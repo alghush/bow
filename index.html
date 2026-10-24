@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"></noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="style/style.css">
+    <title>BOW</title>
+</head>
+    <body>
+
+    <!-- Logo de pantalla de carga -->
+    <div id="loader">
+        <div class="loader-wrap">
+            <img src="" class="loader-logo" id="loader-principal" alt="Cargando BOW">
+        </div>
+    </div>
+
+    <video id="video-teaser" autoplay muted loop playsinline class="video-background activo">
+
+        <source src="video/teaser-mobile.mp4" media="(max-width: 768px)" type="video/mp4">
+        <source src="video/bownvideo.mp4" type="video/mp4">
+    </video>
+
+    <main class="content-wrapper">
+        <section class="splash">
+            <div class="splash__logo">
+
+                <img id="logo-principal" src="img/logosinfond.png" alt="Logo BOW">
+            </div>
+
+            <p class="splash__sub">EL LUGAR AL QUE SIEMPRE QUERÉS VOLVER</p>
+            <div class="scroll-arrow">↓</div>
+            <div class="splash__btns">
+
+                <!-- 1. ACORDEÓN: BOW CAFÉ & BISTRÓ (Planta Baja) -->
+                <input type="checkbox" id="toggle-bown" class="checkbox__submenu">
+                <label class="splash__btn splash__btn--menu" for="toggle-bown">
+                    <span class="splash__btn-left">
+                        <span class="splash__btn-icon"><i class="ti ti-coffee"></i></span>
+                        BOW CAFÉ & BISTRÓ
+                    </span>
+                    <i class="ti ti-chevron-down splash__arrow"></i>
+                </label>
+
+                <div class="splash__acordeon-inner">
+                    <div class="splash__acordeon-wrap">
+                        <!-- Apunta directamente a las secciones internas de bown.html adentro de /pag -->
+                        <a class="splash__acordeon-item" href="pag/bown.html#cafeteria">
+                            <i class="ti ti-coffee"></i> Desayuno & Meriendas
+                        </a>
+                        <a class="splash__acordeon-item" href="pag/bown.html#ejecutivo-section">
+                            <i class="ti ti-bowl-spoon"></i> Menú Ejecutivo
+                        </a>
+                        <a class="splash__acordeon-item" href="pag/bown.html#almuerzo-cena-section">
+                            <i class="ti ti-tools-kitchen-2"></i> Restaurant
+                        </a>
+                        <a class="splash__acordeon-item" href="pag/bown.html#bebidas-section">
+                            <i class="ti ti-glass-full"></i> Bebidas
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. ACORDEÓN: ROOFTOP (Piso 16) -->
+                <input type="checkbox" id="toggle-rooftop" class="checkbox__submenu">
+                <label class="splash__btn splash__btn--menu" for="toggle-rooftop">
+                    <span class="splash__btn-left">
+                        <span class="splash__btn-icon"><i class="ti ti-glass"></i></span>
+                        ROOFTOP
+                    </span>
+                    <i class="ti ti-chevron-down splash__arrow"></i>
+                </label>
+
+                <div class="splash__acordeon-inner">
+                    <div class="splash__acordeon-wrap">
+                        <!-- Apunta a las secciones exclusivas de rooftop.html -->
+                        <a class="splash__acordeon-item" href="pag/rooftop.html#comida-section">
+                            <i class="ti ti-tools-kitchen-2"></i>  Comida
+                        </a>
+                        <a class="splash__acordeon-item" href="pag/rooftop.html#bebida-section">
+                            <i class="ti ti-glass-cocktail"></i>  Bebida
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. ACORDEÓN: RESERVAS -->
+                <input type="checkbox" id="toggle-reservas" class="checkbox__submenu">
+                <label class="splash__btn splash__btn--menu destacado" for="toggle-reservas">
+                    <span class="splash__btn-left">
+                        <span class="splash__btn-icon"><i class="ti ti-calendar"></i></span>
+                        RESERVAS
+                    </span>
+                    <i class="ti ti-chevron-down splash__arrow"></i>
+                </label>
+
+                <div class="splash__acordeon-inner">
+                    <div class="splash__acordeon-wrap">
+                        <a class="splash__acordeon-item" href="pag/bown.html#seccion-reserva">
+                            <i class="ti ti-table"></i> Reservar en Bow (PB)
+                        </a>
+                        <a class="splash__acordeon-item" href="pag/rooftop.html#seccion-reserva">
+                            <i class="ti ti-building-skyscraper"></i> Reservar en Rooftop (P16)
+                        </a>
+                        <a class="splash__acordeon-item" href="pag/eventos.html#seccion-contacto">
+                            <i class="ti ti-users"></i> Eventos & Corporativos
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. REDES -->
+                <a class="splash__btn" href="https://instagram.com" target="_blank">
+                    <span class="splash__btn-icon"><i class="ti ti-brand-instagram"></i></span>
+                    INSTAGRAM
+                </a>
+
+                
+
+                <!-- 5. DELIVERY -->
+                <a class="splash__btn splash__btn--ins" href="RUTA_DE_TU_PEDIDOSYA" target="_blank">
+                    <span class="splash__btn-icon"><img class="pedidoya" src="img/pedidoya.webp" alt="PedidosYa"></span>
+                    Hace tu pedido
+                </a>
+
+                <!-- 6. UBICACIÓN -->
+                <a class="splash__btn splash__btn--ubi" href="https://goo.gl" target="_blank">
+                    <span class="splash__btn-icon"><i class="ti ti-map-pin"></i>ubicacion</span>
+                </a>
+
+            </div>
+
+        </section>
+    </main>
+
+</body>
+
+</html>
