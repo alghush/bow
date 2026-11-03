@@ -985,14 +985,6 @@
                             <span class="plato__precio" id="p-cocteleria-cynar"></span>
                         </div>
                         <p class="plato__desc" data-i18n="d_cocteleria_cynar">Cynar, gaseosa de pomelo.</p>
-                    </li>
-                    <li class="plato">
-                        <div class="plato__linea">
-                            <h4 class="plato__nombre">Martini</h4>
-                            <span class="plato__precio" id="p-cocteleria-martini"></span>
-                        </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_martini">Gin, vermouth seco, limón, aceituna.</p>
-                    </li>
                     <li class="plato">
                         <div class="plato__linea">
                             <h4 class="plato__nombre">Gin Tonic</h4>
@@ -1217,14 +1209,9 @@
     </main>
 
     <main id="rooftop" class="general-wrapper">
-        <!-- SECCION RESTAURANT -->
+        <!-- SECCION BEBIDAS -->
         <section class="panel" id="restaurant-rooftopo" aria-labelledby="restaurant-titulo">
             <div class="panel__scroll">
-
-                <header class="panel__cabecera">
-                    <h2 class="panel__titulo" id="restaurant-titulo" data-i18n="restaurant">Rooftop Bar</h2>
-                    <span class="panel__filete" aria-hidden="true"></span>
-                </header>
 
                 <!-- Carrusel de categorías de Rooftop Bar -->
                 <div class="categorias-wrapper">
@@ -1232,21 +1219,21 @@
                     <div class="categorias-carrusel">
                         <a href="#r-tablas" class="categoria-card"><i class="ti ti-table"></i><span
                                 data-i18n="sec_tablas">Tablas</span></a>
-                        <a href="#r-pasteleria" class="categoria-card"><i class="ti ti-cake"></i><span
-                                data-i18n="sec_pasteleria">Pastelería</span></a>
                         <a href="#r-empanadas" class="categoria-card"><i class="ti ti-cheese"></i><span
                                 data-i18n="sec_empanadas">Empanadas</span></a>
                         <a href="#r-pizzas" class="categoria-card"><i class="ti ti-pizza"></i><span
                                 data-i18n="sec_pizzas">Pizzas</span></a>
-                        <a href="#r-sandwiches" class="categoria-card"><i class="ti ti-bread"></i><span
+                        <a href="#rr-sandwiches" class="categoria-card"><i class="ti ti-bread"></i><span
                                 data-i18n="sec_sandwiches">Sándwiches</span></a>
-                        <a href="#r-frituras" class="categoria-card"><i class="ti ti-fries"></i><span
+                        <a href="#r-frituras" class="categoria-card"><i class="ti ti-cookie"></i><span
                                 data-i18n="sec_frituras">Frituras</span></a>
                         <a href="#r-vegetarianos" class="categoria-card"><i class="ti ti-leaf"></i><span
                                 data-i18n="sec_vegetarianos">Vegetarianos</span></a>
-                        <a href="#r-sintacc" class="categoria-card"><i class="ti ti-grain-off"></i><span
+                        <a href="#r-sintacc" class="categoria-card"><i class="ti ti-wheat-off"></i><span
                                 data-i18n="sec_sintacc">Sin TACC</span></a>
-                        <a href="#r-postres" class="categoria-card"><i class="ti ti-ice-cream"></i><span
+                                <a href="#r-pasteleria" class="categoria-card"><i class="ti ti-cake"></i><span
+                                data-i18n="sec_pasteleria">Pastelería</span></a>
+                        <a href="#rr-postres" class="categoria-card"><i class="ti ti-ice-cream"></i><span
                                 data-i18n="sec_postres">Postres</span></a>
                     </div>
                     <button type="button" class="carrusel-btn carrusel-btn--next" aria-label="Siguiente">»</button>
@@ -1332,7 +1319,7 @@
                 </ul>
 
                 <!-- SÁNDWICHES -->
-                <h3 class="carta__subtitulo" id="r-sandwiches" data-i18n="sec_sandwiches">Sándwiches</h3>
+                <h3 class="carta__subtitulo" id="rr-sandwiches" data-i18n="sec_sandwiches">Sándwiches</h3>
 
                 <ul class="carta__lista">
                     <li class="plato">
@@ -1527,7 +1514,7 @@
                 </ul>
 
                 <!-- POSTRES -->
-                <h3 class="carta__subtitulo" id="r-postres" data-i18n="sec_postres">Postres</h3>
+                <h3 class="carta__subtitulo" id="rr-postres" data-i18n="sec_postres">Postres</h3>
                 <ul class="carta__lista">
                     <li class="plato">
                         <div class="plato__linea">
@@ -1577,31 +1564,139 @@
                     </li>
                 </ul>
         </section>
-        <section class="panel" id="restaurant-rooftopo" aria-labelledby="restaurant-titulo">
+        <section class="panel" id="bebidas-rooftopo" aria-labelledby="bebidas-titulo">
             <div class="panel__scroll">
-
-                <header class="panel__cabecera">
-                    <h2 class="panel__titulo" id="restaurant-titulo" data-i18n="restaurant">Rooftop Bar</h2>
-                    <span class="panel__filete" aria-hidden="true"></span>
-                </header>
-
                 <!-- Carrusel de categorías de Rooftop Bar -->
                 <div class="categorias-wrapper">
                     <button type="button" class="carrusel-btn carrusel-btn--prev" aria-label="Anterior">«</button>
                     <div class="categorias-carrusel">
-                        <a href="#r-autor" class="categoria-card"><i class="ti ti-table"></i><span
-                                data-i18n="sec_tablas">Tragos de autor</span></a>
-                        <a href="#r-aper" class="categoria-card"><i class="ti ti-cake"></i><span
-                                data-i18n="sec_pasteleria">Aperitivos</span></a>
+                        <a href="#r-sin-al" class="categoria-card"><i class="ti ti-lemon"></i><span
+                                data-i18n="<i class="ti ti-pencil"></i>Sin alcohol</span></a>
+                                <a href="#r-cerveza" class="categoria-card"><i class="ti ti-beer"></i><span
+                                data-i18n="<i class="ti ti-pencil"></i>Cervezas</span></a>
+                        <a href="#r-autor" class="categoria-card"><i class="ti ti-glass-full"></i><span
+                                data-i18n="<i class="ti ti-pencil"></i>Tragos de autor</span></a>
+                        <a href="#r-aper" class="categoria-card"><i class="ti ti-barrel"></i><span
+                                data-i18n="sec_tragos-aperitivos">Aperitivos</span></a>
                         <a href="#r-clasyinter" class="categoria-card"><i class="ti ti-cheese"></i><span
-                                data-i18n="sec_empanadas">Clasicos & internacionales</span></a>
-                        <a href="#r-elaborado" class="categoria-card"><i class="ti ti-pizza"></i><span
-                                data-i18n="sec_pizzas">Elaborado</span></a>
-                        <a href="#r-tonicos" class="categoria-card"><i class="ti ti-bread"></i><span
-                                data-i18n="sec_sandwiches">Tonica</span></a>
+                                data-i18n="ti ti-glass-cocktail">Clasicos & internacionales</span></a>
+                        <a href="#r-elaborado" class="categoria-card"><i class=""></i></i><span
+                                data-i18n="sec_tragos-elaborado">Elaborado</span></a>
+                        <a href="#r-tonicos" class="categoria-card"><i class="ti ti-glass-gin"></i><span
+                                data-i18n="sec_tragos-tonicos">Tonicos</span></a>
+                                <a href="#r-vinos" class="categoria-card"><i class="ti ti-glass-full"></i><span
+                                data-i18n="sec_tragos-tonicos">Vinos</span></a>
+                                <a href="#r-vinos" class="categoria-card"><i class="ti ti-bottle"></i><span
+                                data-i18n="sec_tragos-tonicos">Espumantes</span></a>
+
                     </div>
                     <button type="button" class="carrusel-btn carrusel-btn--next" aria-label="Siguiente">»</button>
                 </div>
+
+                <h3 class="carta__subtitulo" id="b-sinalcohol" data-i18n="sec_sinalcohol">Sin alcohol</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_agua">Agua con o sin gas</h4>
+                            <span class="plato__precio" id="pr-sinalcohol-agua"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_agua_saborizada">Agua saborizada</h4>
+                            <span class="plato__precio" id="pr-sinalcohol-agua-saborizada"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_gaseosa">Gaseosa línea Coca-Cola</h4>
+                            <span class="plato__precio" id="pr-sinalcohol-gaseosa"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_exprimido">Exprimido de naranja</h4>
+                            <span class="plato__precio" id="pr-sinalcohol-exprimido"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_pomelada">Pomelada (jarra)</h4>
+                            <span class="plato__precio" id="pr-sinalcohol-pomelada"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_licuados">Licuados</h4>
+                            <span class="plato__precio" id="pr-sinalcohol-licuados"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limonada_menta">Limonada de menta y
+                                jengibre
+                                (1 L)</h4>
+                            <span class="plato__precio" id="pr-sinalcohol-limonada-menta"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limonada_maracuya">Limonada de maracuyá (1
+                                L)
+                            </h4>
+                            <span class="plato__precio" id="pr-sinalcohol-limonada-maracuya"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limonada_frutos_rojos">Limonada con frutos
+                                rojos (1 L)</h4>
+                            <span class="plato__precio" id="pr-sinalcohol-limonada-frutos-rojos"></span>
+                        </div>
+                    </li>
+                </ul>
+
+                <h3 class="carta__subtitulo" id="b-cervezas" data-i18n="sec_cervezas">Cervezas</h3>
+                <ul class="carta__bloque">
+                    <li class="fila">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_cervezas_stella_330">Stella botella 330 ml</h4><span
+                                class="plato__precio" id="pr-cervezas-stella-330"></span>
+                        </div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_cervezas_stella_sa">Stella botella s/a</h4><span
+                                class="plato__precio" id="pr-cervezas-stella-sa"></span>
+                        </div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_cervezas_stella_noire">Stella Artois Noire (lata)
+                            </h4>
+                            <span class="plato__precio" id="pr-cervezas-stella-noire"></span>
+                        </div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_cervezas_corona_330">Corona botella 330 ml</h4><span
+                                class="plato__precio" id="pr-cervezas-corona-330"></span>
+                        </div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_cervezas_corona_sa">Corona botella s/a</h4><span
+                                class="plato__precio" id="pr-cervezas-corona-sa"></span>
+                        </div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_cervezas_stella_pure_gold">Stella Pure Gold sin TACC
+                            </h4>
+                            <span class="plato__precio" id="pr-cervezas-stella-pure-gold"></span>
+                        </div>
+                    </li>
+                </ul>
 
                 <h3 class="carta__subtitulo" id="b-cocteleria" data-i18n="sec_cocteleria">Coctelería</h3>
 
@@ -1642,14 +1737,14 @@
     <li class="plato">
         <div class="plato__linea">
             <h4 class="plato__nombre">Ramazzotti Spritz</h4>
-            <span class="plato__precio" id="p-cocteleria-ramazzotti-spritz"></span>
+            <span class="plato__precio" id="pr-cocteleria-ramazzotti-spritz"></span>
         </div>
         <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_spritz">Ramazzotti, espumante, soda y rodaja de naranja.</p>
     </li>
     <li class="plato">
         <div class="plato__linea">
             <h4 class="plato__nombre">Cynar pomelo</h4>
-            <span class="plato__precio" id="p-cocteleria-cynar"></span>
+            <span class="plato__precio" id="pr-cocteleria-cynar"></span>
         </div>
         <p class="plato__desc" data-i18n="d_cocteleria_cynar">Cynar y gaseosa de pomelo.</p>
     </li>
@@ -1663,14 +1758,14 @@
     <li class="plato">
         <div class="plato__linea">
             <h4 class="plato__nombre">Garibaldi</h4>
-            <span class="plato__precio" id="p-cocteleria-garibaldi"></span>
+            <span class="plato__precio" id="pr-cocteleria-garibaldi"></span>
         </div>
         <p class="plato__desc" data-i18n="d_cocteleria_garibaldi">Campari y jugo de naranja.</p>
     </li>
     <li class="plato">
         <div class="plato__linea">
             <h4 class="plato__nombre">Fernet</h4>
-            <span class="plato__precio" id="p-cocteleria-fernet-coca"></span>
+            <span class="plato__precio" id="pr-cocteleria-fernet-coca"></span>
         </div>
         <p class="plato__desc" data-i18n="d_cocteleria_fernet_coca">Fernet y Coca-Cola.</p>
     </li>
@@ -1681,7 +1776,7 @@
     <li class="plato">
         <div class="plato__linea">
             <h4 class="plato__nombre">Aperol Spritz</h4>
-            <span class="plato__precio" id="p-cocteleria-aperol-spritz"></span>
+            <span class="plato__precio" id="pr-cocteleria-aperol-spritz"></span>
         </div>
         <p class="plato__desc" data-i18n="d_cocteleria_aperol_spritz">Aperol, espumante, soda y rodaja de naranja.</p>
     </li>
@@ -1695,14 +1790,14 @@
     <li class="plato">
         <div class="plato__linea">
             <h4 class="plato__nombre">Cuba Libre</h4>
-            <span class="plato__precio" id="p-cocteleria-cuba-libre"></span>
+            <span class="plato__precio" id="pr-cocteleria-cuba-libre"></span>
         </div>
         <p class="plato__desc" data-i18n="d_cocteleria_cuba_libre">Ron, Coca-Cola y rodaja de lima.</p>
     </li>
     <li class="plato">
         <div class="plato__linea">
             <h4 class="plato__nombre">Negroni</h4>
-            <span class="plato__precio" id="p-cocteleria-negroni"></span>
+            <span class="plato__precio" id="pr-cocteleria-negroni"></span>
         </div>
         <p class="plato__desc" data-i18n="d_cocteleria_negroni">Gin, rosso, Campari y rodaja de naranja.</p>
     </li>
@@ -1747,7 +1842,7 @@
     <li class="plato">
         <div class="plato__linea">
             <h4 class="plato__nombre">Mojito</h4>
-            <span class="plato__precio" id="p-cocteleria-mojito"></span>
+            <span class="plato__precio" id="pr-cocteleria-mojito"></span>
         </div>
         <p class="plato__desc" data-i18n="d_cocteleria_mojito">Lima, menta, almíbar y soda.</p>
     </li>
@@ -1761,7 +1856,7 @@
     <li class="plato">
         <div class="plato__linea">
             <h4 class="plato__nombre">Cynar Julep</h4>
-            <span class="plato__precio" id="p-cocteleria-cynar-julep"></span>
+            <span class="plato__precio" id="pr-cocteleria-cynar-julep"></span>
         </div>
         <p class="plato__desc" data-i18n="d_cocteleria_cynar_julep">Menta, lima, almíbar y gaseosa de pomelo.</p>
     </li>
@@ -1789,7 +1884,7 @@
     <li class="plato">
         <div class="plato__linea">
             <h4 class="plato__nombre">Caipirinha</h4>
-            <span class="plato__precio" id="p-cocteleria-caipirinha"></span>
+            <span class="plato__precio" id="pr-cocteleria-caipirinha"></span>
         </div>
         <p class="plato__desc" data-i18n="d_cocteleria_caipirinha">Lima, azúcar y cachaça.</p>
     </li>
@@ -1835,7 +1930,7 @@
     <li class="plato">
         <div class="plato__linea">
             <h4 class="plato__nombre">Campari Tonic</h4>
-            <span class="plato__precio" id="p-cocteleria-campari-tonic"></span>
+            <span class="plato__precio" id="pr-cocteleria-campari-tonic"></span>
         </div>
         <p class="plato__desc" data-i18n="d_cocteleria_campari_tonic">Campari, tónica y rodaja de limón.</p>
     </li>
