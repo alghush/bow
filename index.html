@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"></noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    </noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+        media="print" onload="this.media='all'">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/index.css">
     <title>BOW</title>
 </head>
-    <body>
+
+<body>
 
     <!-- Logo de pantalla de carga -->
     <div id="loader">
@@ -23,18 +29,30 @@
         <source src="video/bownvideo.mp4" type="video/mp4">
     </video>
 
+    <div class="idiomas">
+        <button type="button" class="idiomas__boton" aria-expanded="false" aria-label="Idioma">
+            <i class="ti ti-world"></i>
+            <span id="idioma-actual">ES</span>
+            <i class="ti ti-chevron-down idiomas__flecha"></i>
+        </button>
+        <div class="idiomas__lista">
+            <button type="button" data-idioma="es">Español</button>
+            <button type="button" data-idioma="en">English</button>
+            <button type="button" data-idioma="pt">Português</button>
+            <button type="button" data-idioma="fr">Français</button>
+        </div>
+    </div>
+
     <main class="content-wrapper">
         <section class="splash">
             <div class="splash__logo">
-
-                <img id="logo-principal" src="img/logosinfond.png" alt="Logo BOW">
+                <img id="logo-principal" src="img/logobow.png" alt="Logo BOW">
             </div>
 
-            <p class="splash__sub">EL LUGAR AL QUE SIEMPRE QUERÉS VOLVER</p>
+            <p class="splash__sub" data-i18n="sub">El lugar al que siempre querés volver</p>
             <div class="scroll-arrow">↓</div>
             <div class="splash__btns">
 
-                <!-- 1. ACORDEÓN: BOW CAFÉ & BISTRÓ (Planta Baja) -->
                 <input type="checkbox" id="toggle-bown" class="checkbox__submenu">
                 <label class="splash__btn splash__btn--menu" for="toggle-bown">
                     <span class="splash__btn-left">
@@ -46,27 +64,17 @@
 
                 <div class="splash__acordeon-inner">
                     <div class="splash__acordeon-wrap">
-                        <!-- Apunta directamente a las secciones internas de bown.html adentro de /pag -->
-                        <a class="splash__acordeon-item" href="pag/bown.html#cafeteria">
-                            <i class="ti ti-coffee"></i> Desayuno & Meriendas
-                        </a>
-                        <a class="splash__acordeon-item" href="pag/bown.html#ejecutivo-section">
-                            <i class="ti ti-bowl-spoon"></i> Menú Ejecutivo
-                        </a>
-                        <a class="splash__acordeon-item" href="pag/bown.html#almuerzo-cena-section">
-                            <i class="ti ti-tools-kitchen-2"></i> Restaurant
-                        </a>
-                        <a class="splash__acordeon-item" href="pag/bown.html#bebidas-section">
-                            <i class="ti ti-glass-full"></i> Bebidas
-                        </a>
+                        <a class="splash__acordeon-item" href="pag/bown.html#desayuno"> Desayuno & Meriendas</a>
+                            <a class="splash__acordeon-item" href="pag/bown.html#menu-ejecutivo"> Menú del día</a>
+                                <a class="splash__acordeon-item" href="pag/bown.html#restaurant"> Restaurant</a>
+                                    <a class="splash__acordeon-item" href="pag/bown.html#bebidas">Bebidas</a>
                     </div>
                 </div>
 
-                <!-- 2. ACORDEÓN: ROOFTOP (Piso 16) -->
                 <input type="checkbox" id="toggle-rooftop" class="checkbox__submenu">
                 <label class="splash__btn splash__btn--menu" for="toggle-rooftop">
                     <span class="splash__btn-left">
-                        <span class="splash__btn-icon"><i class=" ti ti-sunset-2"></i>
+                        <span class="splash__btn-icon"><i class="ti ti-sunset-2"></i></span>
                         ROOFTOP
                     </span>
                     <i class="ti ti-chevron-down splash__arrow"></i>
@@ -74,64 +82,137 @@
 
                 <div class="splash__acordeon-inner">
                     <div class="splash__acordeon-wrap">
-                        <!-- Apunta a las secciones exclusivas de rooftop.html -->
                         <a class="splash__acordeon-item" href="pag/rooftop.html#comida-section">
-                            <i class="ti ti-tools-kitchen-2"></i>  Comida
+                            <i class="ti ti-tools-kitchen-2"></i> <span data-i18n="comida">Comida</span>
                         </a>
                         <a class="splash__acordeon-item" href="pag/rooftop.html#bebida-section">
-                            <i class="ti ti-glass-cocktail"></i>  Bebida
+                            <i class="ti ti-glass-cocktail"></i> <span data-i18n="bebida">Bebida</span>
                         </a>
                     </div>
                 </div>
 
-                <!-- 4. ACORDEÓN: RESERVAS -->
                 <input type="checkbox" id="toggle-reservas" class="checkbox__submenu">
                 <label class="splash__btn splash__btn--menu destacado" for="toggle-reservas">
                     <span class="splash__btn-left">
                         <span class="splash__btn-icon"><i class="ti ti-calendar"></i></span>
-                        RESERVAS
+                        <span data-i18n="reservas">Reservas</span>
                     </span>
                     <i class="ti ti-chevron-down splash__arrow"></i>
                 </label>
 
                 <div class="splash__acordeon-inner">
                     <div class="splash__acordeon-wrap">
-                        <a class="splash__acordeon-item" href="pag/bown.html#seccion-reserva">
-                            <i class="ti ti-table"></i> Reservar en Bow (PB)
+                        <a class="splash__acordeon-item" href="#" data-reserva="bow">
+                            <i class="ti ti-table"></i> <span data-i18n="reservar_bow">Reservar en Bow (PB)</span>
                         </a>
-                        <a class="splash__acordeon-item" href="pag/rooftop.html#seccion-reserva">
-                            <i class="ti ti-building-skyscraper"></i> Reservar en Rooftop (P16)
+                        <a class="splash__acordeon-item" href="#" data-reserva="rooftop">
+                            <i class="ti ti-building-skyscraper"></i> <span data-i18n="reservar_rooftop">Reservar en
+                                Rooftop (P16)</span>
                         </a>
                         <a class="splash__acordeon-item" href="pag/eventos.html#seccion-contacto">
-                            <i class="ti ti-users"></i> Eventos & Corporativos
+                            <i class="ti ti-users"></i> <span data-i18n="eventos">Eventos & Corporativos</span>
                         </a>
                     </div>
                 </div>
 
-                <!-- 3. REDES -->
-                <a class="splash__btn" href="https://www.instagram.com/bowcafebistro/" target="_blank">
+                <a class="splash__btn" href="https://www.instagram.com/bowcafebistro/" target="_blank" rel="noopener">
                     <span class="splash__btn-icon"><i class="ti ti-brand-instagram"></i></span>
                     INSTAGRAM
                 </a>
 
-                
-
-                <!-- 5. DELIVERY 
-                <a class="splash__btn splash__btn--ins" href="RUTA_DE_TU_PEDIDOSYA" target="_blank">
-                    <span class="splash__btn-icon"><img class="pedidoya" src="img/pedidoya.webp" alt="PedidosYa"></span>
-                    Hace tu pedido
-                </a>-->
-
-                <!-- 6. UBICACIÓN -->
-                <a class="splash__btn splash__btn--ubi" href="https://www.google.com/maps/place/bow+cafe/data=!4m2!3m1!1s0x95b65523f22d907f:0xff73d15421f4f752?sa=X&ved=1t:242&ictx=111" target="_blank">
-                    <span class="splash__btn-icon"><i class="ti ti-map-pin"></i>ubicacion</span>
+                <a class="splash__btn splash__btn--ubi" href="TU_LINK_DE_MAPS" target="_blank" rel="noopener">
+                    <span class="splash__btn-icon"><i class="ti ti-map-pin"></i></span>
+                    <span data-i18n="ubicacion">Ubicación</span>
                 </a>
 
             </div>
-
         </section>
     </main>
 
+    <!-- ============================================================
+     MODAL DE RESERVAS — compartido (index.html y bown.html)
+     Va como hijo directo de <body>, FUERA de cualquier <main>.
+     Sin onclick: lo maneja js/reservas.js
+     ============================================================ -->
+    <div class="modal-overlay" id="modal-reserva-overlay">
+        <div class="modal">
+            <button type="button" class="modal-close" data-reserva-cerrar aria-label="Cerrar">✕</button>
+            <div class="reserva__logo">
+                <img src="img/logobow.png" alt="Logo BOW" class="main-logo">
+            </div>
+            <h2 class="modal-titulo" id="reserva-titulo">RESERVAR</h2>
+
+            <!-- PASO 1: formulario -->
+            <div class="modal-form" id="reserva-paso-form">
+                <div class="form-group">
+                    <label for="reserva-nombre">Tu nombre</label>
+                    <input type="text" id="reserva-nombre" placeholder="Nombre y apellido">
+                </div>
+                <div class="form-group">
+                    <label for="reserva-fecha">Fecha</label>
+                    <input type="date" id="reserva-fecha">
+                </div>
+                <div class="form-group">
+                    <label for="reserva-franja">Turno</label>
+                    <select id="reserva-franja">
+                        <option value="" disabled selected>Primero elegí la fecha</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reserva-hora">Horario</label>
+                    <select id="reserva-hora">
+                        <option value="" disabled selected>Elegí un turno</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reserva-adultos">Adultos</label>
+                        <input type="number" id="reserva-adultos" placeholder="0" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="reserva-ninos">Niños</label>
+                        <input type="number" id="reserva-ninos" placeholder="0" min="0">
+                    </div>
+                </div>
+                <div class="form-group" id="reserva-sector-bloque">
+                    <label>Sector</label>
+                    <div class="sector-btns">
+                        <button type="button" class="sector-btn activo" data-sector="Adentro">
+                            <i class="ti ti-building"></i> Adentro
+                        </button>
+                        <button type="button" class="sector-btn" data-sector="Afuera">
+                            <i class="ti ti-tree"></i> Afuera
+                        </button>
+                    </div>
+                </div>
+                <p class="modal-error" id="reserva-error" role="alert" hidden></p>
+                <button type="button" class="modal-btn" id="reserva-enviar">
+                    CONTINUAR <i class="ti ti-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- PASO 2: aviso antes de ir a WhatsApp -->
+            <div class="modal-form" id="reserva-paso-aviso" hidden>
+                <div class="reserva-resumen" id="reserva-resumen"></div>
+                <p class="modal-aviso">
+                    Tu horario está sujeto a confirmación según la disponibilidad.
+                    Te respondemos por WhatsApp para confirmarlo.
+                </p>
+                <button type="button" class="modal-btn" id="reserva-whatsapp">
+                    <i class="ti ti-brand-whatsapp"></i> CONTINUAR A WHATSAPP
+                </button>
+                <button type="button" class="modal-volver" data-reserva-volver>
+                    <i class="ti ti-arrow-left"></i> Volver
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/idiomas.js"></script>
+    <script src="js/comun.js"></script>
+    <script src="js/horarios.js"></script>
+    <script src="js/reservas.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
-</html>
+</html>|

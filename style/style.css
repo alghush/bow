@@ -1,6 +1,23 @@
-/* ==========================================
-   RESET & ESTILOS BASE
-   ========================================== */
+:root {
+    --dorado: #b1910597;
+    --blanco: #ffffff;
+    --blanco-suave: #ffffffd9;
+    --texto-tenue: #ffffffcc;
+    --hover: #ffffff26;
+    --vidrio: #00000059;
+    --vidrio-oscuro: #0000008c;
+    --velo: #00000073;
+    --vino: #58014362;
+    --radio: 15px;
+    --desenfoque: blur(10px);
+    --oro: #d4af37;
+    --oro-borde: rgba(212, 175, 55, 0.35);
+    --noche: #090b11;
+    --serif: 'Cormorant Garamond', 'Cinzel', serif;
+    --nav-alto: 72px;
+    --dorado-claro: #d4af37;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +25,12 @@
     font-family: 'Inter', 'Montserrat', sans-serif;
 }
 
-body, html {
+html, body {
     width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    color: #ffffff;
+    min-height: 100%;
+    overflow-x: clip;
+    color: var(--blanco);
 }
-/*--- VIDEO DE FONDO — usado en index , bow, rooftop y eventos ---*/
 
 .video-background {
     position: fixed;
@@ -33,7 +49,7 @@ body, html {
 }
 
 .video-overlay {
-    position:fixed;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -41,220 +57,300 @@ body, html {
     z-index: 1;
 }
 
-
-/* Capa oscura sobre el video para garantizar legibilidad */
-.content-wrapper::before {
+body::after {
     content: '';
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.45); /* 45% de sombra negra */
+    inset: 0;
+    background: var(--velo);
     z-index: -1;
 }
 
-/* ==========================================
-   CONTENEDOR PRINCIPAL & SPLASH
-   ========================================== */
-.content-wrapper {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
-}
-
-.splash {
-    width: 100%;
-    max-width: 440px; /* Ancho ideal tipo App Móvil */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.splash__logo img {
-    max-width: 180px;
-    height: auto;
-    margin-bottom: 12px;
-    filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.5));
-}
-
-.splash__sub {
-    font-size: 0.90rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 15px;
-    font-weight: 300;
-}
-
-.scroll-arrow {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-    animation: bounce 2s infinite;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-8px); }
-    60% { transform: translateY(-4px); }
-}
-
-/* ==========================================
-   BOTONES Y ACORDEÓN (ESTILO CUERVO BLANCO)
-   ========================================== */
-/* ==========================================
-   AJUSTE DE CENTRADO PERFECTO EN BOTONES
-   ========================================== */
-
-.splash__btn {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    gap: 10px; 
-    width: 100%;
-    padding: 16px 44px;
-    margin-bottom: 10px;
-    border: 1px solid rgba(177, 145, 5, 0.594);
-    border-radius: 15px;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    user-select: none;
-    text-align: center;
-    z-index: 2;
-}
-
-/* El contenedor del texto e ícono izquierdo */
-.splash__btn-left {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-}
-
-/* La flechita desplegable se fija a la derecha sin descentrar el texto */
-.splash__arrow {
-    position: absolute;
+.idiomas {
+    position: fixed;
+    top: 16px;
     right: 16px;
-    font-size: 1.1rem;
-    transition: transform 0.3s ease;
+    z-index: 10;
+    min-width: 120px;
 }
 
-/* Centrado dentro de los submenús del acordeón */
-.splash__acordeon-item {
+.idiomas__boton {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centra también las opciones del acordeón */
-    gap: 10px;
-    padding: 12px 18px;
-    color: rgba(255, 255, 255, 0.85);
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 500;
-    border-radius: 30px;
-    transition: background 0.2s ease, color 0.2s ease;
-    text-align: center;
-}
-
-/* Hover & Active state */
-.splash__btn:hover, .splash__btn:active {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.6);
-    transform: scale(1.02);
-}
-
-/*.splash__btn.destacado {
-    border-color: #a5820e7d;
-}*/
-
-/* Imagen de PedidosYa dentro del botón */
-.pedidoya {
-    width: 22px;
-    height: 22px;
-    object-fit: contain;
-}
-
-/* ==========================================
-   LÓGICA DEL ACORDEÓN CON CHECKBOX (SIN JS)
-   ========================================== */
-.checkbox__submenu {
-    display: none; /* Ocultamos el checkbox */
-}
-
-.splash__acordeon-inner {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-in-out, opacity 0.3s ease;
-    opacity: 0;
+    justify-content: space-between;
+    gap: 8px;
     width: 100%;
-    z-index:1;
+    padding: 9px 14px;
+    background: var(--vidrio);
+    border: 1px solid var(--dorado);
+    border-radius: var(--radio);
+    color: var(--blanco);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    backdrop-filter: var(--desenfoque);
+    -webkit-backdrop-filter: var(--desenfoque);
 }
 
-/* Al marcar el checkbox, expandimos el contenedor */
-.checkbox__submenu:checked + .splash__btn + .splash__acordeon-inner {
-    max-height: 200px;
-    opacity: 1;
-    margin-top: -1px;
-    margin-bottom: 14px;
-}
-
-/* Botón abierto: sin separación con el submenú */
-.checkbox__submenu:checked + .splash__btn {
-    margin-bottom: 0;
-}
-
-/* Rotación de la flechita cuando abre */
-.splash__arrow {
+.idiomas__flecha {
     transition: transform 0.3s ease;
 }
 
-.checkbox__submenu:checked + .splash__btn .splash__arrow {
+.idiomas.abierto .idiomas__flecha {
     transform: rotate(180deg);
 }
 
-/* Contenedor interno e Ítems del submenú */
-.splash__acordeon-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    margin: 0 25px;
-    padding: 6px 8px 8px;
-    background: #58014362;
-    border: 1px solid #b1910597;
+.idiomas__lista {
+    position: absolute;
+    top: 100%;
+    left: 12px;
+    right: 12px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    background: var(--vidrio-oscuro);
+    border: 1px solid transparent;
     border-top: none;
-    border-radius: 0 0 15px 15px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0 0 var(--radio) var(--radio);
+    backdrop-filter: var(--desenfoque);
+    -webkit-backdrop-filter: var(--desenfoque);
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease, border-color 0.3s ease;
 }
 
-.splash__acordeon-item {
+.idiomas.abierto .idiomas__lista {
+    max-height: 220px;
+    opacity: 1;
+    border-color: var(--dorado);
+}
+
+.idiomas__lista button {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    background: transparent;
+    border: none;
+    color: var(--texto-tenue);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.idiomas__lista button:hover,
+.idiomas__lista button.activo {
+    background: var(--hover);
+    color: var(--blanco);
+}
+
+.reservar-flotante {
+    position: fixed;
+    right: 16px;
+    bottom: calc(16px);
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    background: var(--dorado);
+    border-radius: 30px;
+    color: #1a1200;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reservar-flotante i {
+    font-size: 1.1rem;
+}
+
+.reservar-flotante:hover,
+.reservar-flotante:active {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+}
+
+
+/*--- reservas modal ----*/
+
+
+.reserva__logo img {
+    width: 70px;
+    overflow: hidden;
+    object-fit: cover;
+    margin:1rem;
+    filter: drop-shadow(0 0 12px var(--color-hover)) drop-shadow(0 0 24px var(--color-hover));
+}
+
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+}
+
+.modal-overlay.activo {
+    display: flex;
+}
+
+.modal {
+    background: var(--vino);
+    border: 1.5px solid var(--dorado);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 440px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: var(--dorado);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: var(--color-blanco);
+}
+
+.modal-titulo {
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.9rem;
+}
+
+.modal-subtitulo {
+    font-size: 0.75rem;
+    color: var(--color-secundary);
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-hover);
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+}
+
+.form-group input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 10px 14px;
+    color: var(--color-blanco);
+    font-size: 0.85rem;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.form-group input:focus {
+    border-color: var(--color-hover);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.modal-btn {
+    width: 100%;
+    background: var(--vidrio-oscuro);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 50px;
+    padding: 14px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 9px 14px;
-    color: rgba(255, 255, 255, 0.85);
-    text-decoration: none;
-    font-size: 0.75rem;
-    font-weight: 500;
-    border-radius: 12px;
-    transition: background 0.2s ease, color 0.2s ease;
+    margin-top: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.splash__acordeon-item:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
+.modal-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--vino);
+}
+
+.sector-btns {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.sector-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: var(--color-secundary);
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sector-btn.activo {
+    border-color: var(--dorado-claro);
+    color: var(--color-hover);
+    background: var(--vino);
+}
+
+.form-group select {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 10px 14px;
+    color: var(--color-secundary);
+    font-size: 0.85rem;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.form-group select:focus {
+    border-color: var(--color-hover);
+}
+
+.form-group select option {
+    background: var(--vino);
+    color: var(--velo);
 }

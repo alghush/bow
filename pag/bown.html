@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.50.0/dist/tabler-icons.min.css">
+    </noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.50.0/dist/tabler-icons.min.css"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/bow.css">
+    <link rel="stylesheet" href="../style/index.css">
+    <title>BOW</title>
+</head>
+
+<body>
+
+
+    <!-- Logo de pantalla de carga -->
+    <div id="loader">
+        <div class="loader-wrap">
+            <img src="" class="loader-logo" id="loader-principal" alt="Cargando BOW">
+        </div>
+    </div>
+
+    <video id="video-teaser" autoplay muted loop playsinline class="video-background activo">
+
+        <source src="video/teaser-mobile.mp4" media="(max-width: 768px)" type="video/mp4">
+        <source src="../video/bownvideo.mp4" type="video/mp4">
+    </video>
+
+
+    <input type="checkbox" id="menu-toggle" class="nav__check">
+
+    <header class="nav" id="nav">
+        <label for="menu-toggle" class="nav__burger" aria-label="Menú">
+            <i class="ti ti-menu-2"></i>
+        </label>
+
+        <a class="nav__logo" href="#bow">
+            <img src="../img/logobow.png" alt="BOW">
+        </a>
+
+        <nav class="nav__menu">
+            <ul class="nav__lista nav__lista--izq">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html"><span data-i18n="inicio">Inicio</span></a>
+                </li>
+
+                <li class="nav__item nav__item--sub">
+                    <input type="checkbox" id="sub-bow" class="nav__check-sub">
+                    <a class="nav__link" href="#bow"><span>Bow</span></a>
+                    <label for="sub-bow" class="nav__toggle" aria-label="Mostrar secciones">
+                        <i class="ti ti-chevron-down"></i>
+                    </label>
+                    <ul class="nav__sub">
+                        <li><a href="#bow-cafeteria"><span data-i18n="desayuno">Desayuno & Meriendas</span></a></li>
+                        <li><a href="#bow-ejecutivo"><span data-i18n="menu_dia">Menú del día</span></a></li>
+                        <li><a href="#bow-restaurant"><span data-i18n="restaurant">Restaurant</span></a></li>
+                        <li><a href="#bow-bebidas"><span data-i18n="bebidas">Bebidas</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav__lista nav__lista--der">
+                <li class="nav__item nav__item--sub">
+                    <input type="checkbox" id="sub-rooftop" class="nav__check-sub">
+                    <a class="nav__link" href="#rooftop"><span>Rooftop</span></a>
+                    <label for="sub-rooftop" class="nav__toggle" aria-label="Mostrar secciones">
+                        <i class="ti ti-chevron-down"></i>
+                    </label>
+                    <ul class="nav__sub">
+                        <li><a href="#rooftop-comida"><span data-i18n="comida">Comida</span></a></li>
+                        <li><a href="#rooftop-bebida"><span data-i18n="bebida">Bebida</span></a></li>
+                    </ul>
+                </li>
+
+                <li class="nav__item">
+                    <a class="nav__link" href="#eventos"><span data-i18n="eventos_corto">Eventos</span></a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="idiomas">
+            <button type="button" class="idiomas__boton" aria-expanded="false" aria-label="Idioma">
+                <i class="ti ti-world"></i>
+                <span id="idioma-actual">ES</span>
+                <i class="ti ti-chevron-down idiomas__flecha"></i>
+            </button>
+            <div class="idiomas__lista">
+                <button type="button" data-idioma="es">Español</button>
+                <button type="button" data-idioma="en">English</button>
+                <button type="button" data-idioma="pt">Português</button>
+                <button type="button" data-idioma="fr">Français</button>
+            </div>
+        </div>
+    </header>
+
+    <label for="menu-toggle" class="nav__cierre"></label>
+
+    <main id="bow" class="general-wrapper">
+        <!-- SECCION DESYUNO MERIENDA -->
+        <section class="panel" id="desayuno" aria-labelledby="desayuno-titulo">
+            <div class="panel__scroll">
+
+                <div class="panel__cabecera">
+                    <h2 class="panel__titulo" id="desayuno-titulo" data-i18n="desayuno">Desayuno & Meriendas</h2>
+                    <span class="panel__filete" aria-hidden="true"></span>
+                </div>
+
+                <div class="categorias-wrapper">
+                    <button class="carrusel-btn" id="btn-prev">&#171;</button>
+                    <div class="categorias-carrusel">
+                        <a href="#bow-desayuno-cafeteria" class="categoria-card"><i class="ti ti-coffee"></i><span
+                                data-i18n="cat_cafeteria">Cafetería</span></a>
+                        <a href="#bow-desayuno-desayunos" class="categoria-card"><i class="ti ti-sun"></i><span
+                                data-i18n="cat_desayunos">PROMOS</span></a>
+                        <a href="#bow-desayuno-brunch" class="categoria-card"><i class="ti ti-glass-full"></i><span
+                                data-i18n="cat_brunch">Brunch</span></a>
+                        <a href="#bow-desayuno-malteadas" class="categoria-card"><i class="ti ti-milkshake"></i><span
+                                data-i18n="cat_malteadas">Malteadas</span></a>
+                        <a href="#bow-desayuno-complementos" class="categoria-card"><i class="ti ti-cookie"></i><span
+                                data-i18n="cat_complementos">Complementos</span></a>
+                        <a href="#bow-desayuno-pasteleria" class="categoria-card"><i class="ti ti-cake"></i><span
+                                data-i18n="cat_pasteleria">Pastelería</span></a>
+                    </div>
+                    <button class="carrusel-btn" id="btn-next">&#187;</button>
+                </div>
+
+                <h3 class="carta__subtitulo" id="bow-desayuno-cafeteria" data-i18n="cat_cafeteria">Cafetería</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="d_cafe">Café</h4>
+                            <span class="plato__precio" id="price-cafeteria-cafe">....</span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="d_jarro">Jarro</h4>
+                            <span class="plato__precio" id="price-cafeteria-jarro">....</span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="d_cafe_doble">Café doble</h4>
+                            <span class="plato__precio" id="price-cafeteria-cafe-doble">....</span>
+                        </div>
+
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="d_cafe_con_leche">Café con leche</h4>
+                            <span class="plato__precio" id="price-cafeteria-cafe-con-leche">....</span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="d_submarino">Submarino</h4>
+                            <span class="plato__precio" id="price-cafeteria-submarino">....</span>
+                        </div>
+
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="d_chocolatada">Chocolatada</h4>
+                            <span class="plato__precio" id="price-cafeteria-chocolatada">....</span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="d_te">Variedad de té</h4>
+                            <span class="plato__precio" id="price-cafeteria-te">....</span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="d_leche_almendras">Adicional leche de almendras</h4>
+                            <span class="plato__precio" id="price-cafeteria-leche-almendras">....</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <h3 class="carta__subtitulo" id="bow-desayuno-promos" data-i18n="promos">Promos</h3>
+                <ul class="carta__lista" id="bow-desayuno-desayunos">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h3 class="plato__nombre">Tradicional</h3>
+                            <span class="plato__precio" id="price-desayunos-tradicional">....</span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_tradicional">Infusión, 2 medialunas y jugo de naranja.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h3 class="plato__nombre">De campo</h3>
+                            <span class="plato__precio" id="price-desayunos-de-campo">....</span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_campo">Infusión, tostadas de pan de campo, queso crema,
+                            mermelada y jugo de naranja.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h3 class="plato__nombre">Bow</h3>
+                            <span class="plato__precio" id="price-desayunos-bow">....</span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_bow">Infusión, pastelería a elección y jugo de naranja.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h3 class="plato__nombre">Light</h3>
+                            <span class="plato__precio" id="price-desayunos-light">....</span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_light">Infusión, yogurt con granola, frutas de estación y
+                            jugo
+                            de naranja.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h3 class="plato__nombre">Americano</h3>
+                            <span class="plato__precio" id="price-desayunos-americano">....</span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_americano">Infusión, tostada de pan de campo, jamón cocido,
+                            queso y huevos revueltos.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h3 class="plato__nombre">Avocado</h3>
+                            <span class="plato__precio" id="price-desayunos-avocado">....</span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_avocado">Infusión, tostada de pan integral, palta y huevo
+                            revuelto.</p>
+                    </li>
+                </ul>
+
+                <h3 class="carta__subtitulo" id="bow-desayuno-brunch" data-i18n="brunch">Brunch para compartir</h3>
+                <ul class="carta__lista">
+                    <li class="plato plato--destacado">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Brunch</h4>
+                            <span class="plato__precio" id="price-brunch-clasico">....</span>
+                        </div>
+                        <p class="plato__desc" data-i18n="b_clasico">2 infusiones, 2 jugos naturales, 2 medialunas
+                            dulces, 2
+                            porciones de tostadas con queso crema y mermelada, 2 chipá, 1 porción de torta a elección, 2
+                            ensaladas de frutas y 1 bowl de yogurt y granola.</p>
+                    </li>
+                    <li class="plato plato--destacado">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Brunch con Aperol</h4>
+                            <span class="plato__precio" id="price-brunch-aperol">....</span>
+                        </div>
+                        <p class="plato__desc" data-i18n="b_aperol">2 Aperol, 2 tostadas integrales, palta, huevo
+                            revuelto,
+                            2 chipá, ensalada de hojas verdes, queso, tomates cherry, frutos secos, pastelería y agua
+                            saborizada a elección.</p>
+                    </li>
+                </ul>
+
+                <h3 class="carta__subtitulo" id="bow-desayuno-malteadas" data-i18n="cat_malteadas">Malteadas</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="d_malteada_frutillas">Malteada de frutillas</h4>
+                            <span class="plato__precio" id="price-malteadas-frutillas">....</span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="d_malteada_chocolate">Malteada de chocolate</h4>
+                            <span class="plato__precio" id="price-malteadas-chocolate">....</span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="d_malteada_vainilla">Malteada de vainilla</h4>
+                            <span class="plato__precio" id="price-malteadas-vainilla">....</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <h3 class="carta__subtitulo" id="bow-desayuno-complementos" data-i18n="cat_complementos">Complementos
+                </h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Medialuna dulce o salada</h4>
+                            <span class="plato__precio" id="price-complementos-medialuna">....</span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_medialuna"></p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Bizcocho de grasa</h4>
+                            <span class="plato__precio" id="price-complementos-bizcocho-de-grasa">....</span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_bizcocho"></p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Chipa</h4>
+                            <span class="plato__precio" id="price-complementos-chipa">....</span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_chipa"></p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Budines</h4>
+                            <span class="plato__precio" id="price-complementos-budines">....</span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_budines"></p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Espumita de limón</h4>
+                            <span class="plato__precio" id="price-complementos-espumita-de-limon">....</span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_espumita"></p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Alfajor chocolate</h4>
+                            <span class="plato__precio" id="price-complementos-alfajor-chocolate">....</span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_alfajor_chocolate"></p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Alfajor maicena</h4>
+                            <span class="plato__precio" id="price-complementos-alfajor-maicena">....</span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Cookies</h4>
+                            <span class="plato__precio" id="price-complementos-cookies">....</span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cookies"></p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Brownie</h4>
+                            <span class="plato__precio" id="price-complementos-brownie">....</span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_brownie"></p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Cuadradito de coco y dulce de leche</h4>
+                            <span class="plato__precio" id="price-complementos-cuadradito-coco">....</span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cuadradito"></p>
+                    </li>
+                </ul>
+
+                <h3 class="carta__subtitulo" id="bow-desayuno-pasteleria" data-i18n="cat_pasteleria">Pastelería</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="d_lemon_pie">Lemon pie</h4>
+                            <span class="plato__precio" id="price-pasteleria-lemon-pie">....</span>
+                        </div>
+
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="d_rogel">Rogel</h4>
+                            <span class="plato__precio" id="price-pasteleria-rogel">....</span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="d_brownie_bombom">Brownie bombón</h4>
+                            <span class="plato__precio" id="price-pasteleria-brownie-bombom">....</span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="d_cheesecake">Cheesecake</h4>
+                            <span class="plato__precio" id="price-pasteleria-cheesecake">....</span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="d_tiramisu">Tiramisú</h4>
+                            <span class="plato__precio" id="price-pasteleria-tiramisu">....</span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="d_crumble">Crumble de manzana</h4>
+                            <span class="plato__precio" id="price-pasteleria-crumble-de-manzana">....</span>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="panel" id="restaurant" aria-labelledby="restaurant-titulo">
+            <div class="panel__scroll">
+
+                <header class="panel__cabecera">
+                    <h2 class="panel__titulo" id="restaurant-titulo" data-i18n="restaurant">Restaurant</h2>
+                    <span class="panel__filete" aria-hidden="true"></span>
+                </header>
+
+                <!-- Carrusel de categorías: botones por CLASE (no por id) porque Bebidas va a tener otro carrusel -->
+                <div class="categorias-wrapper">
+                    <button type="button" class="carrusel-btn carrusel-btn--prev" aria-label="Anterior">&#171;</button>
+                    <div class="categorias-carrusel">
+                        <a href="#r-entradas" class="categoria-card"><i class="ti ti-tools-kitchen-2"></i><span
+                                data-i18n="sec_entradas">Entradas</span></a>
+                        <a href="#r-ensaladas" class="categoria-card"><i class="ti ti-salad"></i><span
+                                data-i18n="sec_ensaladas">Ensaladas</span></a>
+                        <a href="#r-pastas" class="categoria-card"><i class="ti ti-bowl-spoon"></i><span
+                                data-i18n="sec_pastas">Pastas</span></a>
+                        <a href="#r-carnes" class="categoria-card"><i class="ti ti-meat"></i><span
+                                data-i18n="sec_carnes">Carnes</span></a>
+                        <a href="#r-sandwiches" class="categoria-card"><i class="ti ti-bread"></i><span
+                                data-i18n="sec_sandwiches">Sandwiches</span></a>
+                        <a href="#r-hamburguesas" class="categoria-card"><i class="ti ti-burger"></i><span
+                                data-i18n="sec_hamburguesas">Hamburguesas</span></a>
+                        <a href="#r-postres" class="categoria-card"><i class="ti ti-ice-cream"></i><span
+                                data-i18n="sec_postres">Postres</span></a>
+                    </div>
+                    <button type="button" class="carrusel-btn carrusel-btn--next" aria-label="Siguiente">&#187;</button>
+                </div>
+
+                <h3 class="carta__subtitulo" id="r-entradas" data-i18n="sec_entradas">Entradas</h3>
+
+
+                <ul class="carta__lista">
+                    <li class="plato plato--foto">
+                        <figure class="plato__foto">
+                            <img src="../img/boga.png" alt="Gnocchi de papas con trilogía de tomates y albahaca"
+                                width="400" height="400" loading="lazy" decoding="async">
+                        </figure>
+                        <div class="plato__cuerpo">
+                            <div class="plato__linea">
+                                <h4 class="plato__nombre">Tabla de empanadas para compartir</h4>
+                                <span class="plato__precio" id="p-entradas-empanadas"></span>
+                            </div>
+                            <p class="plato__desc" data-i18n="d_pastas_gnocchi">Con trilogía de tomates y albahaca.</p>
+                        </div>
+                    </li>
+                    <!-- <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_entradas_empanadas">Tabla de empanadas para compartir
+                            </h4>
+                            <span class="plato__precio" id="p-entradas-empanadas"></span>
+                        </div>
+                    </li>-->
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_entradas_bastones_queso">Bastones de queso</h4>
+                            <span class="plato__precio" id="p-entradas-bastones-queso"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_entradas_bastones_queso">Con dip de alioli de pimientos.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_entradas_tortilla_papas">Tortilla de papas</h4>
+                            <span class="plato__precio" id="p-entradas-tortilla-papas"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_entradas_langostinos">Langostinos rebozados en panko
+                            </h4>
+                            <span class="plato__precio" id="p-entradas-langostinos"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_entradas_rabas">Rabas</h4>
+                            <span class="plato__precio" id="p-entradas-rabas"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_entradas_rabas">Con salsa tártara.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_entradas_gambas">Gambas al ajillo</h4>
+                            <span class="plato__precio" id="p-entradas-gambas"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_entradas_gambas">En tostón de campo.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Provoleta</h4>
+                            <span class="plato__precio" id="p-entradas-provoleta"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_entradas_provoleta">Con tomates cherry confitados.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_entradas_tabla_quesos">Tabla de quesos y fiambres
+                            </h4>
+                            <span class="plato__precio" id="p-entradas-tabla-quesos"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_entradas_papas_gratinadas">Papas fritas gratinadas
+                                con
+                                queso</h4>
+                            <span class="plato__precio" id="p-entradas-papas-gratinadas"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_entradas_papas_clasicas">Papas fritas clásicas</h4>
+                            <span class="plato__precio" id="p-entradas-papas-clasicas"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_entradas_tiritas_pollo">Tiritas de pollo crispy</h4>
+                            <span class="plato__precio" id="p-entradas-tiritas-pollo"></span>
+                        </div>
+                    </li>
+                </ul>
+
+                <h3 class="carta__subtitulo" id="r-ensaladas" data-i18n="sec_ensaladas">Ensaladas</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Caesar Salad</h4>
+                            <span class="plato__precio" id="p-ensaladas-caesar"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_ensaladas_caesar">Pollo, mix de verdes, panceta, queso y
+                            aderezo
+                            Caesar.</p>
+                        <div class="plato__linea plato__extra">
+                            <span class="plato__extra-nombre" data-i18n="x_ensaladas_caesar_langostinos">Opcional
+                                langostinos</span>
+                            <span class="plato__precio" id="p-ensaladas-caesar-langostinos"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Green Fresh</h4>
+                            <span class="plato__precio" id="p-ensaladas-green-fresh"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_ensaladas_green_fresh">Mix verde, zanahoria glaseada, cherry
+                            confitado, quinoa, palta, huevo y garrapiñada de girasol.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Blue Fresh</h4>
+                            <span class="plato__precio" id="p-ensaladas-blue-fresh"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_ensaladas_blue_fresh">Rúcula, peras, jamón crudo, queso
+                            azul,
+                            aceitunas negras, almendras tostadas y cebolla morada.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Chef's Salad</h4>
+                            <span class="plato__precio" id="p-ensaladas-chef"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_ensaladas_chef">Mix verde, pollo crocante, cebolla crispy,
+                            pebre
+                            chileno, queso mixto, huevo duro y aderezo honey mustard.</p>
+                    </li>
+                </ul>
+
+                <h3 class="carta__subtitulo" id="r-pastas" data-i18n="sec_pastas">Pastas</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Gnocchi de papas</h4>
+                            <span class="plato__precio" id="p-pastas-gnocchi"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_pastas_gnocchi">Con trilogía de tomates y albahaca.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Tagliatelle</h4>
+                            <span class="plato__precio" id="p-pastas-tagliatelle"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_pastas_tagliatelle">Con salsa pomodoro.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_pastas_ravioles_ternera">Ravioles de ternera</h4>
+                            <span class="plato__precio" id="p-pastas-ravioles-ternera"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_pastas_ravioles_ternera">Salsa de tomate, panceta, tomate
+                            confitado y ricota.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_pastas_ravioles_berenjena">Ravioles de berenjena</h4>
+                            <span class="plato__precio" id="p-pastas-ravioles-berenjena"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_pastas_ravioles_berenjena">Salsa de tomate, tomate fresco y
+                            albahaca.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Risotto milanés</h4>
+                            <span class="plato__precio" id="p-pastas-risotto-milanes"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_pastas_risotto_milanes">Arroz carnaroli cremoso, azafrán,
+                            tuétano, manteca y queso parmesano.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_pastas_risotto_hongos">Risotto de hongos</h4>
+                            <span class="plato__precio" id="p-pastas-risotto-hongos"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_pastas_risotto_hongos">Arroz carnaroli cremoso, hongos,
+                            manteca
+                            y queso parmesano.</p>
+                    </li>
+                </ul>
+
+                <h3 class="carta__subtitulo" id="r-carnes" data-i18n="sec_carnes">Carnes</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_carnes_ojo_bife">Ojo de bife de 350 g</h4>
+                            <span class="plato__precio" id="p-carnes-ojo-bife"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_carnes_ojo_bife">Acompañado de puré de zanahoria y jengibre,
+                            y
+                            zanahoria glaseada.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_carnes_suprema">Suprema</h4>
+                            <span class="plato__precio" id="p-carnes-suprema"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_carnes_suprema">Acompañada de ensalada de zanahoria, pepino,
+                            cebolla encurtida y aderezo de sésamo tostado, miel y mostaza.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_carnes_milanesa">Milanesa de ternera</h4>
+                            <span class="plato__precio" id="p-carnes-milanesa"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_carnes_milanesa">Con tagliatelle a la manteca.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_carnes_abadejo">Abadejo gratinado</h4>
+                            <span class="plato__precio" id="p-carnes-abadejo"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_carnes_abadejo">Con tomate fresco y parmesano.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_carnes_pacu">Pacú</h4>
+                            <span class="plato__precio" id="p-carnes-pacu"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_carnes_pacu">Con papas rústicas y dip de salsa criolla.</p>
+                    </li>
+                </ul>
+
+                <h3 class="carta__subtitulo" id="r-sandwiches" data-i18n="sec_sandwiches">Sandwiches</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sandwiches_tostado">Tostado de jamón y queso
+                                (Carlito)
+                            </h4>
+                            <span class="plato__precio" id="p-sandwiches-tostado"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_sandwiches_tostado">En pan de campo, con papas fritas.</p>
+                        <div class="plato__linea plato__extra">
+                            <span class="plato__extra-nombre" data-i18n="x_sandwiches_tostado_sin_papas">Sin papas
+                                fritas</span>
+                            <span class="plato__precio" id="p-sandwiches-tostado-sin-papas"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sandwiches_mortadela">Sándwich de mortadela y
+                                pistachos
+                            </h4>
+                            <span class="plato__precio" id="p-sandwiches-mortadela"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_sandwiches_mortadela">Queso cremoso, rúcula y pesto en pan
+                            de
+                            ciabatta.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sandwiches_lomito">Sándwich de lomito ahumado</h4>
+                            <span class="plato__precio" id="p-sandwiches-lomito"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_sandwiches_lomito">Queso cremoso, rúcula y tomate seco en
+                            pan de
+                            ciabatta.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sandwiches_vegetales">Sándwich de vegetales grillados
+                            </h4>
+                            <span class="plato__precio" id="p-sandwiches-vegetales"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_sandwiches_vegetales">Queso cremoso, rúcula y tomate seco en
+                            pan
+                            de ciabatta.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sandwiches_vitel_tone">Sándwich de vitel toné</h4>
+                            <span class="plato__precio" id="p-sandwiches-vitel-tone"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_sandwiches_vitel_tone">Peceto, salsa, huevo y alcaparras
+                            fritas
+                            en pan de ciabatta.</p>
+                    </li>
+                </ul>
+
+                <h3 class="carta__subtitulo" id="r-hamburguesas" data-i18n="sec_hamburguesas">Hamburguesas</h3>
+                <p class="carta__nota" data-i18n="hamb_nota">Todas acompañadas de papas fritas.</p>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Hamburguesa 1978</h4>
+                            <span class="plato__precio" id="p-hamburguesas-1978"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_hamburguesas_1978">En pan de papa, blend de carnes,
+                            provoleta,
+                            cebolla caramelizada y morrón asado.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Hamburguesa 1986</h4>
+                            <span class="plato__precio" id="p-hamburguesas-1986"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_hamburguesas_1986">En pan de papa, salsa tasty, cebolla
+                            caramelizada, mermelada de panceta, queso pategrás y cebolla crispy.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Hamburguesa 2022</h4>
+                            <span class="plato__precio" id="p-hamburguesas-2022"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_hamburguesas_2022">En pan de papa, lechuga, tomate, jamón y
+                            muzzarella con mayonesa Bow.</p>
+                    </li>
+                </ul>
+
+
+                <h3 class="carta__subtitulo" id="r-postres" data-i18n="sec_postres">Postres</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_postres_flan">Flan casero de vainilla</h4>
+                            <span class="plato__precio" id="p-postres-flan"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_postres_volcan">Volcán de chocolate con helado</h4>
+                            <span class="plato__precio" id="p-postres-volcan"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_postres_fruta_asada">Fruta asada, dacquoise de
+                                almendras
+                                y helado</h4>
+                            <span class="plato__precio" id="p-postres-fruta-asada"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_postres_helados">Helados</h4>
+                            <span class="plato__precio" id="p-postres-helados"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_postres_brownie">Brownie con helado</h4>
+                            <span class="plato__precio" id="p-postres-brownie"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Tiramisú</h4>
+                            <span class="plato__precio" id="p-postres-tiramisu"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_postres_don_pedro">Reversión de Don Pedro</h4>
+                            <span class="plato__precio" id="p-postres-don-pedro"></span>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <!--
+  VARIANTE CON FOTO: para un plato con foto, reemplazá su <li class="plato"> por esto
+  (el id del precio y los data-i18n se mantienen igual).
+
+  <li class="plato plato--foto">
+    <figure class="plato__foto">
+      <img src="img/carta/gnocchi.webp" alt="Gnocchi de papas con trilogía de tomates y albahaca"
+           width="400" height="400" loading="lazy" decoding="async">
+    </figure>
+    <div class="plato__cuerpo">
+      <div class="plato__linea">
+        <h4 class="plato__nombre">Gnocchi de papas</h4>
+        <span class="plato__precio" id="p-pastas-gnocchi"></span>
+      </div>
+      <p class="plato__desc" data-i18n="d_pastas_gnocchi">Con trilogía de tomates y albahaca.</p>
+    </div>
+  </li>
+-->
+
+        <section class="panel" id="bebidas" aria-labelledby="bebidas-titulo">
+            <div class="panel__scroll">
+
+                <header class="panel__cabecera">
+                    <h2 class="panel__titulo" id="bebidas-titulo" data-i18n="bebidas">Bebidas</h2>
+                    <span class="panel__filete" aria-hidden="true"></span>
+                </header>
+
+                <div class="categorias-wrapper">
+                    <button type="button" class="carrusel-btn" aria-label="Anterior">&#171;</button>
+                    <div class="categorias-carrusel">
+                        <a href="#b-sinalcohol" class="categoria-card"><i class="ti ti-lemon"></i><span
+                                data-i18n="sec_sinalcohol">Sin alcohol</span></a>
+                        <a href="#b-cervezas" class="categoria-card"><i class="ti ti-beer"></i><span
+                                data-i18n="sec_cervezas">Cervezas</span></a>
+                        <a href="#b-cocteleria" class="categoria-card"><i class="ti ti-glass-cocktail"></i><span
+                                data-i18n="sec_cocteleria">Coctelería</span></a>
+                        <a href="#b-vinos" class="categoria-card"><i class="ti ti-glass-full"></i><span
+                                data-i18n="sec_vinos">Vinos</span></a>
+                        <a href="#b-espumantes" class="categoria-card"><i class="ti ti-bottle"></i><span
+                                data-i18n="sec_espumantes">Espumantes</span></a>
+                    </div>
+                    <button type="button" class="carrusel-btn" aria-label="Siguiente">&#187;</button>
+                </div>
+
+                <h3 class="carta__subtitulo" id="b-sinalcohol" data-i18n="sec_sinalcohol">Sin alcohol</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_agua">Agua con o sin gas</h4>
+                            <span class="plato__precio" id="p-sinalcohol-agua"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_agua_saborizada">Agua saborizada</h4>
+                            <span class="plato__precio" id="p-sinalcohol-agua-saborizada"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_gaseosa">Gaseosa línea Coca-Cola</h4>
+                            <span class="plato__precio" id="p-sinalcohol-gaseosa"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_exprimido">Exprimido de naranja</h4>
+                            <span class="plato__precio" id="p-sinalcohol-exprimido"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_pomelada">Pomelada (jarra)</h4>
+                            <span class="plato__precio" id="p-sinalcohol-pomelada"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_licuados">Licuados</h4>
+                            <span class="plato__precio" id="p-sinalcohol-licuados"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limonada_menta">Limonada de menta y
+                                jengibre
+                                (1 L)</h4>
+                            <span class="plato__precio" id="p-sinalcohol-limonada-menta"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limonada_maracuya">Limonada de maracuyá (1
+                                L)
+                            </h4>
+                            <span class="plato__precio" id="p-sinalcohol-limonada-maracuya"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limonada_frutos_rojos">Limonada con frutos
+                                rojos (1 L)</h4>
+                            <span class="plato__precio" id="p-sinalcohol-limonada-frutos-rojos"></span>
+                        </div>
+                    </li>
+                </ul>
+
+                <h3 class="carta__subtitulo" id="b-cervezas" data-i18n="sec_cervezas">Cervezas</h3>
+                <ul class="carta__bloque">
+                    <li class="fila">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_cervezas_stella_330">Stella botella 330 ml</h4><span
+                                class="plato__precio" id="p-cervezas-stella-330"></span>
+                        </div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_cervezas_stella_sa">Stella botella s/a</h4><span
+                                class="plato__precio" id="p-cervezas-stella-sa"></span>
+                        </div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_cervezas_stella_noire">Stella Artois Noire (lata)
+                            </h4>
+                            <span class="plato__precio" id="p-cervezas-stella-noire"></span>
+                        </div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_cervezas_corona_330">Corona botella 330 ml</h4><span
+                                class="plato__precio" id="p-cervezas-corona-330"></span>
+                        </div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_cervezas_corona_sa">Corona botella s/a</h4><span
+                                class="plato__precio" id="p-cervezas-corona-sa"></span>
+                        </div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_cervezas_stella_pure_gold">Stella Pure Gold sin TACC
+                            </h4>
+                            <span class="plato__precio" id="p-cervezas-stella-pure-gold"></span>
+                        </div>
+                    </li>
+                </ul>
+
+                <h3 class="carta__subtitulo" id="b-cocteleria" data-i18n="sec_cocteleria">Coctelería</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Aperol Spritz</h4>
+                            <span class="plato__precio" id="p-cocteleria-aperol-spritz"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_aperol_spritz">Aperol, espumante.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Campari Tonic</h4>
+                            <span class="plato__precio" id="p-cocteleria-campari-tonic"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_campari_tonic">Campari, tónica.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Ramazzotti Spritz</h4>
+                            <span class="plato__precio" id="p-cocteleria-ramazzotti-spritz"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_spritz">Ramazzotti, espumante, soda,
+                            naranja.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Garibaldi</h4>
+                            <span class="plato__precio" id="p-cocteleria-garibaldi"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_garibaldi">Campari, jugo de naranja.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Cynar</h4>
+                            <span class="plato__precio" id="p-cocteleria-cynar"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_cynar">Cynar, gaseosa de pomelo.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Martini</h4>
+                            <span class="plato__precio" id="p-cocteleria-martini"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_martini">Gin, vermouth seco, limón, aceituna.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Gin Tonic</h4>
+                            <span class="plato__precio" id="p-cocteleria-gin-tonic"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_gin_tonic">Bosque o Beefeater.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Cynar Julep</h4>
+                            <span class="plato__precio" id="p-cocteleria-cynar-julep"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_cynar_julep">Cynar, gaseosa de pomelo, almíbar,
+                            menta.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Fernet con Coca Cola</h4>
+                            <span class="plato__precio" id="p-cocteleria-fernet-coca"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_fernet_coca">Fernet Branca, Coca-Cola.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Cuba Libre</h4>
+                            <span class="plato__precio" id="p-cocteleria-cuba-libre"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_cuba_libre">Ron, Coca-Cola, lima.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Mojito</h4>
+                            <span class="plato__precio" id="p-cocteleria-mojito"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_mojito">Ron, limón, almíbar, menta, soda.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Negroni</h4>
+                            <span class="plato__precio" id="p-cocteleria-negroni"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_negroni">Gin, Campari, vermouth rosso.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Caipirinha</h4>
+                            <span class="plato__precio" id="p-cocteleria-caipirinha"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_caipirinha">Cachaça, lima, azúcar.</p>
+                    </li>
+                </ul>
+
+                <h3 class="carta__subtitulo" id="b-vinos" data-i18n="sec_vinos">Vinos</h3>
+                <h4 class="carta__grupo">Malbec</h4>
+                <ul class="carta__bloque">
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Rutini</span><span class="plato__precio"
+                                id="p-vinos-malbec-rutini"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Encuentro</span><span
+                                class="plato__precio" id="p-vinos-malbec-encuentro"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Escorihuela Gascón</span><span
+                                class="plato__precio" id="p-vinos-malbec-escorihuela-gascon"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Terrazas Reserva</span><span
+                                class="plato__precio" id="p-vinos-malbec-terrazas-reserva"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Trumpeter Reserva</span><span
+                                class="plato__precio" id="p-vinos-malbec-trumpeter-reserva"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Trumpeter</span><span
+                                class="plato__precio" id="p-vinos-malbec-trumpeter"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Familia Gascón Roble</span><span
+                                class="plato__precio" id="p-vinos-malbec-familia-gascon-roble"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Kilka</span><span class="plato__precio"
+                                id="p-vinos-malbec-kilka"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Altos del Plata</span><span
+                                class="plato__precio" id="p-vinos-malbec-altos-del-plata"></span></div>
+                    </li>
+                </ul>
+                <h4 class="carta__grupo">Pinot Noir</h4>
+                <ul class="carta__bloque">
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Escorihuela Gascón</span><span
+                                class="plato__precio" id="p-vinos-pinot-noir-escorihuela-gascon"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Salentein Reserve</span><span
+                                class="plato__precio" id="p-vinos-pinot-noir-salentein-reserve"></span></div>
+                    </li>
+                </ul>
+                <h4 class="carta__grupo">Chardonnay</h4>
+                <ul class="carta__bloque">
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Trumpeter Reserva</span><span
+                                class="plato__precio" id="p-vinos-chardonnay-trumpeter-reserva"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Familia Gascón Roble</span><span
+                                class="plato__precio" id="p-vinos-chardonnay-familia-gascon-roble"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Altos del Plata</span><span
+                                class="plato__precio" id="p-vinos-chardonnay-altos-del-plata"></span></div>
+                    </li>
+                </ul>
+                <h4 class="carta__grupo">Cabernet Franc</h4>
+                <ul class="carta__bloque">
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Terrazas Reserva</span><span
+                                class="plato__precio" id="p-vinos-cabernet-franc-terrazas-reserva"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Numina</span><span class="plato__precio"
+                                id="p-vinos-cabernet-franc-numina"></span></div>
+                    </li>
+                </ul>
+                <h4 class="carta__grupo">Cabernet Sauvignon</h4>
+                <ul class="carta__bloque">
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Rutini</span><span class="plato__precio"
+                                id="p-vinos-cabernet-sauvignon-rutini"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Trumpeter</span><span
+                                class="plato__precio" id="p-vinos-cabernet-sauvignon-trumpeter"></span></div>
+                    </li>
+                </ul>
+                <h4 class="carta__grupo">Rosé</h4>
+                <ul class="carta__bloque">
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Trumpeter Reserve Malbec</span><span
+                                class="plato__precio" id="p-vinos-rose-trumpeter-reserve-malbec"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Terrazas Malbec</span><span
+                                class="plato__precio" id="p-vinos-rose-terrazas-malbec"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Salentein Reserve Syrah</span><span
+                                class="plato__precio" id="p-vinos-rose-salentein-reserve-syrah"></span></div>
+                    </li>
+                </ul>
+                <h4 class="carta__grupo">Sauvignon Blanc</h4>
+                <ul class="carta__bloque">
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Rutini</span><span class="plato__precio"
+                                id="p-vinos-sauvignon-blanc-rutini"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Terrazas Reserva</span><span
+                                class="plato__precio" id="p-vinos-sauvignon-blanc-terrazas-reserva"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Trumpeter</span><span
+                                class="plato__precio" id="p-vinos-sauvignon-blanc-trumpeter"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Kilka</span><span class="plato__precio"
+                                id="p-vinos-sauvignon-blanc-kilka"></span></div>
+                    </li>
+                </ul>
+
+                <h3 class="carta__subtitulo" id="b-espumantes" data-i18n="sec_espumantes">Espumantes</h3>
+                <h4 class="carta__grupo">Chandon</h4>
+                <ul class="carta__bloque">
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Baron B Brut Rosé – Cuvée
+                                Millésimée</span><span class="plato__precio"
+                                id="p-espumantes-chandon-baron-b-rose"></span>
+                        </div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Baron B Extra Brut – Cuvée
+                                Spéciale</span><span class="plato__precio"
+                                id="p-espumantes-chandon-baron-b-extra-brut"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Chandon Cuvée Brut Nature</span><span
+                                class="plato__precio" id="p-espumantes-chandon-cuvee-brut-nature"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Chandon Rosé</span><span
+                                class="plato__precio" id="p-espumantes-chandon-rose"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Chandon Extra Brut</span><span
+                                class="plato__precio" id="p-espumantes-chandon-extra-brut"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Chandon Extra Brut 187</span><span
+                                class="plato__precio" id="p-espumantes-chandon-extra-brut-mini"></span></div>
+                    </li>
+                </ul>
+                <h4 class="carta__grupo">Salentein</h4>
+                <ul class="carta__bloque">
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Brut Nature</span><span
+                                class="plato__precio" id="p-espumantes-salentein-brut-nature"></span></div>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <a href="#" data-reserva="auto" class="reservar-flotante">
+            <i class="ti ti-calendar"></i>
+            <span data-i18n="reservar">Reservar</span>
+        </a>
+    </main>
+
+    <main id="rooftop" class="general-wrapper">
+        <!-- SECCION RESTAURANT -->
+        <section class="panel" id="restaurant-rooftopo" aria-labelledby="restaurant-titulo">
+            <div class="panel__scroll">
+
+                <header class="panel__cabecera">
+                    <h2 class="panel__titulo" id="restaurant-titulo" data-i18n="restaurant">Rooftop Bar</h2>
+                    <span class="panel__filete" aria-hidden="true"></span>
+                </header>
+
+                <!-- Carrusel de categorías de Rooftop Bar -->
+                <div class="categorias-wrapper">
+                    <button type="button" class="carrusel-btn carrusel-btn--prev" aria-label="Anterior">«</button>
+                    <div class="categorias-carrusel">
+                        <a href="#r-tablas" class="categoria-card"><i class="ti ti-table"></i><span
+                                data-i18n="sec_tablas">Tablas</span></a>
+                        <a href="#r-pasteleria" class="categoria-card"><i class="ti ti-cake"></i><span
+                                data-i18n="sec_pasteleria">Pastelería</span></a>
+                        <a href="#r-empanadas" class="categoria-card"><i class="ti ti-cheese"></i><span
+                                data-i18n="sec_empanadas">Empanadas</span></a>
+                        <a href="#r-pizzas" class="categoria-card"><i class="ti ti-pizza"></i><span
+                                data-i18n="sec_pizzas">Pizzas</span></a>
+                        <a href="#r-sandwiches" class="categoria-card"><i class="ti ti-bread"></i><span
+                                data-i18n="sec_sandwiches">Sándwiches</span></a>
+                        <a href="#r-frituras" class="categoria-card"><i class="ti ti-fries"></i><span
+                                data-i18n="sec_frituras">Frituras</span></a>
+                        <a href="#r-vegetarianos" class="categoria-card"><i class="ti ti-leaf"></i><span
+                                data-i18n="sec_vegetarianos">Vegetarianos</span></a>
+                        <a href="#r-sintacc" class="categoria-card"><i class="ti ti-grain-off"></i><span
+                                data-i18n="sec_sintacc">Sin TACC</span></a>
+                        <a href="#r-postres" class="categoria-card"><i class="ti ti-ice-cream"></i><span
+                                data-i18n="sec_postres">Postres</span></a>
+                    </div>
+                    <button type="button" class="carrusel-btn carrusel-btn--next" aria-label="Siguiente">»</button>
+                </div>
+
+                <!-- TABLAS -->
+                <h3 class="carta__subtitulo" id="r-tablas" data-i18n="sec_tablas">Tablas</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Sunset in the sky</h4>
+                            <span class="plato__precio" id="p-tablas-sunset"></span>
+                        </div>
+                        <p class="plato__desc">Selección de nuestros quesos premium, selección de nuestros fiambres
+                            premium, olivas, cherrys, pickles.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Rooftop sun</h4>
+                            <span class="plato__precio" id="p-tablas-rooftop-sun"></span>
+                        </div>
+                        <p class="plato__desc">Selección de nuestros quesos premium, selección de nuestros fiambres
+                            premium, mini empanaditas, rabas, papas rústicas, olivas, cherrys y pickles.</p>
+                    </li>
+                </ul>
+
+                <!-- EMPANADAS -->
+                <h3 class="carta__subtitulo" id="r-empanadas" data-i18n="sec_empanadas">Nuestras empanadas</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Jamón y queso</h4><span class="plato__precio"
+                                id="p-empanadas-jyq"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Carne estilo criolla</h4><span class="plato__precio"
+                                id="p-empanadas-carne"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Verdura</h4><span class="plato__precio"
+                                id="p-empanadas-verdura"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Pollo al verdeo</h4><span class="plato__precio"
+                                id="p-empanadas-pollo"></span>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- PIZZAS -->
+                <h3 class="carta__subtitulo" id="r-pizzas" data-i18n="sec_pizzas">Nuestras pizzas individuales</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Napolitana</h4><span class="plato__precio"
+                                id="p-pizzas-napolitana"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Especial</h4><span class="plato__precio"
+                                id="p-pizzas-especial"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Rúcula y Jamón crudo</h4><span class="plato__precio"
+                                id="p-pizzas-rucula-crudo"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Bondiola</h4><span class="plato__precio"
+                                id="p-pizzas-bondiola"></span>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- SÁNDWICHES -->
+                <h3 class="carta__subtitulo" id="r-sandwiches" data-i18n="sec_sandwiches">Sándwiches</h3>
+
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Tostado clásico</h4><span class="plato__precio"
+                                id="p-sandwiches-tostado-clasico"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Carlitos clásico</h4><span class="plato__precio"
+                                id="p-sandwiches-carlitos-clasico"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Tostado de pollo al verdeo</h4><span class="plato__precio"
+                                id="p-sandwiches-tostado-pollo"></span>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Vegetales grillados, tomates confitados, rúcula y crema de queso
+                            </h4><span class="plato__precio" id="p-sandwiches-premium-vegetales"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Mortadela, crema de queso, rúcula y pesto</h4><span
+                                class="plato__precio" id="p-sandwiches-premium-mortadela"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Lomito, crema de queso, tomates confitado y rúcula</h4><span
+                                class="plato__precio" id="p-sandwiches-premium-lomito"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Jamón crudo, queso grouller y rúcula</h4><span
+                                class="plato__precio" id="p-sandwiches-premium-crudo"></span>
+                        </div>
+                    </li>
+                </ul>
+
+                <span class="carta__eslogan">Sugerencia del chef</span>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Degustación de hamburguesitas con papas cuñas saborizadas</h4>
+                            <span class="plato__precio" id="p-sandwiches-chef-hamburguesitas"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Sándwich de pan del chef, bondiola braceada y papas cuñas
+                                saborizadas</h4><span class="plato__precio" id="p-sandwiches-chef-bondiola"></span>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- FRITURAS -->
+                <h3 class="carta__subtitulo" id="r-frituras" data-i18n="sec_frituras">Frituras</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Papas clásicas</h4><span class="plato__precio"
+                                id="p-frituras-papas-clasicas"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Papas con cheddar y verdeo</h4><span class="plato__precio"
+                                id="p-frituras-papas-cheddar"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Pollo crispy</h4><span class="plato__precio"
+                                id="p-frituras-pollo-crispy"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Rabas</h4><span class="plato__precio"
+                                id="p-frituras-rabas"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Langostinos rebozados con panko</h4><span class="plato__precio"
+                                id="p-frituras-langostinos"></span>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- VEGETARIANOS -->
+                <h3 class="carta__subtitulo" id="r-vegetarianos" data-i18n="sec_vegetarianos">Vegetarianos</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Arancinis de calabazas y muzzarela</h4>
+                            <span class="plato__precio" id="p-vegetarianos-arancinis"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Pizza napolitana</h4>
+                            <span class="plato__precio" id="p-vegetarianos-napolitana"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Pizza 4 quesos</h4>
+                            <span class="plato__precio" id="p-vegetarianos-4quesos"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Sándwich sugerencia del chef</h4>
+                            <span class="plato__precio" id="p-vegetarianos-sandwich-chef"></span>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- SIN TACC -->
+                <h3 class="carta__subtitulo" id="r-sintacc" data-i18n="sec_sintacc">Sin TACC</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Pizzas</h4>
+                            <span class="plato__precio" id="p-sintacc-pizzas"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Empanadas</h4>
+                            <span class="plato__precio" id="p-sintacc-empanadas"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Sándwiches</h4>
+                            <span class="plato__precio" id="p-sintacc-sandwiches"></span>
+                        </div>
+                    </li>
+                </ul>
+
+
+                <!-- PASTELERÍA -->
+                <h3 class="carta__subtitulo" id="r-pasteleria" data-i18n="sec_pasteleria">Nuestra pastelería</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Budín de limón y semillas de amapolas</h4><span
+                                class="plato__precio" id="p-pasteleria-budin-limon"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Budin tentación de chocolate</h4><span class="plato__precio"
+                                id="p-pasteleria-budin-chocolate"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Mini lemon pie</h4><span class="plato__precio"
+                                id="p-pasteleria-lemon-pie"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Red velvet</h4><span class="plato__precio"
+                                id="p-pasteleria-red-velvet"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Croissant de pastelera de naranja y chantilly</h4><span
+                                class="plato__precio" id="p-pasteleria-croissant-naranja"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Croissant de dulce de leche</h4><span class="plato__precio"
+                                id="p-pasteleria-croissant-ddl"></span>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- POSTRES -->
+                <h3 class="carta__subtitulo" id="r-postres" data-i18n="sec_postres">Postres</h3>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Flan clásico</h4>
+                            <span class="plato__precio" id="pr-postres-flan"></span>
+                        </div>
+                        <p class="plato__desc">Opcional dulce de leche o chantilly.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Dascua de frutas asadas</h4>
+                            <span class="plato__precio" id="p-postres-dascua"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Brownie con helado</h4>
+                            <span class="plato__precio" id="pr-postres-brownie"></span>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- SUGERENCIAS DEL CHEF (DENTRO DE POSTRES) -->
+                <span class="carta__eslogan">Sugerencias del chef - River view</span>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Degustación de mousses</h4>
+                            <span class="plato__precio" id="p-postres-chef-mousses"></span>
+                        </div>
+                    </li>
+                </ul>
+
+                <span class="carta__eslogan">Sugerencias del chef - Island front</span>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Esfera de chocolate helada, sable de chocolate y ganache</h4>
+                            <span class="plato__precio" id="p-postres-chef-esfera-chocolate"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Esfera de Frutos rojos, sable de vainilla y ganache</h4>
+                            <span class="plato__precio" id="p-postres-chef-esfera-frutos"></span>
+                        </div>
+                    </li>
+                </ul>
+        </section>
+        <section class="panel" id="restaurant-rooftopo" aria-labelledby="restaurant-titulo">
+            <div class="panel__scroll">
+
+                <header class="panel__cabecera">
+                    <h2 class="panel__titulo" id="restaurant-titulo" data-i18n="restaurant">Rooftop Bar</h2>
+                    <span class="panel__filete" aria-hidden="true"></span>
+                </header>
+
+                <!-- Carrusel de categorías de Rooftop Bar -->
+                <div class="categorias-wrapper">
+                    <button type="button" class="carrusel-btn carrusel-btn--prev" aria-label="Anterior">«</button>
+                    <div class="categorias-carrusel">
+                        <a href="#r-autor" class="categoria-card"><i class="ti ti-table"></i><span
+                                data-i18n="sec_tablas">Tragos de autor</span></a>
+                        <a href="#r-aper" class="categoria-card"><i class="ti ti-cake"></i><span
+                                data-i18n="sec_pasteleria">Aperitivos</span></a>
+                        <a href="#r-clasyinter" class="categoria-card"><i class="ti ti-cheese"></i><span
+                                data-i18n="sec_empanadas">Clasicos & internacionales</span></a>
+                        <a href="#r-elaborado" class="categoria-card"><i class="ti ti-pizza"></i><span
+                                data-i18n="sec_pizzas">Elaborado</span></a>
+                        <a href="#r-tonicos" class="categoria-card"><i class="ti ti-bread"></i><span
+                                data-i18n="sec_sandwiches">Tonica</span></a>
+                    </div>
+                    <button type="button" class="carrusel-btn carrusel-btn--next" aria-label="Siguiente">»</button>
+                </div>
+
+                <h3 class="carta__subtitulo" id="b-cocteleria" data-i18n="sec_cocteleria">Coctelería</h3>
+
+<h4 class="carta__grupo" id=""r-autor"" data-i18n="grp_cocteleria_tragos_autor">Tragos de autor</h4>
+<ul class="carta__lista">
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Red Sunset</h4>
+            <span class="plato__precio" id="p-cocteleria-red-sunset"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_red_sunset">Sky, frutos rojos, almíbar de naranja, jugo de lima y gaseosa de pomelo.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Symphony</h4>
+            <span class="plato__precio" id="p-cocteleria-symphony"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_symphony">Rosso, almíbar de naranja y jugo de naranja.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Summer Terrace</h4>
+            <span class="plato__precio" id="p-cocteleria-summer-terrace"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_summer_terrace">Gin, reducción de frutos rojos, jugo de lima, espumante y ananá.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Bill Beery</h4>
+            <span class="plato__precio" id="p-cocteleria-bill-beery"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_bill_beery">Jameson, almíbar de naranja, arándanos y jugo de lima.</p>
+    </li>
+</ul>
+
+<h4 class="carta__grupo" id=""r-aper" data-i18n="grp_cocteleria_aperitivos">Aperitivos</h4>
+<ul class="carta__lista">
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Ramazzotti Spritz</h4>
+            <span class="plato__precio" id="p-cocteleria-ramazzotti-spritz"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_spritz">Ramazzotti, espumante, soda y rodaja de naranja.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Cynar pomelo</h4>
+            <span class="plato__precio" id="p-cocteleria-cynar"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_cynar">Cynar y gaseosa de pomelo.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Campari con pomelo</h4>
+            <span class="plato__precio" id="p-cocteleria-campari-pomelo"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_campari_pomelo">Campari y gaseosa de pomelo.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Garibaldi</h4>
+            <span class="plato__precio" id="p-cocteleria-garibaldi"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_garibaldi">Campari y jugo de naranja.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Fernet</h4>
+            <span class="plato__precio" id="p-cocteleria-fernet-coca"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_fernet_coca">Fernet y Coca-Cola.</p>
+    </li>
+</ul>
+
+<h4 class="carta__grupo" id="r-clasyinter" data-i18n="grp_cocteleria_clasicos">Clásicos e internacionales</h4>
+<ul class="carta__lista">
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Aperol Spritz</h4>
+            <span class="plato__precio" id="p-cocteleria-aperol-spritz"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_aperol_spritz">Aperol, espumante, soda y rodaja de naranja.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Bramble</h4>
+            <span class="plato__precio" id="p-cocteleria-bramble"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_bramble">Gin, jugo de lima y reducción de frutos rojos.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Cuba Libre</h4>
+            <span class="plato__precio" id="p-cocteleria-cuba-libre"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_cuba_libre">Ron, Coca-Cola y rodaja de lima.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Negroni</h4>
+            <span class="plato__precio" id="p-cocteleria-negroni"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_negroni">Gin, rosso, Campari y rodaja de naranja.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Boulevardier</h4>
+            <span class="plato__precio" id="p-cocteleria-boulevardier"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_boulevardier">Whisky, rosso, Campari y rodaja de naranja.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Old Fashioned</h4>
+            <span class="plato__precio" id="p-cocteleria-old-fashioned"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_old_fashioned">Whisky, bitter Angostura y cereza.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Penicillin</h4>
+            <span class="plato__precio" id="p-cocteleria-penicillin"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_penicillin">Chivas, jugo de lima, miel y jengibre.</p>
+    </li>
+</ul>
+
+<h4 class="carta__grupo" id="r-elaborado" data-i18n="grp_cocteleria_elaborados">Elaborados</h4>
+<ul class="carta__lista">
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Tinto Verano</h4>
+            <span class="plato__precio" id="p-cocteleria-tinto-verano"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_tinto_verano">Vino Malbec, jugo de limón, almíbar y frutos rojos.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Maracuyá Spritz</h4>
+            <span class="plato__precio" id="p-cocteleria-maracuya-spritz"></span>
+        </div>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Mojito</h4>
+            <span class="plato__precio" id="p-cocteleria-mojito"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_mojito">Lima, menta, almíbar y soda.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Passion Mojito</h4>
+            <span class="plato__precio" id="p-cocteleria-passion-mojito"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_passion_mojito">Lima, menta, almíbar, maracuyá y soda.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Cynar Julep</h4>
+            <span class="plato__precio" id="p-cocteleria-cynar-julep"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_cynar_julep">Menta, lima, almíbar y gaseosa de pomelo.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Caipiroska clásica</h4>
+            <span class="plato__precio" id="p-cocteleria-caipiroska-clasica"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_caipiroska_clasica">Lima, azúcar y vodka.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Caipiroska de maracuyá</h4>
+            <span class="plato__precio" id="p-cocteleria-caipiroska-maracuya"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_caipiroska_maracuya">Maracuyá, lima, azúcar y vodka.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Caipi de frutos rojos</h4>
+            <span class="plato__precio" id="p-cocteleria-caipi-frutos-rojos"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_caipi_frutos_rojos">Frutos rojos, lima, azúcar y vodka.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Caipirinha</h4>
+            <span class="plato__precio" id="p-cocteleria-caipirinha"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_caipirinha">Lima, azúcar y cachaça.</p>
+    </li>
+</ul>
+
+<h4 class="carta__grupo" id="r-tonicos" data-i18n="grp_cocteleria_tonicos">Tónicos</h4>
+<ul class="carta__lista">
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Ramazzotti Tonic</h4>
+            <span class="plato__precio" id="p-cocteleria-ramazzotti-tonic"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_tonic">Ramazzotti, tónica y rodaja de naranja.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Gin Beefeater</h4>
+            <span class="plato__precio" id="p-cocteleria-gin-beefeater"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_gin_beefeater">Gin Beefeater, fruta a elección y tónica.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Beefeater del Bosque</h4>
+            <span class="plato__precio" id="p-cocteleria-beefeater-bosque"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_beefeater_bosque">Gin Beefeater, frutos rojos y tónica.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Beefeater Pink</h4>
+            <span class="plato__precio" id="p-cocteleria-beefeater-pink"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_beefeater_pink">Beefeater Pink, frutillas y tónica.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Passion &amp; Tonic</h4>
+            <span class="plato__precio" id="p-cocteleria-passion-tonic"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_passion_tonic">Gin Beefeater, maracuyá y tónica.</p>
+    </li>
+    <li class="plato">
+        <div class="plato__linea">
+            <h4 class="plato__nombre">Campari Tonic</h4>
+            <span class="plato__precio" id="p-cocteleria-campari-tonic"></span>
+        </div>
+        <p class="plato__desc" data-i18n="d_cocteleria_campari_tonic">Campari, tónica y rodaja de limón.</p>
+    </li>
+</ul>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+     MODAL DE RESERVAS — compartido (index.html y bown.html)
+     Va como hijo directo de <body>, FUERA de cualquier <main>.
+     Sin onclick: lo maneja js/reservas.js
+     ============================================================ -->
+    <div class="modal-overlay" id="modal-reserva-overlay">
+        <div class="modal">
+            <button type="button" class="modal-close" data-reserva-cerrar aria-label="Cerrar">✕</button>
+            <div class="reserva__logo">
+                <img src="img/logobow.png" alt="Logo BOW" class="main-logo">
+            </div>
+            <h2 class="modal-titulo" id="reserva-titulo">RESERVAR</h2>
+
+            <!-- PASO 1: formulario -->
+            <div class="modal-form" id="reserva-paso-form">
+                <div class="form-group">
+                    <label for="reserva-nombre">Tu nombre</label>
+                    <input type="text" id="reserva-nombre" placeholder="Nombre y apellido">
+                </div>
+                <div class="form-group">
+                    <label for="reserva-fecha">Fecha</label>
+                    <input type="date" id="reserva-fecha">
+                </div>
+                <div class="form-group">
+                    <label for="reserva-franja">Turno</label>
+                    <select id="reserva-franja">
+                        <option value="" disabled selected>Primero elegí la fecha</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reserva-hora">Horario</label>
+                    <select id="reserva-hora">
+                        <option value="" disabled selected>Elegí un turno</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reserva-adultos">Adultos</label>
+                        <input type="number" id="reserva-adultos" placeholder="0" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="reserva-ninos">Niños</label>
+                        <input type="number" id="reserva-ninos" placeholder="0" min="0">
+                    </div>
+                </div>
+                <div class="form-group" id="reserva-sector-bloque">
+                    <label>Sector</label>
+                    <div class="sector-btns">
+                        <button type="button" class="sector-btn activo" data-sector="Adentro">
+                            <i class="ti ti-building"></i> Adentro
+                        </button>
+                        <button type="button" class="sector-btn" data-sector="Afuera">
+                            <i class="ti ti-tree"></i> Afuera
+                        </button>
+                    </div>
+                </div>
+                <p class="modal-error" id="reserva-error" role="alert" hidden></p>
+                <button type="button" class="modal-btn" id="reserva-enviar">
+                    CONTINUAR <i class="ti ti-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- PASO 2: aviso antes de ir a WhatsApp -->
+            <div class="modal-form" id="reserva-paso-aviso" hidden>
+                <div class="reserva-resumen" id="reserva-resumen"></div>
+                <p class="modal-aviso">
+                    Tu horario está sujeto a confirmación según la disponibilidad.
+                    Te respondemos por WhatsApp para confirmarlo.
+                </p>
+                <button type="button" class="modal-btn" id="reserva-whatsapp">
+                    <i class="ti ti-brand-whatsapp"></i> CONTINUAR A WHATSAPP
+                </button>
+                <button type="button" class="modal-volver" data-reserva-volver>
+                    <i class="ti ti-arrow-left"></i> Volver
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main id="eventos" class="general-wrapper">
+        <!-- SECCION DESYUNO MERIENDA -->
+    </main>
+
+
+
+    <script src="../js/idiomas.js"></script>
+    <script src="../js/reservas.js"></script>
+    <script src="../js/horarios.js"></script>
+    <script src="../js/bow.js"></script>
+    <script src="../js/precios.js" defer></script>
+    <script src="../js/idioma-carta.js"></script>
+    <script src="../js/comun.js"></script>
+</body>
+
+</html>
