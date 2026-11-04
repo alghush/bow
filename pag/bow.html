@@ -57,10 +57,10 @@
                         <i class="ti ti-chevron-down"></i>
                     </label>
                     <ul class="nav__sub">
-                        <li><a href="#bow-cafeteria"><span data-i18n="desayuno">Desayuno & Meriendas</span></a></li>
+                        <li><a href="#desayuno"><span data-i18n="desayuno">Desayuno & Meriendas</span></a></li>
                         <li><a href="#bow-ejecutivo"><span data-i18n="menu_dia">Menú del día</span></a></li>
-                        <li><a href="#bow-restaurant"><span data-i18n="restaurant">Restaurant</span></a></li>
-                        <li><a href="#bow-bebidas"><span data-i18n="bebidas">Bebidas</span></a></li>
+                        <li><a href="#restaurant"><span data-i18n="restaurant">Restaurant</span></a></li>
+                        <li><a href="#bebidas"><span data-i18n="bebidas">Bebidas</span></a></li>
                     </ul>
                 </li>
             </ul>
@@ -398,14 +398,57 @@
 
             </div>
         </section>
+        <section>
+            <div class="ejecutivo" id="bow-ejecutivo">
 
+                <div class="ejecutivo__cabecera">
+                    <h2 class="ejecutivo__titulo" id="ej-titulo" data-i18n="menu_dia">Menú del día</h2>
+                </div>
+
+                <!-- Plato del día: lo llena pintarEjecutivo() según el día de la semana -->
+                <div class="ejecutivo__destacado">
+                    <span class="ejecutivo__etiqueta" data-i18n="ej_plato_dia">Plato del día</span>
+                    <ul class="ejecutivo__hoy" id="ej-hoy"></ul>
+                </div>
+
+                <div class="ejecutivo__grilla">
+                    <div class="ejecutivo__bloque">
+                        <h3 class="ejecutivo__subtitulo" data-i18n="ej_tambien">También para elegir</h3>
+                        <ul id="ej-fijos"></ul>
+                    </div>
+
+                    <div class="ejecutivo__bloque ejecutivo__bloque--veggie" id="ej-veggie-bloque">
+                        <h3 class="ejecutivo__subtitulo">
+                            <i class="ti ti-leaf" aria-hidden="true"></i>
+                            <span data-i18n="ej_veggie">Opciones veggie</span>
+                        </h3>
+                        <ul id="ej-veggie"></ul>
+                    </div>
+                </div>
+
+                <!-- Precios: si el precio está vacío en la planilla, la píldora se oculta sola (CSS :has) -->
+                <div class="ejecutivo__precios">
+                    <p class="ejecutivo__precio">
+                        <i class="ti ti-armchair" aria-hidden="true"></i>
+                        <span data-i18n="ej_en_bow">En Bow</span>
+                        <strong class="ejecutivo__monto" id="p-ej-bow"></strong>
+                    </p>
+                    <p class="ejecutivo__precio">
+                        <i class="ti ti-motorbike" aria-hidden="true"></i>
+                        <span data-i18n="ej_delivery">Delivery</span>
+                        <strong class="ejecutivo__monto" id="p-ej-delivery"></strong>
+                    </p>
+                </div>
+
+            </div>
+        </section>
         <section class="panel" id="restaurant" aria-labelledby="restaurant-titulo">
             <div class="panel__scroll">
 
-                <header class="panel__cabecera">
+                <div class="panel__cabecera">
                     <h2 class="panel__titulo" id="restaurant-titulo" data-i18n="restaurant">Restaurant</h2>
                     <span class="panel__filete" aria-hidden="true"></span>
-                </header>
+                </div>
 
                 <!-- Carrusel de categorías: botones por CLASE (no por id) porque Bebidas va a tener otro carrusel -->
                 <div class="categorias-wrapper">
@@ -1209,8 +1252,8 @@
     </main>
 
     <main id="rooftop" class="general-wrapper">
-        <!-- SECCION BEBIDAS -->
-        <section class="panel" id="restaurant-rooftopo" aria-labelledby="restaurant-titulo">
+        <!-- SECCION RESTAURANT -->
+        <section class="panel" id="rooftop-comida" aria-label="Rooftop · Comida">
             <div class="panel__scroll">
 
                 <!-- Carrusel de categorías de Rooftop Bar -->
@@ -1231,7 +1274,7 @@
                                 data-i18n="sec_vegetarianos">Vegetarianos</span></a>
                         <a href="#r-sintacc" class="categoria-card"><i class="ti ti-wheat-off"></i><span
                                 data-i18n="sec_sintacc">Sin TACC</span></a>
-                                <a href="#r-pasteleria" class="categoria-card"><i class="ti ti-cake"></i><span
+                        <a href="#r-pasteleria" class="categoria-card"><i class="ti ti-cake"></i><span
                                 data-i18n="sec_pasteleria">Pastelería</span></a>
                         <a href="#rr-postres" class="categoria-card"><i class="ti ti-ice-cream"></i><span
                                 data-i18n="sec_postres">Postres</span></a>
@@ -1564,36 +1607,33 @@
                     </li>
                 </ul>
         </section>
-        <section class="panel" id="bebidas-rooftopo" aria-labelledby="bebidas-titulo">
+        <!-- SECCION BEBIDAS -->
+        <section class="panel" id="rooftop-bebida" aria-label="Rooftop · Bebida">
             <div class="panel__scroll">
                 <!-- Carrusel de categorías de Rooftop Bar -->
                 <div class="categorias-wrapper">
-                    <button type="button" class="carrusel-btn carrusel-btn--prev" aria-label="Anterior">«</button>
+                    <button type="button" class="carrusel-btn carrusel-btn--prev" aria-label="Anterior">&#171;</button>
                     <div class="categorias-carrusel">
-                        <a href="#r-sin-al" class="categoria-card"><i class="ti ti-lemon"></i><span
-                                data-i18n="<i class="ti ti-pencil"></i>Sin alcohol</span></a>
-                                <a href="#r-cerveza" class="categoria-card"><i class="ti ti-beer"></i><span
-                                data-i18n="<i class="ti ti-pencil"></i>Cervezas</span></a>
-                        <a href="#r-autor" class="categoria-card"><i class="ti ti-glass-full"></i><span
-                                data-i18n="<i class="ti ti-pencil"></i>Tragos de autor</span></a>
+                        <a href="#rb-sinalcohol" class="categoria-card"><i class="ti ti-lemon"></i><span
+                                data-i18n="sec_sinalcohol">Sin alcohol</span></a>
+                        <a href="#rb-cervezas" class="categoria-card"><i class="ti ti-beer"></i><span
+                                data-i18n="sec_cervezas">Cervezas</span></a>
+                        <a href="#r-autor" class="categoria-card"><i class="ti ti-star"></i><span
+                                data-i18n="grp_cocteleria_tragos_autor">Tragos de autor</span></a>
                         <a href="#r-aper" class="categoria-card"><i class="ti ti-barrel"></i><span
-                                data-i18n="sec_tragos-aperitivos">Aperitivos</span></a>
-                        <a href="#r-clasyinter" class="categoria-card"><i class="ti ti-cheese"></i><span
-                                data-i18n="ti ti-glass-cocktail">Clasicos & internacionales</span></a>
-                        <a href="#r-elaborado" class="categoria-card"><i class=""></i></i><span
-                                data-i18n="sec_tragos-elaborado">Elaborado</span></a>
+                                data-i18n="grp_cocteleria_aperitivos">Aperitivos</span></a>
+                        <a href="#r-clasyinter" class="categoria-card"><i class="ti ti-glass-cocktail"></i><span
+                                data-i18n="grp_cocteleria_clasicos">Clásicos</span></a>
+                        <a href="#r-elaborado" class="categoria-card"><i class="ti ti-flask"></i><span
+                                data-i18n="grp_cocteleria_elaborados">Elaborados</span></a>
                         <a href="#r-tonicos" class="categoria-card"><i class="ti ti-glass-gin"></i><span
-                                data-i18n="sec_tragos-tonicos">Tonicos</span></a>
-                                <a href="#r-vinos" class="categoria-card"><i class="ti ti-glass-full"></i><span
-                                data-i18n="sec_tragos-tonicos">Vinos</span></a>
-                                <a href="#r-vinos" class="categoria-card"><i class="ti ti-bottle"></i><span
-                                data-i18n="sec_tragos-tonicos">Espumantes</span></a>
-
+                                data-i18n="grp_cocteleria_tonicos">Tónicos</span></a>
                     </div>
-                    <button type="button" class="carrusel-btn carrusel-btn--next" aria-label="Siguiente">»</button>
+                    <button type="button" class="carrusel-btn carrusel-btn--next" aria-label="Siguiente">&#187;</button>
                 </div>
 
-                <h3 class="carta__subtitulo" id="b-sinalcohol" data-i18n="sec_sinalcohol">Sin alcohol</h3>
+
+                <h3 class="carta__subtitulo" id="rb-sinalcohol" data-i18n="sec_sinalcohol">Sin alcohol</h3>
                 <ul class="carta__lista">
                     <li class="plato">
                         <div class="plato__linea">
@@ -1621,15 +1661,31 @@
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_pomelada">Pomelada (jarra)</h4>
-                            <span class="plato__precio" id="pr-sinalcohol-pomelada"></span>
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limo">Vaso limonada</h4>
+                            <span class="plato__precio" id="pr-sinalcohol-limo"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_licuados">Licuados</h4>
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limo">Vaso limonada de frutos rojos</h4>
+                            <span class="plato__precio" id="pr-sinalcohol-limo-fr"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limo">Maracuya terrace</h4>
+                            <span class="plato__precio" id="pr-sinalcohol-limo-mr"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_spritz">reduccion de frutos rojos , maracuya y jugo de naranaja.</p>
+                    </li>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_licuados">Angel nova </h4>
                             <span class="plato__precio" id="pr-sinalcohol-licuados"></span>
                         </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_spritz">Te negro y hibicus , jugo de lima , almibar y soda</p>
+                    </li>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
@@ -1656,7 +1712,7 @@
                     </li>
                 </ul>
 
-                <h3 class="carta__subtitulo" id="b-cervezas" data-i18n="sec_cervezas">Cervezas</h3>
+                <h3 class="carta__subtitulo" id="rb-cervezas" data-i18n="sec_cervezas">Cervezas</h3>
                 <ul class="carta__bloque">
                     <li class="fila">
                         <div class="plato__linea">
@@ -1700,241 +1756,264 @@
 
                 <h3 class="carta__subtitulo" id="b-cocteleria" data-i18n="sec_cocteleria">Coctelería</h3>
 
-<h4 class="carta__grupo" id=""r-autor"" data-i18n="grp_cocteleria_tragos_autor">Tragos de autor</h4>
-<ul class="carta__lista">
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Red Sunset</h4>
-            <span class="plato__precio" id="p-cocteleria-red-sunset"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_red_sunset">Sky, frutos rojos, almíbar de naranja, jugo de lima y gaseosa de pomelo.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Symphony</h4>
-            <span class="plato__precio" id="p-cocteleria-symphony"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_symphony">Rosso, almíbar de naranja y jugo de naranja.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Summer Terrace</h4>
-            <span class="plato__precio" id="p-cocteleria-summer-terrace"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_summer_terrace">Gin, reducción de frutos rojos, jugo de lima, espumante y ananá.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Bill Beery</h4>
-            <span class="plato__precio" id="p-cocteleria-bill-beery"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_bill_beery">Jameson, almíbar de naranja, arándanos y jugo de lima.</p>
-    </li>
-</ul>
+                <h4 class="carta__grupo" id="r-autor" data-i18n="grp_cocteleria_tragos_autor">Tragos de autor</h4>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Red Sunset</h4>
+                            <span class="plato__precio" id="p-cocteleria-red-sunset"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_red_sunset">Sky, frutos rojos, almíbar de
+                            naranja, jugo de lima y gaseosa de pomelo.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Symphony</h4>
+                            <span class="plato__precio" id="p-cocteleria-symphony"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_symphony">Rosso, almíbar de naranja y jugo de
+                            naranja.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Summer Terrace</h4>
+                            <span class="plato__precio" id="p-cocteleria-summer-terrace"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_summer_terrace">Gin, reducción de frutos rojos,
+                            jugo de lima, espumante y ananá.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Bill Beery</h4>
+                            <span class="plato__precio" id="p-cocteleria-bill-beery"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_bill_beery">Jameson, almíbar de naranja,
+                            arándanos y jugo de lima.</p>
+                    </li>
+                </ul>
 
-<h4 class="carta__grupo" id=""r-aper" data-i18n="grp_cocteleria_aperitivos">Aperitivos</h4>
-<ul class="carta__lista">
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Ramazzotti Spritz</h4>
-            <span class="plato__precio" id="pr-cocteleria-ramazzotti-spritz"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_spritz">Ramazzotti, espumante, soda y rodaja de naranja.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Cynar pomelo</h4>
-            <span class="plato__precio" id="pr-cocteleria-cynar"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_cynar">Cynar y gaseosa de pomelo.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Campari con pomelo</h4>
-            <span class="plato__precio" id="p-cocteleria-campari-pomelo"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_campari_pomelo">Campari y gaseosa de pomelo.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Garibaldi</h4>
-            <span class="plato__precio" id="pr-cocteleria-garibaldi"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_garibaldi">Campari y jugo de naranja.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Fernet</h4>
-            <span class="plato__precio" id="pr-cocteleria-fernet-coca"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_fernet_coca">Fernet y Coca-Cola.</p>
-    </li>
-</ul>
+                <h4 class="carta__grupo" id="r-aper" data-i18n="grp_cocteleria_aperitivos">Aperitivos</h4>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Ramazzotti Spritz</h4>
+                            <span class="plato__precio" id="pr-cocteleria-ramazzotti-spritz"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_spritz">Ramazzotti, espumante, soda y
+                            rodaja de naranja.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Cynar pomelo</h4>
+                            <span class="plato__precio" id="pr-cocteleria-cynar"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_cynar">Cynar y gaseosa de pomelo.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Campari con pomelo</h4>
+                            <span class="plato__precio" id="p-cocteleria-campari-pomelo"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_campari_pomelo">Campari y gaseosa de pomelo.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Garibaldi</h4>
+                            <span class="plato__precio" id="pr-cocteleria-garibaldi"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_garibaldi">Campari y jugo de naranja.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Fernet</h4>
+                            <span class="plato__precio" id="pr-cocteleria-fernet-coca"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_fernet_coca">Fernet y Coca-Cola.</p>
+                    </li>
+                </ul>
 
-<h4 class="carta__grupo" id="r-clasyinter" data-i18n="grp_cocteleria_clasicos">Clásicos e internacionales</h4>
-<ul class="carta__lista">
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Aperol Spritz</h4>
-            <span class="plato__precio" id="pr-cocteleria-aperol-spritz"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_aperol_spritz">Aperol, espumante, soda y rodaja de naranja.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Bramble</h4>
-            <span class="plato__precio" id="p-cocteleria-bramble"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_bramble">Gin, jugo de lima y reducción de frutos rojos.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Cuba Libre</h4>
-            <span class="plato__precio" id="pr-cocteleria-cuba-libre"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_cuba_libre">Ron, Coca-Cola y rodaja de lima.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Negroni</h4>
-            <span class="plato__precio" id="pr-cocteleria-negroni"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_negroni">Gin, rosso, Campari y rodaja de naranja.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Boulevardier</h4>
-            <span class="plato__precio" id="p-cocteleria-boulevardier"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_boulevardier">Whisky, rosso, Campari y rodaja de naranja.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Old Fashioned</h4>
-            <span class="plato__precio" id="p-cocteleria-old-fashioned"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_old_fashioned">Whisky, bitter Angostura y cereza.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Penicillin</h4>
-            <span class="plato__precio" id="p-cocteleria-penicillin"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_penicillin">Chivas, jugo de lima, miel y jengibre.</p>
-    </li>
-</ul>
+                <h4 class="carta__grupo" id="r-clasyinter" data-i18n="grp_cocteleria_clasicos">Clásicos e
+                    internacionales</h4>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Aperol Spritz</h4>
+                            <span class="plato__precio" id="pr-cocteleria-aperol-spritz"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_aperol_spritz">Aperol, espumante, soda y rodaja
+                            de naranja.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Bramble</h4>
+                            <span class="plato__precio" id="p-cocteleria-bramble"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_bramble">Gin, jugo de lima y reducción de frutos
+                            rojos.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Cuba Libre</h4>
+                            <span class="plato__precio" id="pr-cocteleria-cuba-libre"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_cuba_libre">Ron, Coca-Cola y rodaja de lima.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Negroni</h4>
+                            <span class="plato__precio" id="pr-cocteleria-negroni"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_negroni">Gin, rosso, Campari y rodaja de naranja.
+                        </p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Boulevardier</h4>
+                            <span class="plato__precio" id="p-cocteleria-boulevardier"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_boulevardier">Whisky, rosso, Campari y rodaja de
+                            naranja.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Old Fashioned</h4>
+                            <span class="plato__precio" id="p-cocteleria-old-fashioned"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_old_fashioned">Whisky, bitter Angostura y cereza.
+                        </p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Penicillin</h4>
+                            <span class="plato__precio" id="p-cocteleria-penicillin"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_penicillin">Chivas, jugo de lima, miel y
+                            jengibre.</p>
+                    </li>
+                </ul>
 
-<h4 class="carta__grupo" id="r-elaborado" data-i18n="grp_cocteleria_elaborados">Elaborados</h4>
-<ul class="carta__lista">
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Tinto Verano</h4>
-            <span class="plato__precio" id="p-cocteleria-tinto-verano"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_tinto_verano">Vino Malbec, jugo de limón, almíbar y frutos rojos.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Maracuyá Spritz</h4>
-            <span class="plato__precio" id="p-cocteleria-maracuya-spritz"></span>
-        </div>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Mojito</h4>
-            <span class="plato__precio" id="pr-cocteleria-mojito"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_mojito">Lima, menta, almíbar y soda.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Passion Mojito</h4>
-            <span class="plato__precio" id="p-cocteleria-passion-mojito"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_passion_mojito">Lima, menta, almíbar, maracuyá y soda.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Cynar Julep</h4>
-            <span class="plato__precio" id="pr-cocteleria-cynar-julep"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_cynar_julep">Menta, lima, almíbar y gaseosa de pomelo.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Caipiroska clásica</h4>
-            <span class="plato__precio" id="p-cocteleria-caipiroska-clasica"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_caipiroska_clasica">Lima, azúcar y vodka.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Caipiroska de maracuyá</h4>
-            <span class="plato__precio" id="p-cocteleria-caipiroska-maracuya"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_caipiroska_maracuya">Maracuyá, lima, azúcar y vodka.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Caipi de frutos rojos</h4>
-            <span class="plato__precio" id="p-cocteleria-caipi-frutos-rojos"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_caipi_frutos_rojos">Frutos rojos, lima, azúcar y vodka.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Caipirinha</h4>
-            <span class="plato__precio" id="pr-cocteleria-caipirinha"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_caipirinha">Lima, azúcar y cachaça.</p>
-    </li>
-</ul>
+                <h4 class="carta__grupo" id="r-elaborado" data-i18n="grp_cocteleria_elaborados">Elaborados</h4>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Tinto Verano</h4>
+                            <span class="plato__precio" id="p-cocteleria-tinto-verano"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_tinto_verano">Vino Malbec, jugo de limón, almíbar
+                            y frutos rojos.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Maracuyá Spritz</h4>
+                            <span class="plato__precio" id="p-cocteleria-maracuya-spritz"></span>
+                        </div>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Mojito</h4>
+                            <span class="plato__precio" id="pr-cocteleria-mojito"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_mojito">Lima, menta, almíbar y soda.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Passion Mojito</h4>
+                            <span class="plato__precio" id="p-cocteleria-passion-mojito"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_passion_mojito">Lima, menta, almíbar, maracuyá y
+                            soda.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Cynar Julep</h4>
+                            <span class="plato__precio" id="pr-cocteleria-cynar-julep"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_cynar_julep">Menta, lima, almíbar y gaseosa de
+                            pomelo.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Caipiroska clásica</h4>
+                            <span class="plato__precio" id="p-cocteleria-caipiroska-clasica"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_caipiroska_clasica">Lima, azúcar y vodka.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Caipiroska de maracuyá</h4>
+                            <span class="plato__precio" id="p-cocteleria-caipiroska-maracuya"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_caipiroska_maracuya">Maracuyá, lima, azúcar y
+                            vodka.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Caipi de frutos rojos</h4>
+                            <span class="plato__precio" id="p-cocteleria-caipi-frutos-rojos"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_caipi_frutos_rojos">Frutos rojos, lima, azúcar y
+                            vodka.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Caipirinha</h4>
+                            <span class="plato__precio" id="pr-cocteleria-caipirinha"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_caipirinha">Lima, azúcar y cachaça.</p>
+                    </li>
+                </ul>
 
-<h4 class="carta__grupo" id="r-tonicos" data-i18n="grp_cocteleria_tonicos">Tónicos</h4>
-<ul class="carta__lista">
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Ramazzotti Tonic</h4>
-            <span class="plato__precio" id="p-cocteleria-ramazzotti-tonic"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_tonic">Ramazzotti, tónica y rodaja de naranja.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Gin Beefeater</h4>
-            <span class="plato__precio" id="p-cocteleria-gin-beefeater"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_gin_beefeater">Gin Beefeater, fruta a elección y tónica.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Beefeater del Bosque</h4>
-            <span class="plato__precio" id="p-cocteleria-beefeater-bosque"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_beefeater_bosque">Gin Beefeater, frutos rojos y tónica.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Beefeater Pink</h4>
-            <span class="plato__precio" id="p-cocteleria-beefeater-pink"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_beefeater_pink">Beefeater Pink, frutillas y tónica.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Passion &amp; Tonic</h4>
-            <span class="plato__precio" id="p-cocteleria-passion-tonic"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_passion_tonic">Gin Beefeater, maracuyá y tónica.</p>
-    </li>
-    <li class="plato">
-        <div class="plato__linea">
-            <h4 class="plato__nombre">Campari Tonic</h4>
-            <span class="plato__precio" id="pr-cocteleria-campari-tonic"></span>
-        </div>
-        <p class="plato__desc" data-i18n="d_cocteleria_campari_tonic">Campari, tónica y rodaja de limón.</p>
-    </li>
-</ul>
+                <h4 class="carta__grupo" id="r-tonicos" data-i18n="grp_cocteleria_tonicos">Tónicos</h4>
+                <ul class="carta__lista">
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Ramazzotti Tonic</h4>
+                            <span class="plato__precio" id="p-cocteleria-ramazzotti-tonic"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_tonic">Ramazzotti, tónica y rodaja de
+                            naranja.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Gin Beefeater</h4>
+                            <span class="plato__precio" id="p-cocteleria-gin-beefeater"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_gin_beefeater">Gin Beefeater, fruta a elección y
+                            tónica.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Beefeater del Bosque</h4>
+                            <span class="plato__precio" id="p-cocteleria-beefeater-bosque"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_beefeater_bosque">Gin Beefeater, frutos rojos y
+                            tónica.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Beefeater Pink</h4>
+                            <span class="plato__precio" id="p-cocteleria-beefeater-pink"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_beefeater_pink">Beefeater Pink, frutillas y
+                            tónica.</p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Passion &amp; Tonic</h4>
+                            <span class="plato__precio" id="p-cocteleria-passion-tonic"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_passion_tonic">Gin Beefeater, maracuyá y tónica.
+                        </p>
+                    </li>
+                    <li class="plato">
+                        <div class="plato__linea">
+                            <h4 class="plato__nombre">Campari Tonic</h4>
+                            <span class="plato__precio" id="pr-cocteleria-campari-tonic"></span>
+                        </div>
+                        <p class="plato__desc" data-i18n="d_cocteleria_campari_tonic">Campari, tónica y rodaja de limón.
+                        </p>
+                    </li>
+                </ul>
         </section>
 
     </main>
@@ -2019,7 +2098,7 @@
     </div>
 
     <main id="eventos" class="general-wrapper">
-    <!--- agragando comentarios para el index y falta todavia hacer esta seccion de eventos -->
+        <!--- agragando comentarios para el index y falta todavia hacer esta seccion de eventos -->
     </main>
 
 
@@ -2031,6 +2110,8 @@
     <script src="../js/precios.js" defer></script>
     <script src="../js/idioma-carta.js"></script>
     <script src="../js/comun.js"></script>
+
+    <footer></footer>
 </body>
 
 </html>
