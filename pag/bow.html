@@ -41,7 +41,10 @@
         </label>
 
         <a class="nav__logo" href="#bow">
-            <img src="../img/logobow.png" alt="BOW">
+            <img src="../img/logobow.png"
+         data-logo-bow="../img/logobow.png"
+         data-logo-rooftop="../img/logorooftop.png"
+         alt="BOW">
         </a>
 
         <nav class="nav__menu">
@@ -78,9 +81,9 @@
                     </ul>
                 </li>
 
-                <li class="nav__item">
+                <!--<li class="nav__item">
                     <a class="nav__link" href="#eventos"><span data-i18n="eventos_corto">Eventos</span></a>
-                </li>
+                </li>-->
             </ul>
         </nav>
 
@@ -864,10 +867,10 @@
         <section class="panel" id="bebidas" aria-labelledby="bebidas-titulo">
             <div class="panel__scroll">
 
-                <header class="panel__cabecera">
+                <div class="panel__cabecera">
                     <h2 class="panel__titulo" id="bebidas-titulo" data-i18n="bebidas">Bebidas</h2>
                     <span class="panel__filete" aria-hidden="true"></span>
-                </header>
+                </div>
 
                 <div class="categorias-wrapper">
                     <button type="button" class="carrusel-btn" aria-label="Anterior">&#171;</button>
@@ -1355,7 +1358,7 @@
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Bondiola</h4><span class="plato__precio"
+                            <h4 class="plato__nombre">4 Quesos </Q></h4><span class="plato__precio"
                                 id="p-pizzas-bondiola"></span>
                         </div>
                     </li>
@@ -1581,9 +1584,11 @@
                 </ul>
 
                 <!-- SUGERENCIAS DEL CHEF (DENTRO DE POSTRES) -->
-                <span class="carta__eslogan">Sugerencias del chef - River view</span>
+
                 <ul class="carta__lista">
+                    
                     <li class="plato">
+                        <span class="carta__eslogan">Sugerencias del chef - River view</span>
                         <div class="plato__linea">
                             <h4 class="plato__nombre">Degustación de mousses</h4>
                             <span class="plato__precio" id="p-postres-chef-mousses"></span>
@@ -1591,9 +1596,11 @@
                     </li>
                 </ul>
 
-                <span class="carta__eslogan">Sugerencias del chef - Island front</span>
+                
                 <ul class="carta__lista">
+                    
                     <li class="plato">
+                        <span class="carta__eslogan">Sugerencias del chef - Island front</span>
                         <div class="plato__linea">
                             <h4 class="plato__nombre">Esfera de chocolate helada, sable de chocolate y ganache</h4>
                             <span class="plato__precio" id="p-postres-chef-esfera-chocolate"></span>
@@ -1618,6 +1625,8 @@
                                 data-i18n="sec_sinalcohol">Sin alcohol</span></a>
                         <a href="#rb-cervezas" class="categoria-card"><i class="ti ti-beer"></i><span
                                 data-i18n="sec_cervezas">Cervezas</span></a>
+                        <a href="#rb-cervezas" class="categoria-card"><i class="ti ti-bottle"></i><span
+                                data-i18n="sec_cervezas">Vinos & espumantes</span></a>
                         <a href="#r-autor" class="categoria-card"><i class="ti ti-star"></i><span
                                 data-i18n="grp_cocteleria_tragos_autor">Tragos de autor</span></a>
                         <a href="#r-aper" class="categoria-card"><i class="ti ti-barrel"></i><span
@@ -1676,7 +1685,8 @@
                             <h4 class="plato__nombre" data-i18n="n_sinalcohol_limo">Maracuya terrace</h4>
                             <span class="plato__precio" id="pr-sinalcohol-limo-mr"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_spritz">reduccion de frutos rojos , maracuya y jugo de naranaja.</p>
+                        <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_spritz">reduccion de frutos rojos ,
+                            maracuya y jugo de naranaja.</p>
                     </li>
                     </li>
                     <li class="plato">
@@ -1684,7 +1694,8 @@
                             <h4 class="plato__nombre" data-i18n="n_sinalcohol_licuados">Angel nova </h4>
                             <span class="plato__precio" id="pr-sinalcohol-licuados"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_spritz">Te negro y hibicus , jugo de lima , almibar y soda</p>
+                        <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_spritz">Te negro y hibicus , jugo de
+                            lima , almibar y soda</p>
                     </li>
                     </li>
                     <li class="plato">
@@ -1753,6 +1764,90 @@
                         </div>
                     </li>
                 </ul>
+
+                <!-- ESPUMANTES -->
+                <h3 class="carta__subtitulo" id="rb-espumantes" data-i18n="sec_espumantes">Espumantes</h3>
+                <h4 class="carta__grupo">Chandon</h4>
+                <ul class="carta__bloque">
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Baron B Brut Rosé – Cuvée
+                                Millésimée</span><span class="plato__precio" id="p-rb-espumantes-baron-b-rose"></span>
+                        </div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Baron B Extra Brut – Cuvée
+                                Spéciale</span><span class="plato__precio"
+                                id="p-rb-espumantes-baron-b-extra-brut"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Chandon Cuvée Brut Nature</span><span
+                                class="plato__precio" id="p-rb-espumantes-cuvee-brut-nature"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Chandon Rosé</span><span
+                                class="plato__precio" id="p-rb-espumantes-chandon-rose"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Chandon Extra Brut</span><span
+                                class="plato__precio" id="p-rb-espumantes-chandon-extra-brut"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Chandon Extra Brut 187</span><span
+                                class="plato__precio" id="p-rb-espumantes-chandon-extra-brut-mini"></span></div>
+                    </li>
+                </ul>
+
+                <!-- VINOS -->
+                <h3 class="carta__subtitulo" id="rb-vinos" data-i18n="sec_vinos">Vinos</h3>
+
+                <h4 class="carta__grupo">Malbec</h4>
+                <ul class="carta__bloque">
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Escorihuela Gascón</span><span
+                                class="plato__precio" id="p-rb-vinos-malbec-escorihuela-gascon"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Terrazas Reserva</span><span
+                                class="plato__precio" id="p-rb-vinos-malbec-terrazas-reserva"></span></div>
+                    </li>
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Trumpeter Reserva</span><span
+                                class="plato__precio" id="p-rb-vinos-malbec-trumpeter-reserva"></span></div>
+                    </li>
+                </ul>
+
+                <h4 class="carta__grupo">Chardonnay</h4>
+                <ul class="carta__bloque">
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Trumpeter Reserva</span><span
+                                class="plato__precio" id="p-rb-vinos-chardonnay-trumpeter-reserva"></span></div>
+                    </li>
+                    <!-- ⚠️ CONFIRMAR NOMBRE: llegó "Trumpeter Reserva" repetido ($21.000)
+      <li class="fila"><div class="plato__linea"><span class="plato__nombre">¿?</span><span class="plato__precio" id="p-rb-vinos-chardonnay-xxx"></span></div></li>
+      -->
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Trumpeter Reserva Chardonnay</span><span
+                                class="plato__precio" id="p-rb-vinos-rose-xxx"></span></div>
+                    </li>
+
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Altos del Plata</span><span
+                                class="plato__precio" id="p-rb-vinos-chardonnay-altos-del-plata"></span></div>
+                    </li>
+
+                </ul>
+
+                <h4 class="carta__grupo">Rosé</h4>
+                <ul class="carta__bloque">
+                    <li class="fila">
+                        <div class="plato__linea"><span class="plato__nombre">Trumpeter Reserve Malbec Rose</span><span
+                                class="plato__precio" id="p-rb-vinos-rose-trumpeter-reserve-malbec"></span></div>
+                    </li>
+                    <!-- ⚠️ CONFIRMAR: llegó "" ($29.000) como rosado
+      <li class="fila"><div class="plato__linea"><span class="plato__nombre">Trumpeter Reserva Chardonnay</span><span class="plato__precio" id="p-rb-vinos-rose-xxx"></span></div></li>
+      -->
+                </ul>
+
 
                 <h3 class="carta__subtitulo" id="b-cocteleria" data-i18n="sec_cocteleria">Coctelería</h3>
 
@@ -2016,6 +2111,11 @@
                 </ul>
         </section>
 
+        <a href="#" data-reserva="auto" class="reservar-flotante">
+            <i class="ti ti-calendar"></i>
+            <span data-i18n="reservar">Reservar</span>
+        </a>
+
     </main>
 
     <!-- ============================================================
@@ -2027,7 +2127,11 @@
         <div class="modal">
             <button type="button" class="modal-close" data-reserva-cerrar aria-label="Cerrar">✕</button>
             <div class="reserva__logo">
-                <img src="img/logobow.png" alt="Logo BOW" class="main-logo">
+                <img id="reserva-logo" class="main-logo"
+         src="../img/logobow.png"
+         data-logo-bow="../img/logobow.png"
+         data-logo-rooftop="../img/logorooftop.png"
+         alt="BOW Café & Bistró">
             </div>
             <h2 class="modal-titulo" id="reserva-titulo">RESERVAR</h2>
 
@@ -2097,8 +2201,10 @@
         </div>
     </div>
 
-    <main id="eventos" class="general-wrapper">
-        <!--- agragando comentarios para el index y falta todavia hacer esta seccion de eventos -->
+    <!--<main id="eventos" class="general-wrapper">
+        <div>
+            <p>PROXIMAMENTE</p>
+        </div>-->
     </main>
 
 
@@ -2111,7 +2217,72 @@
     <script src="../js/idioma-carta.js"></script>
     <script src="../js/comun.js"></script>
 
-    <footer></footer>
+    <!-- ==========================================
+     FOOTER
+     Va en bown.html DESPUÉS del último </main> (el de #eventos) y del modal,
+     y ANTES de los <script>. Fuera de cualquier <main>, así es uno solo
+     para las tres vistas (Bow, Rooftop, Eventos).
+     ========================================== -->
+    <footer class="footer" id="footer">
+        <div class="footer__grid">
+
+            <div class="footer__marca">
+                <img class="footer__logo" src="../img/logobow.png" alt="BOW Café & Bistró" width="90" loading="lazy">
+            </div>
+
+            <div class="footer__col">
+                <h3 class="footer__titulo" data-i18n="horarios">Horarios</h3>
+                <p class="footer__linea"><span>Bow (PB) · <span data-i18n="dias_dom_jue">Dom a
+                            Jue</span></span><strong>08:00 – 00:30</strong></p>
+                <p class="footer__linea"><span>Bow (PB) · <span data-i18n="dias_vie_sab">Vie y
+                            Sáb</span></span><strong>08:00 – 01:00</strong></p>
+                <p class="footer__linea"><span>Rooftop (P16)</span><strong>18:00 – 01:30</strong></p>
+            </div>
+
+            <div class="footer__col">
+                <h3 class="footer__titulo" data-i18n="ubicacion">Ubicación</h3>
+                <a class="footer__link"
+                    href="https://google.com/maps/search/?api=1&query=BOW+Café,+Bar+&+Bistró,+Av.+Carballo+502,+S2013+Rosario,+Santa+Fe"
+                    target="_blank" rel="noopener">
+                    <i class="ti ti-map-pin" aria-hidden="true"></i>
+                    <span>Dazzler by Wyndham Rosario<br>Junín 185, Rosario, Santa Fe</span>
+                </a>
+            </div>
+
+            <div class="footer__col">
+                <h3 class="footer__titulo" data-i18n="contacto">Contacto</h3>
+
+                <!-- Abre el mismo modal de reservas que el botón flotante -->
+                <a class="footer__link" href="#" data-reserva="auto">
+                    <i class="ti ti-calendar" aria-hidden="true"></i>
+                    <span data-i18n="reservas">Reservas</span>
+                </a>
+
+                <a class="footer__link"
+                    href="https://wa.me/5493413442134?text=Hola!%20Quiero%20consultar%20por%20un%20evento%20en%20BOW."
+                    target="_blank" rel="noopener">
+                    <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
+                    <span data-i18n="eventos">Eventos & Corporativos</span>
+                </a>
+
+                <a class="footer__link" href="https://www.instagram.com/bowcafebistro/" target="_blank" rel="noopener">
+                    <i class="ti ti-brand-instagram" aria-hidden="true"></i>
+                    <span>Instagram</span>
+                </a>
+
+                <!-- Descomentar cuando tengas el link de PedidosYa
+            <a class="footer__link" href="LINK_PEDIDOSYA" target="_blank" rel="noopener">
+                <i class="ti ti-motorbike" aria-hidden="true"></i>
+                <span>PedidosYa</span>
+            </a>
+            -->
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>© 2026 BOW Café & Bistró · Dazzler by Wyndham, Rosario</p>
+        </div>
+    </footer>
 </body>
 
 </html>

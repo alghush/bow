@@ -3,6 +3,8 @@
     display: none;
 }
 
+
+
 .nav {
     position: fixed;
     top: 0;
@@ -43,7 +45,15 @@
     width: 90px;
     height: auto;
     filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+    transition: opacity 0.2s ease, transform 0.2s ease; 
 }
+
+.nav__logo img.nav__logo-img--saliendo {
+    opacity: 0;
+    transform: scale(0.92);
+}
+
+
 
 .nav__burger {
     display: none;
@@ -917,7 +927,128 @@
 
 .plato__foto img {
     width:200px;
+}
 
 
+/* ===== Footer ===== */
+
+.footer {
+    margin-top: 40px;
+    /* El padding de abajo deja libre el espacio del botón flotante "Reservar" */
+    padding: 48px 20px calc(110px + env(safe-area-inset-bottom));
+    background: var(--vidrio-oscuro);
+    border-top: 1px solid var(--oro-borde);
+    backdrop-filter: var(--desenfoque);
+    -webkit-backdrop-filter: var(--desenfoque);
+    color: var(--blanco-suave);
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.footer__grid {
+    display: grid;
+    gap: 36px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    justify-items: center;
+}
+
+.footer__logo {
+    width: 90px;
+    height: auto;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+}
+
+.footer__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.footer__titulo {
+    margin-bottom: 14px;
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--oro);
+}
+
+.footer__titulo::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 1px;
+    margin: 8px auto 0;
+    background: var(--oro);
+}
+
+.footer__linea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 10px;
+    padding: 4px 0;
+}
+
+.footer__linea strong {
+    font-weight: 600;
+    color: var(--oro);
+    font-variant-numeric: tabular-nums;
+}
+
+.footer__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;               /* zona táctil cómoda en el celular */
+    color: var(--blanco-suave);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer__link i {
+    font-size: 1.1rem;
+    color: var(--oro);
+}
+
+.footer__link:hover,
+.footer__link:focus-visible {
+    color: var(--oro);
+}
+
+.footer__bottom {
+    max-width: 1100px;
+    margin: 36px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: var(--texto-tenue);
+}
+
+@media (min-width: 800px) {
+    .footer__grid {
+        grid-template-columns: 0.8fr 1fr 1.2fr 1.2fr;
+        text-align: left;
+        justify-items: start;
+        align-items: start;
+    }
+
+    .footer__col {
+        align-items: flex-start;
+    }
+
+    .footer__titulo::after {
+        margin-left: 0;
+    }
+
+    .footer__linea {
+        justify-content: flex-start;
+    }
 }
 

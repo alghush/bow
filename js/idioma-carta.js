@@ -464,3 +464,10 @@ n_postres_brownie: "Brownie de chocolate com sorvete",
 n_postres_don_pedro: "Dom Pedro reinventado",
 
  })
+
+ //FOOTER
+
+Object.assign(IDIOMAS.es, { dias_dom_jue: "Dom a Jue", dias_vie_sab: "Vie y Sáb" });
+Object.assign(IDIOMAS.en, { dias_dom_jue: "Sun to Thu", dias_vie_sab: "Fri & Sat" });
+Object.assign(IDIOMAS.pt, { dias_dom_jue: "Dom a Qui", dias_vie_sab: "Sex e Sáb" });
+Object.assign(IDIOMAS.fr, { dias_dom_jue: "Dim à Jeu", dias_vie_sab: "Ven et Sam" });

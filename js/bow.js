@@ -1,88 +1,67 @@
-document.addEventListener("DOMContentLoaded", () => {
-
-  // Menú: cerrarlo al tocar un ítem del nav
-  document.querySelector(".nav__menu")?.addEventListener("click", e => {
-    if (!e.target.closest("a")) return;
-    document.querySelectorAll(".nav__check, .nav__check-sub").forEach(c => (c.checked = false));
-  });
-
-  // Botones « » de los carruseles (un solo listener para todos)
-  document.addEventListener("click", e => {
-    const btn = e.target.closest(".carrusel-btn");
-    if (!btn) return;
-    const wrapper = btn.closest(".categorias-wrapper");
-    const carrusel = wrapper.querySelector(".categorias-carrusel");
-    const esPrev = btn === wrapper.querySelector(".carrusel-btn");
-    const paso = Math.max(150, carrusel.clientWidth * 0.7);
-    carrusel.scrollBy({ left: esPrev ? -paso : paso, behavior: "smooth" });
-  });
-
-  // Categoría activa: cada tarjeta busca su destino por el href (#id)
-  const navAlto = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--nav-alto")) || 72;
-  const LINEA = navAlto + 110;
-
-  const carruseles = [...document.querySelectorAll(".categorias-wrapper")].map(wrapper => ({
-    wrapper,
-    carrusel: wrapper.querySelector(".categorias-carrusel"),
-    items: [...wrapper.querySelectorAll(".categoria-card")]
-      .map(card => ({ card, destino: document.querySelector(card.getAttribute("href")) }))
-      .filter(i => i.destino),
-    ultima: null
-  }));
-
-  let pendiente = false;
-
-  function marcarActiva() {
-    pendiente = false;
-    carruseles.forEach(c => {
-      if (c.wrapper.offsetParent === null) return;
-
-      let activo = null;
-      c.items.forEach(i => { if (i.destino.getBoundingClientRect().top <= LINEA) activo = i; });
-      c.items.forEach(i => i.card.classList.toggle("active", i === activo));
-
-      if (!activo || c.ultima === activo.card) return;
-      c.ultima = activo.card;
-      const rc = activo.card.getBoundingClientRect();
-      const rk = c.carrusel.getBoundingClientRect();
-      c.carrusel.scrollTo({
-        left: c.carrusel.scrollLeft + (rc.left - rk.left) - (c.carrusel.clientWidth - rc.width) / 2,
-        behavior: "smooth"
-      });
-    });
-  }
-
-  const pedir = () => { if (!pendiente) { pendiente = true; requestAnimationFrame(marcarActiva); } };
-
-  // captura = true: escucha el scroll de la ventana Y el de cualquier contenedor (body, etc.)
-  document.addEventListener("scroll", pedir, { passive: true, capture: true });
-  window.addEventListener("resize", pedir);
-  window.addEventListener("hashchange", pedir);
-  window.addEventListener("load", pedir);
-  pedir();
-});
-
-
-/////// CAMBIO DE MAIN A OTRO MAIN (VISTAS)
-
-/* vistas.js: una sola vista (<main>) visible a la vez.
-   Al cambiar de vista (Bow <-> Rooftop <-> Eventos) la actual sale y la nueva entra
-   en horizontal. El orden de los <main> en el HTML define hacia dónde se mueve. */
 (function () {
     const vistas = Array.from(document.querySelectorAll("main"));
     if (!vistas.length) return;
 
     const DURACION = 450;                               // ms
     const EASING = "cubic-bezier(.22,.61,.36,1)";
+    const DURACION_LOGO = 200;                          // ms, tiene que coincidir con el CSS (0.2s)
     const reducir = matchMedia("(prefers-reduced-motion: reduce)");
 
     let actual = vistas.findIndex(v => !v.hidden);
     if (actual < 0) actual = 0;
     vistas.forEach((v, i) => { v.hidden = i !== actual; });
 
-    let cortarAnimacion = null;                         // para terminar una animación en curso
+    let cortarAnimacion = null;
 
-    function marcarNav() {
+    // ---- Logo del nav: cambia según la vista, con fade ----
+    const enlaceLogo = document.querySelector(".nav__logo");
+    const imgLogo = enlaceLogo?.querySelector("img");
+    let timerLogo = null;
+
+    if (!imgLogo) {
+        console.warn("[vistas.js] No hay <img> dentro de .nav__logo");
+    } else {
+        ["data-logo-bow", "data-logo-rooftop"].forEach(attr => {
+            const s = imgLogo.getAttribute(attr);
+            if (s) new Image().src = s;
+        });
+    }
+
+    function ponerLogoNav(animar) {
+        if (!imgLogo) return;
+        const esRooftop = vistas[actual].id === "rooftop";
+        const src = imgLogo.getAttribute(esRooftop ? "data-logo-rooftop" : "data-logo-bow");
+        if (!src) return;
+
+        // Datos funcionales: cambian al instante
+        enlaceLogo.setAttribute("href", esRooftop ? "#rooftop" : "#bow");
+        imgLogo.alt = esRooftop ? "BOW Rooftop" : "BOW";
+
+        // Si había un cambio a medias, se cancela
+        clearTimeout(timerLogo);
+
+        // Ya es el logo correcto (o el usuario volvió atrás a mitad del fade)
+        if (imgLogo.getAttribute("src") === src) {
+            imgLogo.classList.remove("nav__logo-img--saliendo");
+            return;
+        }
+
+        // Sin animación: carga inicial o "reducir movimiento"
+        if (!animar || reducir.matches) {
+            imgLogo.setAttribute("src", src);
+            imgLogo.classList.remove("nav__logo-img--saliendo");
+            return;
+        }
+
+        imgLogo.classList.add("nav__logo-img--saliendo");          // fade-out
+        timerLogo = setTimeout(() => {
+            imgLogo.setAttribute("src", src);                       // cambio con el logo invisible
+            imgLogo.classList.remove("nav__logo-img--saliendo");    // fade-in
+        }, DURACION_LOGO);
+    }
+
+    function marcarNav(animar) {
+        ponerLogoNav(animar);
         document.querySelectorAll(".nav__link").forEach(a => {
             a.classList.toggle("activo", a.getAttribute("href") === "#" + vistas[actual].id);
         });
@@ -90,14 +69,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function mostrar(i, animar) {
         if (i === actual) return;
-        if (cortarAnimacion) cortarAnimacion();         // si hay una animación a medias, se cierra ya
+        if (cortarAnimacion) cortarAnimacion();
 
         const saliente = vistas[actual];
         const entrante = vistas[i];
-        const dir = i > actual ? 1 : -1;                // 1 = avanza (entra desde la derecha)
+        const dir = i > actual ? 1 : -1;
         const scrollAnterior = window.scrollY;
         actual = i;
-        marcarNav();
+        marcarNav(animar);                              // ← ahora le pasamos si hay animación
 
         if (!animar || reducir.matches || !entrante.animate) {
             saliente.hidden = true;
@@ -106,8 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // La saliente se fija en pantalla, exactamente donde estaba (con su propio scroll interno
-        // solo durante la animación, así la barra de categorías sigue pegada y no salta)
         saliente.style.cssText = "position:fixed;inset:0;overflow:hidden;pointer-events:none;";
         saliente.scrollTop = scrollAnterior;
         entrante.hidden = false;
@@ -129,7 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
         aEntra.finished.then(limpiar).catch(() => {});
     }
 
-    // Resuelve un hash: puede ser una vista (#rooftop) o algo que está adentro de una (#rooftop-comida)
     function ir(hash, animar) {
         const id = decodeURIComponent((hash || "").replace("#", ""));
         const destino = id && document.getElementById(id);
@@ -140,26 +116,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const i = vistas.indexOf(vista);
         const cambia = i !== actual;
         if (cambia) mostrar(i, animar);
-        // Si no cambia de vista, el navegador ya hizo el scroll al ancla
         if (cambia && destino !== vista) destino.scrollIntoView({ block: "start" });
         return true;
     }
 
     window.addEventListener("hashchange", () => ir(location.hash, true));
 
-    marcarNav();
-    ir(location.hash, false);                           // carga inicial: si viene con hash, respeta el hash
-})();
-
-// Al entrar sin destino explícito (ej. el QR), llevar a la sección que corresponde por hora
-(function () {
-  if (location.hash && location.hash !== "#bow") return;   // vino de un link con destino: se respeta
-  if (typeof Horarios === "undefined") return;
-
-  const { fecha, minutos } = Horarios.ahora();
-  const vigente = Horarios.seccionVisible(fecha, minutos);  // "desayuno" | "menu-ejecutivo" | "restaurant"
-  const destino = document.getElementById(vigente) || document.getElementById("restaurant");
-  if (!destino) return;
-
-  window.addEventListener("load", () => destino.scrollIntoView({ block: "start" }));
+    marcarNav(false);                                   // ← carga inicial sin fade
+    ir(location.hash, false);
 })();

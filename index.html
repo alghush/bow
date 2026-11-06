@@ -16,12 +16,12 @@
 
 <body>
 
-    <!-- Logo de pantalla de carga -->
+    <!-- Logo de pantalla de carga 
     <div id="loader">
         <div class="loader-wrap">
             <img src="" class="loader-logo" id="loader-principal" alt="Cargando BOW">
         </div>
-    </div>
+    </div>-->
 
     <video id="video-teaser" autoplay muted loop playsinline class="video-background activo">
 
@@ -109,9 +109,9 @@
                             <i class="ti ti-building-skyscraper"></i> <span data-i18n="reservar_rooftop">Reservar en
                                 Rooftop (P16)</span>
                         </a>
-                        <a class="splash__acordeon-item" href="pag/bow.html#eventos">
+                        <!--<a class="splash__acordeon-item" href="pag/bow.html#eventos">
                             <i class="ti ti-users"></i> <span data-i18n="eventos">Eventos & Corporativos</span>
-                        </a>
+                        </a>-->
                     </div>
                 </div>
 
@@ -120,7 +120,7 @@
                     INSTAGRAM
                 </a>
 
-                <a class="splash__btn splash__btn--ubi" href="TU_LINK_DE_MAPS" target="_blank" rel="noopener">
+                <a class="splash__btn splash__btn--ubi" href="https://google.com/maps/search/?api=1&query=BOW+Café,+Bar+&+Bistró,+Av.+Carballo+502,+S2013+Rosario,+Santa+Fe" target="_blank" rel="noopener">
                     <span class="splash__btn-icon"><i class="ti ti-map-pin"></i></span>
                     <span data-i18n="ubicacion">Ubicación</span>
                 </a>
@@ -138,7 +138,11 @@
         <div class="modal">
             <button type="button" class="modal-close" data-reserva-cerrar aria-label="Cerrar">✕</button>
             <div class="reserva__logo">
-                <img src="img/logobow.png" alt="Logo BOW" class="main-logo">
+                <img id="reserva-logo" class="main-logo"
+         src="img/logobow.png"
+         data-logo-bow="img/logobow.png"
+         data-logo-rooftop="img/logorooftop.png"
+         alt="BOW Café & Bistró">
             </div>
             <h2 class="modal-titulo" id="reserva-titulo">RESERVAR</h2>
 

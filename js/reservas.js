@@ -12,7 +12,7 @@
   // ==========================================================
 
   // Formato: 549 + código de área sin 0 + número sin 15
-  const WA_NUMBER = "549341XXXXXXX";
+  const WA_NUMBER = "5493415608330";
 
   const DESTINOS = {
     bow:     { nombre: "BOW Café & Bistró", titulo: "RESERVAR EN BOW",     conSector: true  },
@@ -37,7 +37,8 @@
     error:        "#reserva-error",
     resumen:      "#reserva-resumen",
     enviar:       "#reserva-enviar",
-    whatsapp:     "#reserva-whatsapp"
+    whatsapp:     "#reserva-whatsapp",
+    logo:         "#reserva-logo"
   };
 
   // Atributos que se ponen en los botones del sitio
@@ -73,6 +74,13 @@
   function abrirReserva(quien) {
     destino = quien === "auto" || !DESTINOS[quien] ? destinoDeLaVista() : quien;
     const cfg = DESTINOS[destino];
+
+    const logo = $("logo");
+if (logo) {
+  const src = logo.getAttribute("data-logo-" + destino);   // data-logo-bow | data-logo-rooftop
+  if (src) logo.setAttribute("src", src);
+  logo.alt = cfg.nombre;
+}
 
     $("titulo").textContent = cfg.titulo;
     $("sectorBloque").hidden = !cfg.conSector;       // Rooftop no tiene sector
