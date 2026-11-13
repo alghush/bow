@@ -74,6 +74,8 @@
   function abrirReserva(quien) {
     destino = quien === "auto" || !DESTINOS[quien] ? destinoDeLaVista() : quien;
     const cfg = DESTINOS[destino];
+    trackear("reserva_abrir", { destino });
+
 
     const logo = $("logo");
 if (logo) {
@@ -244,6 +246,7 @@ if (logo) {
       `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(mensaje)}`,
       "_blank", "noopener"
     );
+
     cerrarReserva();
   }
 

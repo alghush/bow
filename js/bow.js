@@ -76,6 +76,7 @@
         const dir = i > actual ? 1 : -1;
         const scrollAnterior = window.scrollY;
         actual = i;
+        trackear("vista_carta", { vista: vistas[actual].id });
         marcarNav(animar);                              // ← ahora le pasamos si hay animación
 
         if (!animar || reducir.matches || !entrante.animate) {

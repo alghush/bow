@@ -4,14 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <noscript>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    </noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
-        media="print" onload="this.media='all'">
+    <meta name="theme-color" content="#090b11">
+
+    <title>BOW Café & Bistró y Rooftop | Dazzler Rosario</title>
+    <meta name="description" content="BOW Café & Bistró (planta baja) y BOW Rooftop (piso 16) en el Hotel Dazzler by Wyndham, Junín 185, Rosario. Desayunos, menú del día, cena y coctelería con vista a la ciudad.">
+    <link rel="canonical" href="https://bowcafebistro.com.ar/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BOW Café & Bistró y Rooftop | Dazzler Rosario">
+    <meta property="og:description" content="Café, bistró y rooftop en el Hotel Dazzler, Rosario.">
+    <meta property="og:url" content="https://bowcafebistro.com.ar/">
+    <meta property="og:image" content="https://bowcafebistro.com.ar/img/og-bow.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_AR">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="img/bowico-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/bowico-16x16.png">
+
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/index.css">
-    <title>BOW</title>
+
+    <!-- Tabler Icons (misma versión fija que bow.html) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.50.0/dist/tabler-icons.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.50.0/dist/tabler-icons.min.css">
+    </noscript>
+
+    <!-- Google Analytics -->
+
+    <meta name="google-site-verification" content="U6iUQFh1vSnfoxED_0JTmVNNI-W8i2861mKQqyrSceY" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9D3T41YX1H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-9D3T41YX1H');
+    </script>
 </head>
 
 <body>
@@ -45,9 +85,9 @@
 
     <main class="content-wrapper">
         <section class="splash">
-            <div class="splash__logo">
-                <img id="logo-principal" src="img/logobow.png" alt="Logo BOW">
-            </div>
+            <h1 class="splash__logo">
+                <img id="logo-principal" src="img/logobow.png" alt="BOW Café & Bistró y Rooftop – Dazzler Rosario">
+            </h1>
 
             <p class="splash__sub" data-i18n="sub">El lugar al que siempre querés volver</p>
             <div class="scroll-arrow">↓</div>
@@ -109,9 +149,9 @@
                             <i class="ti ti-building-skyscraper"></i> <span data-i18n="reservar_rooftop">Reservar en
                                 Rooftop (P16)</span>
                         </a>
-                        <!--<a class="splash__acordeon-item" href="pag/bow.html#eventos">
+                        <a class="splash__acordeon-item" href="pag/bow.html#eventos">
                             <i class="ti ti-users"></i> <span data-i18n="eventos">Eventos & Corporativos</span>
-                        </a>-->
+                        </a>
                     </div>
                 </div>
 
@@ -213,6 +253,7 @@
     </div>
 
     <script src="js/idiomas.js"></script>
+    <script src="js/analytics.js"></script>
     <script src="js/comun.js"></script>
     <script src="js/horarios.js"></script>
     <script src="js/reservas.js"></script>

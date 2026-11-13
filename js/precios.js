@@ -121,5 +121,34 @@ function pintarEjecutivo(crudos) {
     document.dispatchEvent(new CustomEvent("ejecutivo:listo", { detail: { abierto } }));
     return abierto;
 }
+
+/* ===== Eventos: listas "Incluye" =====
+   Cada <ul class="ev-lista" id="ev-ts-f"> toma las filas ev-ts-f1, ev-ts-f2, ... */
+function filasNumeradas(datos, base) {
+    const patron = new RegExp("^" + base + "(\\d+)$");
+    const filas = Object.keys(datos)
+        .map(clave => {
+            const m = patron.exec(clave);
+            return m ? { clave, n: Number(m[1]), texto: String(datos[clave] ?? "").trim() } : null;
+        })
+        .filter(Boolean);
+    return filas.length ? filas.sort((a, b) => a.n - b.n) : null;
+}
+
+function pintarEventos(crudos) {
+    const datos = {};
+    for (const clave in crudos) datos[clave.trim()] = crudos[clave];
+
+    document.querySelectorAll(".ev-lista[id]").forEach(ul => {
+        const filas = filasNumeradas(datos, ul.id);
+        if (!filas) return;                          // la planilla no trae esta lista: queda el respaldo
+        ul.replaceChildren(...filas.filter(f => f.texto).map(f => {
+            const li = document.createElement("li");
+            li.id = f.clave;                         // el <li> conserva el id de su fila
+            li.textContent = f.texto;                // textContent: lo que escriba el cliente no se interpreta como HTML
+            return li;
+        }));
+    });
+}
  
 cargarPrecios();

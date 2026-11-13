@@ -4,20 +4,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090b11">
+
+    <title>Carta BOW Café & Bistró y Rooftop – Hotel Dazzler Rosario</title>
+    <meta name="description"
+        content="Carta de BOW en el Hotel Dazzler by Wyndham de Rosario: desayunos y meriendas, menú del día, restaurant, coctelería y vinos. Reservas por WhatsApp.">
+    <link rel="canonical" href="https://bowcafebistro.com.ar/pag/bow.html">
+
+    <!-- Open Graph: cómo se ve el link al compartirlo en WhatsApp / Instagram / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Carta BOW Café  Bistró y Rooftop – Dazzler Rosario">
+    <meta property="og:description" content="Desayunos, menú del día, restaurant, coctelería y vinos en el Hotel Dazzler, Rosario.">
+    <meta property="og:url" content="https://bowcafebistro.com.ar/pag/bow.html">
+    <meta property="og:image" content="https://bowcafebistro.com.ar/img/og-bow.jpg">
+    <meta property="og:locale" content="es_AR">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/bowico-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/bowico-16x16.png">
+
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Cormorant+Garamond:wght@300;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/bow.css">
+
+    <!-- Tabler Icons (carga sin bloquear el render) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.50.0/dist/tabler-icons.min.css"
+        media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.50.0/dist/tabler-icons.min.css">
     </noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.50.0/dist/tabler-icons.min.css"
-        media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/bow.css">
-    <link rel="stylesheet" href="../style/index.css">
-    <title>BOW</title>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9D3T41YX1H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-9D3T41YX1H');
+    </script>
+
+    <!-- Datos estructurados -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["CafeOrCoffeeShop", "Restaurant"],
+          "@id": "https://bowcafebistro.com.ar/pag/bow.html#bow",
+          "name": "BOW Café & Bistró",
+          "url": "https://bowcafebistro.com.ar/",
+          "image": "https://bowcafebistro.com.ar/img/og-bow.jpg",
+          "logo": "https://bowcafebistro.com.ar/img/logobow.png",
+          "telephone": "+5493415608330",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Junín 185",
+            "addressLocality": "Rosario",
+            "addressRegion": "Santa Fe",
+            "postalCode": "2000",
+            "addressCountry": "AR"
+          },
+          "containedInPlace": {
+            "@type": "Hotel",
+            "name": "Dazzler by Wyndham Rosario",
+            "url": "https://dazzlerrosario.com/"
+          },
+          "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
+              "opens": "08:00", "closes": "00:30" },
+            { "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Friday","Saturday"],
+              "opens": "08:00", "closes": "01:00" }
+          ],
+          "sameAs": ["https://www.instagram.com/bowcafebistro/"]
+        },
+        {
+          "@type": "BarOrPub",
+          "@id": "https://bowcafebistro.com.ar/pag/bow.html#rooftop",
+          "name": "BOW Rooftop",
+          "url": "https://bowcafebistro.com.ar/pag/bow.html#rooftop",
+          "telephone": "+5493415608330",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Junín 185",
+            "addressLocality": "Rosario",
+            "addressRegion": "Santa Fe",
+            "postalCode": "2000",
+            "addressCountry": "AR"
+          },
+          "containedInPlace": {
+            "@type": "Hotel",
+            "name": "Dazzler by Wyndham Rosario",
+            "url": "https://dazzlerrosario.com/"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+            "opens": "18:00", "closes": "01:30"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
-
+<h1 class="sr-only">Carta BOW Café & Bistró y Rooftop – Hotel Dazzler Rosario</h1>
 
     <!-- Logo de pantalla de carga -->
     <div id="loader">
@@ -41,10 +140,8 @@
         </label>
 
         <a class="nav__logo" href="#bow">
-            <img src="../img/logobow.png"
-         data-logo-bow="../img/logobow.png"
-         data-logo-rooftop="../img/logorooftop.png"
-         alt="BOW">
+            <img src="../img/logobow.png" data-logo-bow="../img/logobow.png" data-logo-rooftop="../img/logorooftop.png"
+                alt="BOW">
         </a>
 
         <nav class="nav__menu">
@@ -80,10 +177,20 @@
                         <li><a href="#rooftop-bebida"><span data-i18n="bebida">Bebida</span></a></li>
                     </ul>
                 </li>
-
-                <!--<li class="nav__item">
+                <li class="nav__item nav__item--sub">
+                    <input type="checkbox" id="sub-eventos" class="nav__check-sub">
                     <a class="nav__link" href="#eventos"><span data-i18n="eventos_corto">Eventos</span></a>
-                </li>-->
+                    <label for="sub-eventos" class="nav__toggle" aria-label="Mostrar secciones">
+                        <i class="ti ti-chevron-down"></i>
+                    </label>
+                    <ul class="nav__sub">
+                        <li><a href="#eventos-sobre"><span data-i18n="ev_nav_sobre">Sobre nosotros</span></a></li>
+                        <li><a href="#eventos-espacios"><span data-i18n="ev_nav_espacios">Nuestro espacio</span></a>
+                        </li>
+                        <li><a href="#eventos-servicios"><span data-i18n="ev_nav_servicios">Servicios</span></a></li>
+                    </ul>
+                </li>
+
             </ul>
         </nav>
 
@@ -492,7 +599,7 @@
                             <p class="plato__desc" data-i18n="d_pastas_gnocchi">Con trilogía de tomates y albahaca.</p>
                         </div>
                     </li>-->
-                     <li class="plato">
+                    <li class="plato">
                         <div class="plato__linea">
                             <h4 class="plato__nombre" data-i18n="n_entradas_empanadas">Tabla de empanadas para compartir
                             </h4>
@@ -883,8 +990,7 @@
                                 data-i18n="sec_cocteleria">Coctelería</span></a>
                         <a href="#b-vinos" class="categoria-card"><i class="ti ti-glass-full"></i><span
                                 data-i18n="sec_vinos">Vinos</span></a>
-                        <a href="#b-espumantes" class="categoria-card"><i class="ti ti-bottle"></i><span
-                                data-i18n="sec_espumantes">Espumantes</span></a>
+                        <a href="#b-espumantes" class="categoria-card"><i class="ti ti-bottle"></i><span data-i18n="sec_espumantes">Espumantes</span></a>
                     </div>
                     <button type="button" class="carrusel-btn" aria-label="Siguiente">&#187;</button>
                 </div>
@@ -1256,31 +1362,27 @@
 
     <main id="rooftop" class="general-wrapper">
         <!-- SECCION RESTAURANT -->
-        <section class="panel" id="rooftop-comida" aria-label="Rooftop · Comida">
+        <section class="panel" id="rooftop-comida" aria-labelledby="rooftop-comida-titulo">
             <div class="panel__scroll">
+                <div class="panel__cabecera">
+                    <h2 class="panel__titulo" id="rooftop-comida-titulo" data-i18n="rt_t_comida">Rooftop · Comida</h2>
+                    <span class="panel__filete" aria-hidden="true"></span>
+                </div>
+
 
                 <!-- Carrusel de categorías de Rooftop Bar -->
                 <div class="categorias-wrapper">
                     <button type="button" class="carrusel-btn carrusel-btn--prev" aria-label="Anterior">«</button>
                     <div class="categorias-carrusel">
-                        <a href="#r-tablas" class="categoria-card"><i class="ti ti-table"></i><span
-                                data-i18n="sec_tablas">Tablas</span></a>
-                        <a href="#r-empanadas" class="categoria-card"><i class="ti ti-cheese"></i><span
-                                data-i18n="sec_empanadas">Empanadas</span></a>
-                        <a href="#r-pizzas" class="categoria-card"><i class="ti ti-pizza"></i><span
-                                data-i18n="sec_pizzas">Pizzas</span></a>
-                        <a href="#rr-sandwiches" class="categoria-card"><i class="ti ti-bread"></i><span
-                                data-i18n="sec_sandwiches">Sándwiches</span></a>
-                        <a href="#r-frituras" class="categoria-card"><i class="ti ti-cookie"></i><span
-                                data-i18n="sec_frituras">Frituras</span></a>
-                        <a href="#r-vegetarianos" class="categoria-card"><i class="ti ti-leaf"></i><span
-                                data-i18n="sec_vegetarianos">Vegetarianos</span></a>
-                        <a href="#r-sintacc" class="categoria-card"><i class="ti ti-wheat-off"></i><span
-                                data-i18n="sec_sintacc">Sin TACC</span></a>
-                        <a href="#r-pasteleria" class="categoria-card"><i class="ti ti-cake"></i><span
-                                data-i18n="sec_pasteleria">Pastelería</span></a>
-                        <a href="#rr-postres" class="categoria-card"><i class="ti ti-ice-cream"></i><span
-                                data-i18n="sec_postres">Postres</span></a>
+                        <a href="#r-tablas" class="categoria-card"><i class="ti ti-table"></i><span data-i18n="sec_tablas">Tablas</span></a>
+                        <a href="#r-empanadas" class="categoria-card"><i class="ti ti-cheese"></i><span data-i18n="rt_empanadas">Empanadas</span></a>
+                        <a href="#r-pizzas" class="categoria-card"><i class="ti ti-pizza"></i><span data-i18n="rt_pizzas">Pizzas</span></a>
+                        <a href="#rr-sandwiches" class="categoria-card"><i class="ti ti-bread"></i><span data-i18n="rt_sandwiches">Sándwiches</span></a>
+                        <a href="#r-frituras" class="categoria-card"><i class="ti ti-cookie"></i><span data-i18n="sec_frituras">Frituras</span></a>
+                        <a href="#r-vegetarianos" class="categoria-card"><i class="ti ti-leaf"></i><span data-i18n="sec_vegetarianos">Vegetarianos</span></a>
+                        <a href="#r-sintacc" class="categoria-card"><i class="ti ti-wheat-off"></i><span data-i18n="sec_sintacc">Sin TACC</span></a>
+                        <a href="#r-pasteleria" class="categoria-card"><i class="ti ti-cake"></i><span data-i18n="sec_pasteleria">Pastelería</span></a>
+                        <a href="#rr-postres" class="categoria-card"><i class="ti ti-ice-cream"></i><span data-i18n="sec_postres">Postres</span></a>
                     </div>
                     <button type="button" class="carrusel-btn carrusel-btn--next" aria-label="Siguiente">»</button>
                 </div>
@@ -1293,96 +1395,94 @@
                             <h4 class="plato__nombre">Sunset in the sky</h4>
                             <span class="plato__precio" id="p-tablas-sunset"></span>
                         </div>
-                        <p class="plato__desc">Selección de nuestros quesos premium, selección de nuestros fiambres
-                            premium, olivas, cherrys, pickles.</p>
+                        <p class="plato__desc" data-i18n="rt_d_tablas_sunset">Selección de nuestros quesos premium, selección de nuestros fiambres premium, olivas, cherrys, pickles.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
                             <h4 class="plato__nombre">Rooftop sun</h4>
                             <span class="plato__precio" id="p-tablas-rooftop-sun"></span>
                         </div>
-                        <p class="plato__desc">Selección de nuestros quesos premium, selección de nuestros fiambres
-                            premium, mini empanaditas, rabas, papas rústicas, olivas, cherrys y pickles.</p>
+                        <p class="plato__desc" data-i18n="rt_d_tablas_rooftop_sun">Selección de nuestros quesos premium, selección de nuestros fiambres premium, mini empanaditas, rabas, papas rústicas, olivas, cherrys y pickles.</p>
                     </li>
                 </ul>
 
                 <!-- EMPANADAS -->
-                <h3 class="carta__subtitulo" id="r-empanadas" data-i18n="sec_empanadas">Nuestras empanadas</h3>
+                <h3 class="carta__subtitulo" id="r-empanadas" data-i18n="rt_h_empanadas">Nuestras empanadas</h3>
                 <ul class="carta__lista">
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Jamón y queso</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_emp_jyq">Jamón y queso</h4><span class="plato__precio"
                                 id="p-empanadas-jyq"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Carne estilo criolla</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_emp_carne">Carne estilo criolla</h4><span class="plato__precio"
                                 id="p-empanadas-carne"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Verdura</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_emp_verdura">Verdura</h4><span class="plato__precio"
                                 id="p-empanadas-verdura"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Pollo al verdeo</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_emp_pollo">Pollo al verdeo</h4><span class="plato__precio"
                                 id="p-empanadas-pollo"></span>
                         </div>
                     </li>
                 </ul>
 
                 <!-- PIZZAS -->
-                <h3 class="carta__subtitulo" id="r-pizzas" data-i18n="sec_pizzas">Nuestras pizzas individuales</h3>
+                <h3 class="carta__subtitulo" id="r-pizzas" data-i18n="rt_h_pizzas">Nuestras pizzas individuales</h3>
                 <ul class="carta__lista">
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Napolitana</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_pizza_napolitana">Napolitana</h4><span class="plato__precio"
                                 id="p-pizzas-napolitana"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Especial</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_pizza_especial">Especial</h4><span class="plato__precio"
                                 id="p-pizzas-especial"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Rúcula y Jamón crudo</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_pizza_rucula">Rúcula y jamón crudo</h4><span class="plato__precio"
                                 id="p-pizzas-rucula-crudo"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">4 Quesos </Q></h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_pizza_4quesos">4 Quesos</h4><span class="plato__precio"
                                 id="p-pizzas-bondiola"></span>
                         </div>
                     </li>
                 </ul>
 
                 <!-- SÁNDWICHES -->
-                <h3 class="carta__subtitulo" id="rr-sandwiches" data-i18n="sec_sandwiches">Sándwiches</h3>
+                <h3 class="carta__subtitulo" id="rr-sandwiches" data-i18n="rt_sandwiches">Sándwiches</h3>
 
                 <ul class="carta__lista">
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Tostado clásico</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_sand_tostado">Tostado clásico</h4><span class="plato__precio"
                                 id="p-sandwiches-tostado-clasico"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Carlitos clásico</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_sand_carlitos">Carlitos clásico</h4><span class="plato__precio"
                                 id="p-sandwiches-carlitos-clasico"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Tostado de pollo al verdeo</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_sand_pollo">Tostado de pollo al verdeo</h4><span class="plato__precio"
                                 id="p-sandwiches-tostado-pollo"></span>
                         </div>
                     </li>
@@ -1390,42 +1490,40 @@
                 <ul class="carta__lista">
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Vegetales grillados, tomates confitados, rúcula y crema de queso
-                            </h4><span class="plato__precio" id="p-sandwiches-premium-vegetales"></span>
+                            <h4 class="plato__nombre" data-i18n="rt_n_sand_vegetales">Vegetales grillados, tomates confitados, rúcula y crema de queso</h4><span class="plato__precio" id="p-sandwiches-premium-vegetales"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Mortadela, crema de queso, rúcula y pesto</h4><span
+                            <h4 class="plato__nombre" data-i18n="rt_n_sand_mortadela">Mortadela, crema de queso, rúcula y pesto</h4><span
                                 class="plato__precio" id="p-sandwiches-premium-mortadela"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Lomito, crema de queso, tomates confitado y rúcula</h4><span
+                            <h4 class="plato__nombre" data-i18n="rt_n_sand_lomito">Lomito, crema de queso, tomates confitados y rúcula</h4><span
                                 class="plato__precio" id="p-sandwiches-premium-lomito"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Jamón crudo, queso grouller y rúcula</h4><span
+                            <h4 class="plato__nombre" data-i18n="rt_n_sand_crudo">Jamón crudo, queso gruyère y rúcula</h4><span
                                 class="plato__precio" id="p-sandwiches-premium-crudo"></span>
                         </div>
                     </li>
                 </ul>
 
-                <span class="carta__eslogan">Sugerencia del chef</span>
+                <p class="carta__eslogan" data-i18n="rt_chef_sugerencia">Sugerencia del chef</p>
                 <ul class="carta__lista">
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Degustación de hamburguesitas con papas cuñas saborizadas</h4>
+                            <h4 class="plato__nombre" data-i18n="rt_n_sand_hamburguesitas">Degustación de hamburguesitas con papas cuñas saborizadas</h4>
                             <span class="plato__precio" id="p-sandwiches-chef-hamburguesitas"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Sándwich de pan del chef, bondiola braceada y papas cuñas
-                                saborizadas</h4><span class="plato__precio" id="p-sandwiches-chef-bondiola"></span>
+                            <h4 class="plato__nombre" data-i18n="rt_n_sand_bondiola">Sándwich de pan del chef, bondiola braceada y papas cuñas saborizadas</h4><span class="plato__precio" id="p-sandwiches-chef-bondiola"></span>
                         </div>
                     </li>
                 </ul>
@@ -1435,31 +1533,31 @@
                 <ul class="carta__lista">
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Papas clásicas</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_fri_papas">Papas clásicas</h4><span class="plato__precio"
                                 id="p-frituras-papas-clasicas"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Papas con cheddar y verdeo</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_fri_cheddar">Papas con cheddar y verdeo</h4><span class="plato__precio"
                                 id="p-frituras-papas-cheddar"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Pollo crispy</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_fri_pollo">Pollo crispy</h4><span class="plato__precio"
                                 id="p-frituras-pollo-crispy"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Rabas</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_fri_rabas">Rabas</h4><span class="plato__precio"
                                 id="p-frituras-rabas"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Langostinos rebozados con panko</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_fri_langostinos">Langostinos rebozados con panko</h4><span class="plato__precio"
                                 id="p-frituras-langostinos"></span>
                         </div>
                     </li>
@@ -1470,25 +1568,25 @@
                 <ul class="carta__lista">
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Arancinis de calabazas y muzzarela</h4>
+                            <h4 class="plato__nombre" data-i18n="rt_n_veg_arancinis">Arancinis de calabazas y muzzarela</h4>
                             <span class="plato__precio" id="p-vegetarianos-arancinis"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Pizza napolitana</h4>
+                            <h4 class="plato__nombre" data-i18n="rt_n_veg_napolitana">Pizza napolitana</h4>
                             <span class="plato__precio" id="p-vegetarianos-napolitana"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Pizza 4 quesos</h4>
+                            <h4 class="plato__nombre" data-i18n="rt_n_veg_4quesos">Pizza 4 quesos</h4>
                             <span class="plato__precio" id="p-vegetarianos-4quesos"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Sándwich sugerencia del chef</h4>
+                            <h4 class="plato__nombre" data-i18n="rt_n_veg_sandwich">Sándwich sugerencia del chef</h4>
                             <span class="plato__precio" id="p-vegetarianos-sandwich-chef"></span>
                         </div>
                     </li>
@@ -1499,19 +1597,19 @@
                 <ul class="carta__lista">
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Pizzas</h4>
+                            <h4 class="plato__nombre" data-i18n="rt_pizzas">Pizzas</h4>
                             <span class="plato__precio" id="p-sintacc-pizzas"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Empanadas</h4>
+                            <h4 class="plato__nombre" data-i18n="rt_empanadas">Empanadas</h4>
                             <span class="plato__precio" id="p-sintacc-empanadas"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Sándwiches</h4>
+                            <h4 class="plato__nombre" data-i18n="rt_sandwiches">Sándwiches</h4>
                             <span class="plato__precio" id="p-sintacc-sandwiches"></span>
                         </div>
                     </li>
@@ -1519,23 +1617,23 @@
 
 
                 <!-- PASTELERÍA -->
-                <h3 class="carta__subtitulo" id="r-pasteleria" data-i18n="sec_pasteleria">Nuestra pastelería</h3>
+                <h3 class="carta__subtitulo" id="r-pasteleria" data-i18n="rt_h_pasteleria">Nuestra pastelería</h3>
                 <ul class="carta__lista">
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Budín de limón y semillas de amapolas</h4><span
+                            <h4 class="plato__nombre" data-i18n="rt_n_pas_budin_limon">Budín de limón y semillas de amapolas</h4><span
                                 class="plato__precio" id="p-pasteleria-budin-limon"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Budin tentación de chocolate</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_pas_budin_choc">Budín tentación de chocolate</h4><span class="plato__precio"
                                 id="p-pasteleria-budin-chocolate"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Mini lemon pie</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_pas_lemon">Mini lemon pie</h4><span class="plato__precio"
                                 id="p-pasteleria-lemon-pie"></span>
                         </div>
                     </li>
@@ -1547,13 +1645,13 @@
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Croissant de pastelera de naranja y chantilly</h4><span
+                            <h4 class="plato__nombre" data-i18n="rt_n_pas_croissant_naranja">Croissant de pastelera de naranja y chantilly</h4><span
                                 class="plato__precio" id="p-pasteleria-croissant-naranja"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Croissant de dulce de leche</h4><span class="plato__precio"
+                            <h4 class="plato__nombre" data-i18n="rt_n_pas_croissant_ddl">Croissant de dulce de leche</h4><span class="plato__precio"
                                 id="p-pasteleria-croissant-ddl"></span>
                         </div>
                     </li>
@@ -1564,10 +1662,10 @@
                 <ul class="carta__lista">
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Flan clásico</h4>
+                            <h4 class="plato__nombre" data-i18n="rt_n_pos_flan">Flan clásico</h4>
                             <span class="plato__precio" id="pr-postres-flan"></span>
                         </div>
-                        <p class="plato__desc">Opcional dulce de leche o chantilly.</p>
+                        <p class="plato__desc" data-i18n="rt_d_pos_flan">Opcional dulce de leche o chantilly.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
@@ -1577,7 +1675,7 @@
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Brownie con helado</h4>
+                            <h4 class="plato__nombre" data-i18n="n_postres_brownie">Brownie con helado</h4>
                             <span class="plato__precio" id="pr-postres-brownie"></span>
                         </div>
                     </li>
@@ -1586,57 +1684,55 @@
                 <!-- SUGERENCIAS DEL CHEF (DENTRO DE POSTRES) -->
 
                 <ul class="carta__lista">
-                    
+
                     <li class="plato">
-                        <span class="carta__eslogan">Sugerencias del chef - River view</span>
+                        <p class="carta__eslogan" data-i18n="rt_chef_river">Sugerencias del chef - River view</p>
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Degustación de mousses</h4>
+                            <h4 class="plato__nombre" data-i18n="rt_n_pos_mousses">Degustación de mousses</h4>
                             <span class="plato__precio" id="p-postres-chef-mousses"></span>
                         </div>
                     </li>
                 </ul>
 
-                
+
                 <ul class="carta__lista">
-                    
+
                     <li class="plato">
-                        <span class="carta__eslogan">Sugerencias del chef - Island front</span>
+                        <p class="carta__eslogan" data-i18n="rt_chef_island">Sugerencias del chef - Island front</p>
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Esfera de chocolate helada, sable de chocolate y ganache</h4>
+                            <h4 class="plato__nombre" data-i18n="rt_n_pos_esfera_choc">Esfera de chocolate helada, sable de chocolate y ganache</h4>
                             <span class="plato__precio" id="p-postres-chef-esfera-chocolate"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Esfera de Frutos rojos, sable de vainilla y ganache</h4>
+                            <h4 class="plato__nombre" data-i18n="rt_n_pos_esfera_frutos">Esfera de frutos rojos, sable de vainilla y ganache</h4>
                             <span class="plato__precio" id="p-postres-chef-esfera-frutos"></span>
                         </div>
                     </li>
                 </ul>
+            </div>
         </section>
         <!-- SECCION BEBIDAS -->
-        <section class="panel" id="rooftop-bebida" aria-label="Rooftop · Bebida">
+        <section class="panel" id="rooftop-bebida" aria-labelledby="rooftop-bebida-titulo">
             <div class="panel__scroll">
+                <div class="panel__cabecera">
+                    <h2 class="panel__titulo" id="rooftop-bebida-titulo" data-i18n="rt_t_bebida">Rooftop · Bebida</h2>
+                    <span class="panel__filete" aria-hidden="true"></span>
+                </div>
+
                 <!-- Carrusel de categorías de Rooftop Bar -->
                 <div class="categorias-wrapper">
                     <button type="button" class="carrusel-btn carrusel-btn--prev" aria-label="Anterior">&#171;</button>
                     <div class="categorias-carrusel">
-                        <a href="#rb-sinalcohol" class="categoria-card"><i class="ti ti-lemon"></i><span
-                                data-i18n="sec_sinalcohol">Sin alcohol</span></a>
-                        <a href="#rb-cervezas" class="categoria-card"><i class="ti ti-beer"></i><span
-                                data-i18n="sec_cervezas">Cervezas</span></a>
-                        <a href="#rb-cervezas" class="categoria-card"><i class="ti ti-bottle"></i><span
-                                data-i18n="sec_cervezas">Vinos & espumantes</span></a>
-                        <a href="#r-autor" class="categoria-card"><i class="ti ti-star"></i><span
-                                data-i18n="grp_cocteleria_tragos_autor">Tragos de autor</span></a>
-                        <a href="#r-aper" class="categoria-card"><i class="ti ti-barrel"></i><span
-                                data-i18n="grp_cocteleria_aperitivos">Aperitivos</span></a>
-                        <a href="#r-clasyinter" class="categoria-card"><i class="ti ti-glass-cocktail"></i><span
-                                data-i18n="grp_cocteleria_clasicos">Clásicos</span></a>
-                        <a href="#r-elaborado" class="categoria-card"><i class="ti ti-flask"></i><span
-                                data-i18n="grp_cocteleria_elaborados">Elaborados</span></a>
-                        <a href="#r-tonicos" class="categoria-card"><i class="ti ti-glass-gin"></i><span
-                                data-i18n="grp_cocteleria_tonicos">Tónicos</span></a>
+                        <a href="#rb-sinalcohol" class="categoria-card"><i class="ti ti-lemon"></i><span data-i18n="sec_sinalcohol">Sin alcohol</span></a>
+                        <a href="#rb-cervezas" class="categoria-card"><i class="ti ti-beer"></i><span data-i18n="sec_cervezas">Cervezas</span></a>
+                        <a href="#rb-espumantes" class="categoria-card"><i class="ti ti-bottle"></i><span data-i18n="rt_c_vinos_espumantes">Vinos &amp; espumantes</span></a>
+                        <a href="#r-autor" class="categoria-card"><i class="ti ti-star"></i><span data-i18n="rt_g_autor">Tragos de autor</span></a>
+                        <a href="#r-aper" class="categoria-card"><i class="ti ti-barrel"></i><span data-i18n="rt_g_aperitivos">Aperitivos</span></a>
+                        <a href="#r-clasyinter" class="categoria-card"><i class="ti ti-glass-cocktail"></i><span data-i18n="rt_c_clasicos">Clásicos</span></a>
+                        <a href="#r-elaborado" class="categoria-card"><i class="ti ti-flask"></i><span data-i18n="rt_g_elaborados">Elaborados</span></a>
+                        <a href="#r-tonicos" class="categoria-card"><i class="ti ti-glass-gin"></i><span data-i18n="rt_g_tonicos">Tónicos</span></a>
                     </div>
                     <button type="button" class="carrusel-btn carrusel-btn--next" aria-label="Siguiente">&#187;</button>
                 </div>
@@ -1670,54 +1766,45 @@
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limo">Vaso limonada</h4>
+                            <h4 class="plato__nombre" data-i18n="rt_n_limonada_vaso">Vaso limonada</h4>
                             <span class="plato__precio" id="pr-sinalcohol-limo"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limo">Vaso limonada de frutos rojos</h4>
+                            <h4 class="plato__nombre" data-i18n="rt_n_limonada_vaso_fr">Vaso limonada de frutos rojos</h4>
                             <span class="plato__precio" id="pr-sinalcohol-limo-fr"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limo">Maracuya terrace</h4>
+                            <h4 class="plato__nombre">Maracuyá Terrace</h4>
                             <span class="plato__precio" id="pr-sinalcohol-limo-mr"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_spritz">reduccion de frutos rojos ,
-                            maracuya y jugo de naranaja.</p>
-                    </li>
+                        <p class="plato__desc" data-i18n="rt_d_maracuya_terrace">Reducción de frutos rojos, maracuyá y jugo de naranja.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_licuados">Angel nova </h4>
+                            <h4 class="plato__nombre">Angel Nova</h4>
                             <span class="plato__precio" id="pr-sinalcohol-licuados"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_spritz">Te negro y hibicus , jugo de
-                            lima , almibar y soda</p>
-                    </li>
+                        <p class="plato__desc" data-i18n="rt_d_angel_nova">Té negro y hibiscus, jugo de lima, almíbar y soda.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limonada_menta">Limonada de menta y
-                                jengibre
-                                (1 L)</h4>
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limonada_menta">Limonada de menta y jengibre (1 L)</h4>
                             <span class="plato__precio" id="pr-sinalcohol-limonada-menta"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limonada_maracuya">Limonada de maracuyá (1
-                                L)
-                            </h4>
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limonada_maracuya">Limonada de maracuyá (1 L)</h4>
                             <span class="plato__precio" id="pr-sinalcohol-limonada-maracuya"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limonada_frutos_rojos">Limonada con frutos
-                                rojos (1 L)</h4>
+                            <h4 class="plato__nombre" data-i18n="n_sinalcohol_limonada_frutos_rojos">Limonada con frutos rojos (1 L)</h4>
                             <span class="plato__precio" id="pr-sinalcohol-limonada-frutos-rojos"></span>
                         </div>
                     </li>
@@ -1739,8 +1826,7 @@
                     </li>
                     <li class="fila">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre" data-i18n="n_cervezas_stella_noire">Stella Artois Noire (lata)
-                            </h4>
+                            <h4 class="plato__nombre" data-i18n="n_cervezas_stella_noire">Stella Artois Noire (lata)</h4>
                             <span class="plato__precio" id="pr-cervezas-stella-noire"></span>
                         </div>
                     </li>
@@ -1758,8 +1844,7 @@
                     </li>
                     <li class="fila">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre" data-i18n="n_cervezas_stella_pure_gold">Stella Pure Gold sin TACC
-                            </h4>
+                            <h4 class="plato__nombre" data-i18n="n_cervezas_stella_pure_gold">Stella Pure Gold sin TACC</h4>
                             <span class="plato__precio" id="pr-cervezas-stella-pure-gold"></span>
                         </div>
                     </li>
@@ -1849,272 +1934,254 @@
                 </ul>
 
 
-                <h3 class="carta__subtitulo" id="b-cocteleria" data-i18n="sec_cocteleria">Coctelería</h3>
+                <h3 class="carta__subtitulo" id="rb-cocteleria" data-i18n="sec_cocteleria">Coctelería</h3>
 
-                <h4 class="carta__grupo" id="r-autor" data-i18n="grp_cocteleria_tragos_autor">Tragos de autor</h4>
+                <h4 class="carta__grupo" id="r-autor" data-i18n="rt_g_autor">Tragos de autor</h4>
                 <ul class="carta__lista">
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Red Sunset</h4>
+                            <h5 class="plato__nombre">Red Sunset</h5>
                             <span class="plato__precio" id="p-cocteleria-red-sunset"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_red_sunset">Sky, frutos rojos, almíbar de
-                            naranja, jugo de lima y gaseosa de pomelo.</p>
+                        <p class="plato__desc" data-i18n="rt_d_red_sunset">Sky, frutos rojos, almíbar de naranja, jugo de lima y gaseosa de pomelo.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Symphony</h4>
+                            <h5 class="plato__nombre">Symphony</h5>
                             <span class="plato__precio" id="p-cocteleria-symphony"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_symphony">Rosso, almíbar de naranja y jugo de
-                            naranja.</p>
+                        <p class="plato__desc" data-i18n="rt_d_symphony">Rosso, almíbar de naranja y jugo de naranja.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Summer Terrace</h4>
+                            <h5 class="plato__nombre">Summer Terrace</h5>
                             <span class="plato__precio" id="p-cocteleria-summer-terrace"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_summer_terrace">Gin, reducción de frutos rojos,
-                            jugo de lima, espumante y ananá.</p>
+                        <p class="plato__desc" data-i18n="rt_d_summer_terrace">Gin, reducción de frutos rojos, jugo de lima, espumante y ananá.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Bill Beery</h4>
+                            <h5 class="plato__nombre">Bill Beery</h5>
                             <span class="plato__precio" id="p-cocteleria-bill-beery"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_bill_beery">Jameson, almíbar de naranja,
-                            arándanos y jugo de lima.</p>
+                        <p class="plato__desc" data-i18n="rt_d_bill_beery">Jameson, almíbar de naranja, arándanos y jugo de lima.</p>
                     </li>
                 </ul>
 
-                <h4 class="carta__grupo" id="r-aper" data-i18n="grp_cocteleria_aperitivos">Aperitivos</h4>
+                <h4 class="carta__grupo" id="r-aper" data-i18n="rt_g_aperitivos">Aperitivos</h4>
                 <ul class="carta__lista">
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Ramazzotti Spritz</h4>
+                            <h5 class="plato__nombre">Ramazzotti Spritz</h5>
                             <span class="plato__precio" id="pr-cocteleria-ramazzotti-spritz"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_spritz">Ramazzotti, espumante, soda y
-                            rodaja de naranja.</p>
+                        <p class="plato__desc" data-i18n="rt_d_ramazzotti_spritz">Ramazzotti, espumante, soda y rodaja de naranja.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Cynar pomelo</h4>
+                            <h5 class="plato__nombre">Cynar pomelo</h5>
                             <span class="plato__precio" id="pr-cocteleria-cynar"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_cynar">Cynar y gaseosa de pomelo.</p>
+                        <p class="plato__desc" data-i18n="rt_d_cynar">Cynar y gaseosa de pomelo.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Campari con pomelo</h4>
+                            <h5 class="plato__nombre">Campari con pomelo</h5>
                             <span class="plato__precio" id="p-cocteleria-campari-pomelo"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_campari_pomelo">Campari y gaseosa de pomelo.</p>
+                        <p class="plato__desc" data-i18n="rt_d_campari_pomelo">Campari y gaseosa de pomelo.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Garibaldi</h4>
+                            <h5 class="plato__nombre">Garibaldi</h5>
                             <span class="plato__precio" id="pr-cocteleria-garibaldi"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_garibaldi">Campari y jugo de naranja.</p>
+                        <p class="plato__desc" data-i18n="rt_d_garibaldi">Campari y jugo de naranja.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Fernet</h4>
+                            <h5 class="plato__nombre">Fernet</h5>
                             <span class="plato__precio" id="pr-cocteleria-fernet-coca"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_fernet_coca">Fernet y Coca-Cola.</p>
+                        <p class="plato__desc" data-i18n="rt_d_fernet">Fernet y Coca-Cola.</p>
                     </li>
                 </ul>
 
-                <h4 class="carta__grupo" id="r-clasyinter" data-i18n="grp_cocteleria_clasicos">Clásicos e
-                    internacionales</h4>
+                <h4 class="carta__grupo" id="r-clasyinter" data-i18n="rt_g_clasicos">Clásicos e internacionales</h4>
                 <ul class="carta__lista">
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Aperol Spritz</h4>
+                            <h5 class="plato__nombre">Aperol Spritz</h5>
                             <span class="plato__precio" id="pr-cocteleria-aperol-spritz"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_aperol_spritz">Aperol, espumante, soda y rodaja
-                            de naranja.</p>
+                        <p class="plato__desc" data-i18n="rt_d_aperol_spritz">Aperol, espumante, soda y rodaja de naranja.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Bramble</h4>
+                            <h5 class="plato__nombre">Bramble</h5>
                             <span class="plato__precio" id="p-cocteleria-bramble"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_bramble">Gin, jugo de lima y reducción de frutos
-                            rojos.</p>
+                        <p class="plato__desc" data-i18n="rt_d_bramble">Gin, jugo de lima y reducción de frutos rojos.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Cuba Libre</h4>
+                            <h5 class="plato__nombre">Cuba Libre</h5>
                             <span class="plato__precio" id="pr-cocteleria-cuba-libre"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_cuba_libre">Ron, Coca-Cola y rodaja de lima.</p>
+                        <p class="plato__desc" data-i18n="rt_d_cuba_libre">Ron, Coca-Cola y rodaja de lima.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Negroni</h4>
+                            <h5 class="plato__nombre">Negroni</h5>
                             <span class="plato__precio" id="pr-cocteleria-negroni"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_negroni">Gin, rosso, Campari y rodaja de naranja.
-                        </p>
+                        <p class="plato__desc" data-i18n="rt_d_negroni">Gin, rosso, Campari y rodaja de naranja.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Boulevardier</h4>
+                            <h5 class="plato__nombre">Boulevardier</h5>
                             <span class="plato__precio" id="p-cocteleria-boulevardier"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_boulevardier">Whisky, rosso, Campari y rodaja de
-                            naranja.</p>
+                        <p class="plato__desc" data-i18n="rt_d_boulevardier">Whisky, rosso, Campari y rodaja de naranja.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Old Fashioned</h4>
+                            <h5 class="plato__nombre">Old Fashioned</h5>
                             <span class="plato__precio" id="p-cocteleria-old-fashioned"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_old_fashioned">Whisky, bitter Angostura y cereza.
-                        </p>
+                        <p class="plato__desc" data-i18n="rt_d_old_fashioned">Whisky, bitter Angostura y cereza.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Penicillin</h4>
+                            <h5 class="plato__nombre">Penicillin</h5>
                             <span class="plato__precio" id="p-cocteleria-penicillin"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_penicillin">Chivas, jugo de lima, miel y
-                            jengibre.</p>
+                        <p class="plato__desc" data-i18n="rt_d_penicillin">Chivas, jugo de lima, miel y jengibre.</p>
                     </li>
                 </ul>
 
-                <h4 class="carta__grupo" id="r-elaborado" data-i18n="grp_cocteleria_elaborados">Elaborados</h4>
+                <h4 class="carta__grupo" id="r-elaborado" data-i18n="rt_g_elaborados">Elaborados</h4>
                 <ul class="carta__lista">
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Tinto Verano</h4>
+                            <h5 class="plato__nombre">Tinto Verano</h5>
                             <span class="plato__precio" id="p-cocteleria-tinto-verano"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_tinto_verano">Vino Malbec, jugo de limón, almíbar
-                            y frutos rojos.</p>
+                        <p class="plato__desc" data-i18n="rt_d_tinto_verano">Vino Malbec, jugo de limón, almíbar y frutos rojos.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Maracuyá Spritz</h4>
+                            <h5 class="plato__nombre">Maracuyá Spritz</h5>
                             <span class="plato__precio" id="p-cocteleria-maracuya-spritz"></span>
                         </div>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Mojito</h4>
+                            <h5 class="plato__nombre">Mojito</h5>
                             <span class="plato__precio" id="pr-cocteleria-mojito"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_mojito">Lima, menta, almíbar y soda.</p>
+                        <p class="plato__desc" data-i18n="rt_d_mojito">Lima, menta, almíbar y soda.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Passion Mojito</h4>
+                            <h5 class="plato__nombre">Passion Mojito</h5>
                             <span class="plato__precio" id="p-cocteleria-passion-mojito"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_passion_mojito">Lima, menta, almíbar, maracuyá y
-                            soda.</p>
+                        <p class="plato__desc" data-i18n="rt_d_passion_mojito">Lima, menta, almíbar, maracuyá y soda.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Cynar Julep</h4>
+                            <h5 class="plato__nombre">Cynar Julep</h5>
                             <span class="plato__precio" id="pr-cocteleria-cynar-julep"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_cynar_julep">Menta, lima, almíbar y gaseosa de
-                            pomelo.</p>
+                        <p class="plato__desc" data-i18n="rt_d_cynar_julep">Menta, lima, almíbar y gaseosa de pomelo.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Caipiroska clásica</h4>
+                            <h5 class="plato__nombre">Caipiroska clásica</h5>
                             <span class="plato__precio" id="p-cocteleria-caipiroska-clasica"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_caipiroska_clasica">Lima, azúcar y vodka.</p>
+                        <p class="plato__desc" data-i18n="rt_d_caipiroska_clasica">Lima, azúcar y vodka.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Caipiroska de maracuyá</h4>
+                            <h5 class="plato__nombre">Caipiroska de maracuyá</h5>
                             <span class="plato__precio" id="p-cocteleria-caipiroska-maracuya"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_caipiroska_maracuya">Maracuyá, lima, azúcar y
-                            vodka.</p>
+                        <p class="plato__desc" data-i18n="rt_d_caipiroska_maracuya">Maracuyá, lima, azúcar y vodka.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Caipi de frutos rojos</h4>
+                            <h5 class="plato__nombre">Caipi de frutos rojos</h5>
                             <span class="plato__precio" id="p-cocteleria-caipi-frutos-rojos"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_caipi_frutos_rojos">Frutos rojos, lima, azúcar y
-                            vodka.</p>
+                        <p class="plato__desc" data-i18n="rt_d_caipi_frutos_rojos">Frutos rojos, lima, azúcar y vodka.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Caipirinha</h4>
+                            <h5 class="plato__nombre">Caipirinha</h5>
                             <span class="plato__precio" id="pr-cocteleria-caipirinha"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_caipirinha">Lima, azúcar y cachaça.</p>
+                        <p class="plato__desc" data-i18n="rt_d_caipirinha">Lima, azúcar y cachaça.</p>
                     </li>
                 </ul>
 
-                <h4 class="carta__grupo" id="r-tonicos" data-i18n="grp_cocteleria_tonicos">Tónicos</h4>
+                <h4 class="carta__grupo" id="r-tonicos" data-i18n="rt_g_tonicos">Tónicos</h4>
                 <ul class="carta__lista">
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Ramazzotti Tonic</h4>
+                            <h5 class="plato__nombre">Ramazzotti Tonic</h5>
                             <span class="plato__precio" id="p-cocteleria-ramazzotti-tonic"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_ramazzotti_tonic">Ramazzotti, tónica y rodaja de
-                            naranja.</p>
+                        <p class="plato__desc" data-i18n="rt_d_ramazzotti_tonic">Ramazzotti, tónica y rodaja de naranja.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Gin Beefeater</h4>
+                            <h5 class="plato__nombre">Gin Beefeater</h5>
                             <span class="plato__precio" id="p-cocteleria-gin-beefeater"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_gin_beefeater">Gin Beefeater, fruta a elección y
-                            tónica.</p>
+                        <p class="plato__desc" data-i18n="rt_d_gin_beefeater">Gin Beefeater, fruta a elección y tónica.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Beefeater del Bosque</h4>
+                            <h5 class="plato__nombre">Beefeater del Bosque</h5>
                             <span class="plato__precio" id="p-cocteleria-beefeater-bosque"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_beefeater_bosque">Gin Beefeater, frutos rojos y
-                            tónica.</p>
+                        <p class="plato__desc" data-i18n="rt_d_beefeater_bosque">Gin Beefeater, frutos rojos y tónica.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Beefeater Pink</h4>
+                            <h5 class="plato__nombre">Beefeater Pink</h5>
                             <span class="plato__precio" id="p-cocteleria-beefeater-pink"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_beefeater_pink">Beefeater Pink, frutillas y
-                            tónica.</p>
+                        <p class="plato__desc" data-i18n="rt_d_beefeater_pink">Beefeater Pink, frutillas y tónica.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Passion &amp; Tonic</h4>
+                            <h5 class="plato__nombre">Passion &amp; Tonic</h5>
                             <span class="plato__precio" id="p-cocteleria-passion-tonic"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_passion_tonic">Gin Beefeater, maracuyá y tónica.
-                        </p>
+                        <p class="plato__desc" data-i18n="rt_d_passion_tonic">Gin Beefeater, maracuyá y tónica.</p>
                     </li>
                     <li class="plato">
                         <div class="plato__linea">
-                            <h4 class="plato__nombre">Campari Tonic</h4>
+                            <h5 class="plato__nombre">Campari Tonic</h5>
                             <span class="plato__precio" id="pr-cocteleria-campari-tonic"></span>
                         </div>
-                        <p class="plato__desc" data-i18n="d_cocteleria_campari_tonic">Campari, tónica y rodaja de limón.
-                        </p>
+                        <p class="plato__desc" data-i18n="rt_d_campari_tonic">Campari, tónica y rodaja de limón.</p>
                     </li>
                 </ul>
+            </div>
         </section>
+
+
 
         <a href="#" data-reserva="auto" class="reservar-flotante">
             <i class="ti ti-calendar"></i>
             <span data-i18n="reservar">Reservar</span>
         </a>
+
+        
 
     </main>
 
@@ -2127,11 +2194,8 @@
         <div class="modal">
             <button type="button" class="modal-close" data-reserva-cerrar aria-label="Cerrar">✕</button>
             <div class="reserva__logo">
-                <img id="reserva-logo" class="main-logo"
-         src="../img/logobow.png"
-         data-logo-bow="../img/logobow.png"
-         data-logo-rooftop="../img/logorooftop.png"
-         alt="BOW Café & Bistró">
+                <img id="reserva-logo" class="main-logo" src="../img/logobow.png" data-logo-bow="../img/logobow.png"
+                    data-logo-rooftop="../img/logorooftop.png" alt="BOW Café & Bistró">
             </div>
             <h2 class="modal-titulo" id="reserva-titulo">RESERVAR</h2>
 
@@ -2201,20 +2265,1237 @@
         </div>
     </div>
 
-    <!--<main id="eventos" class="general-wrapper">
-        <div>
-            <p>PROXIMAMENTE</p>
-        </div>-->
+    <main id="eventos" class="general-wrapper">
+        <section class="panel" id="eventos-inicio" aria-labelledby="eventos-titulo">
+            <div class="panel__scroll">
+
+                <div class="panel__cabecera">
+                    <h2 class="panel__titulo" id="eventos-titulo" data-i18n="eventos">Eventos & Corporativos</h2>
+                    <span class="panel__filete" aria-hidden="true"></span>
+                </div>
+
+                <div class="evento__sobre" id="eventos-sobre">
+                    <h3 class="carta__subtitulo" data-i18n="ev_sobre_t">Experiencia BOW</h3>
+                    <p class="evento__intro" data-i18n="ev_sobre_d">Dentro del Hotel Dazzler Rosario, gastronomía,
+                        servicio y ambiente trabajan juntos para que tu evento sea único y vos solo disfrutes.</p>
+                </div>
+
+                <h3 class="carta__subtitulo" id="eventos-espacios" data-i18n="ev_elegi">Elegí tu espacio</h3>
+
+                <div class="espacios">
+                    <input type="radio" name="espacio" id="esp-bistro" class="espacios__radio" checked>
+                    <input type="radio" name="espacio" id="esp-rooftop" class="espacios__radio">
+
+                    <div class="espacios__botones">
+                        <label for="esp-bistro" class="espacios__boton">
+                            <i class="ti ti-armchair"></i>
+                            <span data-i18n="ev_bistro_t">Salón Bistró</span>
+                        </label>
+                    </div>
+
+                    <article class="espacios__panel espacios__panel--bistro">
+                        <p class="espacios__desc" data-i18n="ev_bistro_d">Salón Bistró es un espacio exclusivo y
+                            versátil, ideal para eventos sociales y corporativos que buscan un entorno elegante y
+                            privado.</p>
+                        <div class="galeria-wrap">
+                            <button type="button" class="galeria__btn galeria__btn--prev" aria-label="Anterior"><i
+                                    class="ti ti-chevron-left"></i></button>
+                            <div class="galeria-carrusel">
+                                <figure><img src="../img/eventos/bistro-1.webp" alt="Salón Bistró" loading="lazy"
+                                        decoding="async"></figure>
+                                <figure><img src="../img/eventos/bistro-2.webp" alt="Salón Bistró" loading="lazy"
+                                        decoding="async"></figure>
+                                <figure><img src="../img/eventos/bistro-3.webp" alt="Salón Bistró" loading="lazy"
+                                        decoding="async"></figure>
+                                <figure><img src="../img/eventos/bistro-4.webp" alt="Salón Bistró" loading="lazy"
+                                        decoding="async"></figure>
+                                <figure><img src="../img/eventos/bistro-5.webp" alt="Salón Bistró" loading="lazy"
+                                        decoding="async"></figure>
+                                <figure><img src="../img/eventos/bistro-6.webp" alt="Salón Bistró" loading="lazy"
+                                        decoding="async"></figure>
+                                <figure><img src="../img/eventos/bistro-7.webp" alt="Salón Bistró" loading="lazy"
+                                        decoding="async"></figure>
+                            </div>
+                            <button type="button" class="galeria__btn galeria__btn--next" aria-label="Siguiente"><i
+                                    class="ti ti-chevron-right"></i></button>
+                        </div>
+                        <p class="espacios__dato" data-i18n="ev_bistro_u">Primer piso · hasta 80 personas</p>
+                    </article>
+
+
+                </div>
+
+            </div>
+        </section>
+        <!-- ============================================================
+     EVENTOS — servicios
+     - .ev-flujo (div): solo agrupa los pasos; no lleva titulo propio.
+     - .ev-paso (section): cada paso tiene su titulo (aria-labelledby).
+     ============================================================ -->
+
+        <div class="ev-flujo">
+
+            <!-- PASO 1: SERVICIOS -->
+            <section class="ev-paso" id="ev-servicios" aria-labelledby="ev-servicios-titulo">
+                <div class="panel__scroll">
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-servicios-titulo">Servicios</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="ev-grilla">
+                        <a class="ev-card ev-card--cocktails" href="#ev-cocktails">
+                            <i class="ti ti-glass-cocktail" aria-hidden="true"></i>
+                            <span>Cocktails y tapeos</span>
+                        </a>
+                        <a class="ev-card ev-card--coffee" href="#ev-coffee">
+                            <i class="ti ti-coffee" aria-hidden="true"></i>
+                            <span>Coffee corporativos</span>
+                        </a>
+                        <a class="ev-card ev-card--meriendas" href="#ev-meriendas">
+                            <i class="ti ti-cake" aria-hidden="true"></i>
+                            <span>Meriendas</span>
+                        </a>
+                        <a class="ev-card ev-card--emplatados" href="#ev-emplatados">
+                            <i class="ti ti-tools-kitchen-2" aria-hidden="true"></i>
+                            <span>Emplatados</span>
+                        </a>
+                        <a class="ev-card ev-card--barra" href="#ev-barra">
+                            <i class="ti ti-bottle" aria-hidden="true"></i>
+                            <span>Barra de bebidas</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PASO 2: COCKTAILS Y TAPEOS (lista de propuestas) -->
+            <section class="ev-paso" id="ev-cocktails" aria-labelledby="ev-cocktails-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li aria-current="step">Cocktails y tapeos</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-cocktails-titulo">Cocktails y tapeos</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro">Tocá una propuesta para conocer qué incluye.</p>
+
+                    <div class="carta__lista">
+                        <a class="plato ev-propuesta" href="#ev-tapeo-simple">
+                            <h4 class="plato__nombre">Tapeo simple</h4>
+                            <p class="plato__desc" id="ev-ts-card">Una propuesta descontracturada y ágil, ideal para
+                                encuentros informales con opciones clásicas y livianas.</p>
+                            <span class="ev-mas">Ver qué incluye <i class="ti ti-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="plato ev-propuesta" href="#ev-tapeo-clasico">
+                            <h4 class="plato__nombre">Tapeo clásico</h4>
+                            <p class="plato__desc" id="ev-tc-card">Una opción más completa, que combina variedad de
+                                finger food caliente y frío con propuestas dulces.</p>
+                            <span class="ev-mas">Ver qué incluye <i class="ti ti-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="plato ev-propuesta" href="#ev-menu-cocktail">
+                            <h4 class="plato__nombre">Menú cocktail</h4>
+                            <p class="plato__desc" id="ev-mc-card">Una propuesta integral tipo recepción, con variedad
+                                de estaciones y opciones gourmet para eventos dinámicos.</p>
+                            <span class="ev-mas">Ver qué incluye <i class="ti ti-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PASO 3A: TAPEO SIMPLE (prefijo ts) -->
+            <section class="ev-paso" id="ev-tapeo-simple" aria-labelledby="ev-tapeo-simple-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li><a href="#ev-cocktails">Cocktails y tapeos</a></li>
+                        <li aria-current="step">Tapeo simple</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-tapeo-simple-titulo">Tapeo simple</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro" id="ev-ts-desc">Una propuesta descontracturada y ágil, ideal para encuentros
+                        informales con opciones clásicas y livianas.</p>
+
+                    <div class="ev-incluye">
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-ts-f-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-ts-f">
+                                <li id="ev-ts-f1" hidden></li>
+                                <li id="ev-ts-f2" hidden></li>
+                                <li id="ev-ts-f3" hidden></li>
+                                <li id="ev-ts-f4" hidden></li>
+                                <li id="ev-ts-f5" hidden></li>
+                                <li id="ev-ts-f6" hidden></li>
+                                <li id="ev-ts-f7" hidden></li>
+                            </ul>
+                        </div>
+
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-ts-d-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-ts-d">
+                                <li id="ev-ts-d1" hidden></li>
+                                <li id="ev-ts-d2" hidden></li>
+                                <li id="ev-ts-d3" hidden></li>
+                                <li id="ev-ts-d4" hidden></li>
+                            </ul>
+                        </div>
+
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-ts-b-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-ts-b">
+                                <li id="ev-ts-b1" hidden></li>
+                                <li id="ev-ts-b2" hidden></li>
+                                <li id="ev-ts-b3" hidden></li>
+                                <li id="ev-ts-b4" hidden></li>
+                                <li id="ev-ts-b5" hidden></li>
+                                <li id="ev-ts-b6" hidden></li>
+                                <li id="ev-ts-b7" hidden></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="ev-aviso" hidden>No pudimos cargar el detalle en este momento. Escribinos por WhatsApp y
+                        te lo enviamos.</p>
+
+
+                    <div class="ev-acciones">
+                        <a class="ev-boton"
+                            href="https://wa.me/5493413442134?text=Hola!%20Quiero%20consultar%20por%20el%20Tapeo%20simple%20para%20un%20evento."
+                            target="_blank" rel="noopener">
+                            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Consultá tu evento
+                        </a>
+                        <a class="ev-volver" href="#ev-cocktails"><i class="ti ti-arrow-left" aria-hidden="true"></i>
+                            Volver a las propuestas</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PASO 3B: TAPEO CLÁSICO (prefijo tc) -->
+            <section class="ev-paso" id="ev-tapeo-clasico" aria-labelledby="ev-tapeo-clasico-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li><a href="#ev-cocktails">Cocktails y tapeos</a></li>
+                        <li aria-current="step">Tapeo clásico</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-tapeo-clasico-titulo">Tapeo clásico</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro" id="ev-tc-desc">Una opción más completa, que combina variedad de finger food
+                        caliente y frío con propuestas dulces.</p>
+
+                    <div class="ev-incluye">
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-tc-f-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-tc-f">
+                                <li id="ev-tc-f1" hidden></li>
+                                <li id="ev-tc-f2" hidden></li>
+                                <li id="ev-tc-f3" hidden></li>
+                                <li id="ev-tc-f4" hidden></li>
+                                <li id="ev-tc-f5" hidden></li>
+                                <li id="ev-tc-f6" hidden></li>
+                                <li id="ev-tc-f7" hidden></li>
+                                <li id="ev-tc-f8" hidden></li>
+                                <li id="ev-tc-f9" hidden></li>
+                            </ul>
+                        </div>
+
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-tc-d-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-tc-d">
+                                <li id="ev-tc-d1" hidden></li>
+                                <li id="ev-tc-d2" hidden></li>
+                                <li id="ev-tc-d3" hidden></li>
+                                <li id="ev-tc-d4" hidden></li>
+                            </ul>
+                        </div>
+
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-tc-b-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-tc-b">
+                                <li id="ev-tc-b1" hidden></li>
+                                <li id="ev-tc-b2" hidden></li>
+                                <li id="ev-tc-b3" hidden></li>
+                                <li id="ev-tc-b4" hidden></li>
+                                <li id="ev-tc-b5" hidden></li>
+                                <li id="ev-tc-b6" hidden></li>
+                                <li id="ev-tc-b7" hidden></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="ev-aviso" hidden>No pudimos cargar el detalle en este momento. Escribinos por WhatsApp y
+                        te lo enviamos.</p>
+
+
+                    <div class="ev-acciones">
+                        <a class="ev-boton"
+                            href="https://wa.me/5493413442134?text=Hola!%20Quiero%20consultar%20por%20el%20Tapeo%20cl%C3%A1sico%20para%20un%20evento."
+                            target="_blank" rel="noopener">
+                            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Consultá tu evento
+                        </a>
+                        <a class="ev-volver" href="#ev-cocktails"><i class="ti ti-arrow-left" aria-hidden="true"></i>
+                            Volver a las propuestas</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PASO 3C: MENÚ COCKTAIL (prefijo mc) -->
+            <section class="ev-paso" id="ev-menu-cocktail" aria-labelledby="ev-menu-cocktail-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li><a href="#ev-cocktails">Cocktails y tapeos</a></li>
+                        <li aria-current="step">Menú cocktail</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-menu-cocktail-titulo">Menú cocktail</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro" id="ev-mc-desc">Una propuesta integral tipo recepción, con variedad de
+                        estaciones y opciones gourmet para eventos dinámicos.</p>
+
+                    <div class="ev-incluye">
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-mc-r-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-mc-r">
+                                <li id="ev-mc-r1" hidden></li>
+                                <li id="ev-mc-r2" hidden></li>
+                                <li id="ev-mc-r3" hidden></li>
+                                <li id="ev-mc-r4" hidden></li>
+                                <li id="ev-mc-r5" hidden></li>
+                            </ul>
+                        </div>
+
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-mc-f-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-mc-f">
+                                <li id="ev-mc-f1" hidden></li>
+                                <li id="ev-mc-f2" hidden></li>
+                                <li id="ev-mc-f3" hidden></li>
+                                <li id="ev-mc-f4" hidden></li>
+                                <li id="ev-mc-f5" hidden></li>
+                                <li id="ev-mc-f6" hidden></li>
+                                <li id="ev-mc-f7" hidden></li>
+                                <li id="ev-mc-f8" hidden></li>
+                                <li id="ev-mc-f9" hidden></li>
+                                <li id="ev-mc-f10" hidden></li>
+                                <li id="ev-mc-f11" hidden></li>
+                                <li id="ev-mc-f12" hidden></li>
+                                <li id="ev-mc-f13" hidden></li>
+                                <li id="ev-mc-f14" hidden></li>
+                                <li id="ev-mc-f15" hidden></li>
+                                <li id="ev-mc-f16" hidden></li>
+                            </ul>
+                        </div>
+
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-mc-d-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-mc-d">
+                                <li id="ev-mc-d1" hidden></li>
+                                <li id="ev-mc-d2" hidden></li>
+                                <li id="ev-mc-d3" hidden></li>
+                                <li id="ev-mc-d4" hidden></li>
+                            </ul>
+                        </div>
+
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-mc-b-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-mc-b">
+                                <li id="ev-mc-b1" hidden></li>
+                                <li id="ev-mc-b2" hidden></li>
+                                <li id="ev-mc-b3" hidden></li>
+                                <li id="ev-mc-b4" hidden></li>
+                                <li id="ev-mc-b5" hidden></li>
+                                <li id="ev-mc-b6" hidden></li>
+                                <li id="ev-mc-b7" hidden></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="ev-aviso" hidden>No pudimos cargar el detalle en este momento. Escribinos por WhatsApp y
+                        te lo enviamos.</p>
+
+
+                    <div class="ev-acciones">
+                        <a class="ev-boton"
+                            href="https://wa.me/5493413442134?text=Hola!%20Quiero%20consultar%20por%20el%20Men%C3%BA%20cocktail%20para%20un%20evento."
+                            target="_blank" rel="noopener">
+                            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Consultá tu evento
+                        </a>
+                        <a class="ev-volver" href="#ev-cocktails"><i class="ti ti-arrow-left" aria-hidden="true"></i>
+                            Volver a las propuestas</a>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- coffe corporativo -->
+            <!-- PASO 2: COFFEE CORPORATIVOS (Selección de tipo) -->
+            <section class="ev-paso" id="ev-coffee" aria-labelledby="ev-coffee-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li aria-current="step">Coffee corporativos</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-coffee-titulo">Coffee corporativos</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro">Hace click en el símbolo para conocer qué incluye cada propuesta.</p>
+
+                    <div class="carta__lista">
+                        <a class="plato ev-propuesta" href="#ev-coffee-simple">
+                            <h4 class="plato__nombre">Coffee simple</h4>
+                            <p class="plato__desc" id="ev-cs-card">Una opción práctica y funcional, ideal para pausas
+                                breves en reuniones o capacitaciones.</p>
+                            <span class="ev-mas">Ver qué incluye <i class="ti ti-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="plato ev-propuesta" href="#ev-coffee-clasico">
+                            <h4 class="plato__nombre">Coffee clásico</h4>
+                            <p class="plato__desc" id="ev-cc-card">Una propuesta más completa, que suma variedad dulce y
+                                opciones saladas para una pausa más extendida.</p>
+                            <span class="ev-mas">Ver qué incluye <i class="ti ti-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="plato ev-propuesta" href="#ev-coffee-premium">
+                            <h4 class="plato__nombre">Coffee premium</h4>
+                            <p class="plato__desc" id="ev-cp-card">Una experiencia más amplia y variada, con opciones
+                                dulces, saladas y frescas para eventos más completos.</p>
+                            <span class="ev-mas">Ver qué incluye <i class="ti ti-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PASO 3A: COFFEE SIMPLE (prefijo cs) -->
+            <section class="ev-paso" id="ev-coffee-simple" aria-labelledby="ev-coffee-simple-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li><a href="#ev-coffee">Coffee corporativos</a></li>
+                        <li aria-current="step">Coffee simple</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-coffee-simple-titulo">Coffee simple</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro" id="ev-cs-desc">Una opción práctica y funcional, ideal para pausas breves en
+                        reuniones o capacitaciones.</p>
+
+                    <div class="ev-incluye">
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-cs-f-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-cs-f">
+                                <li id="ev-cs-f1" hidden></li>
+                                <li id="ev-cs-f2" hidden></li>
+                                <li id="ev-cs-f3" hidden></li>
+                                <li id="ev-cs-f4" hidden></li>
+                                <li id="ev-cs-f5" hidden></li>
+                            </ul>
+                        </div>
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-cs-b-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-cs-b">
+                                <li id="ev-cs-b1" hidden></li>
+                                <li id="ev-cs-b2" hidden></li>
+                                <li id="ev-cs-b3" hidden></li>
+                                <li id="ev-cs-b4" hidden></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="ev-aviso" hidden>No pudimos cargar el detalle en este momento. Escribinos por WhatsApp y
+                        te lo enviamos.</p>
+
+                    <div class="ev-acciones">
+                        <a class="ev-boton"
+                            href="https://wa.me/5493413442134?text=Hola!%20Quiero%20consultar%20por%20el%20Coffee%20simple%20para%20un%20evento."
+                            target="_blank" rel="noopener">
+                            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Consultá tu evento
+                        </a>
+                        <a class="ev-volver" href="#ev-coffee"><i class="ti ti-arrow-left" aria-hidden="true"></i>
+                            Volver a las propuestas</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PASO 3B: COFFEE CLÁSICO (prefijo cc) -->
+            <section class="ev-paso" id="ev-coffee-clasico" aria-labelledby="ev-coffee-clasico-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li><a href="#ev-coffee">Coffee corporativos</a></li>
+                        <li aria-current="step">Coffee clásico</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-coffee-clasico-titulo">Coffee clásico</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro" id="ev-cc-desc">Una propuesta más completa, que suma variedad dulce y opciones
+                        saladas para una pausa más extendida.</p>
+
+                    <div class="ev-incluye">
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-cc-f-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-cc-f">
+                                <li id="ev-cc-f1" hidden></li>
+                                <li id="ev-cc-f2" hidden></li>
+                                <li id="ev-cc-f3" hidden></li>
+                                <li id="ev-cc-f4" hidden></li>
+                                <li id="ev-cc-f5" hidden></li>
+                                <li id="ev-cc-f6" hidden></li>
+                            </ul>
+                        </div>
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-cc-b-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-cc-b">
+                                <li id="ev-cc-b1" hidden></li>
+                                <li id="ev-cc-b2" hidden></li>
+                                <li id="ev-cc-b3" hidden></li>
+                                <li id="ev-cc-b4" hidden></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="ev-aviso" hidden>No pudimos cargar el detalle en este momento. Escribinos por WhatsApp y
+                        te lo enviamos.</p>
+
+                    <div class="ev-acciones">
+                        <a class="ev-boton"
+                            href="https://wa.me/5493413442134?text=Hola!%20Quiero%20consultar%20por%20el%20Coffee%20cl%C3%A1sico%20para%20un%20evento."
+                            target="_blank" rel="noopener">
+                            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Consultá tu evento
+                        </a>
+                        <a class="ev-volver" href="#ev-coffee"><i class="ti ti-arrow-left" aria-hidden="true"></i>
+                            Volver a las propuestas</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PASO 3C: COFFEE PREMIUM (prefijo cp) -->
+            <section class="ev-paso" id="ev-coffee-premium" aria-labelledby="ev-coffee-premium-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li><a href="#ev-coffee">Coffee corporativos</a></li>
+                        <li aria-current="step">Coffee premium</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-coffee-premium-titulo">Coffee premium</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro" id="ev-cp-desc">Una experiencia más amplia y variada, con opciones dulces,
+                        saladas y frescas para eventos más completos.</p>
+
+                    <div class="ev-incluye">
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-cp-f-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-cp-f">
+                                <li id="ev-cp-f1" hidden></li>
+                                <li id="ev-cp-f2" hidden></li>
+                                <li id="ev-cp-f3" hidden></li>
+                                <li id="ev-cp-f4" hidden></li>
+                                <li id="ev-cp-f5" hidden></li>
+                                <li id="ev-cp-f6" hidden></li>
+                                <li id="ev-cp-f7" hidden></li>
+                            </ul>
+                        </div>
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-cp-b-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-cp-b">
+                                <li id="ev-cp-b1" hidden></li>
+                                <li id="ev-cp-b2" hidden></li>
+                                <li id="ev-cp-b3" hidden></li>
+                                <li id="ev-cp-b4" hidden></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="ev-aviso" hidden>No pudimos cargar el detalle en este momento. Escribinos por WhatsApp y
+                        te lo enviamos.</p>
+
+                    <div class="ev-acciones">
+                        <a class="ev-boton"
+                            href="https://wa.me/5493413442134?text=Hola!%20Quiero%20consultar%20por%20el%20Coffee%20premium%20para%20un%20evento."
+                            target="_blank" rel="noopener">
+                            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Consultá tu evento
+                        </a>
+                        <a class="ev-volver" href="#ev-coffee"><i class="ti ti-arrow-left" aria-hidden="true"></i>
+                            Volver a las propuestas</a>
+                    </div>
+                </div>
+            </section>
+
+            <!--SECCION MERIENDA -->
+            <!-- PASO 2: MERIENDAS (Selección de tipo) -->
+            <section class="ev-paso" id="ev-meriendas" aria-labelledby="ev-meriendas-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li aria-current="step">Meriendas</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-meriendas-titulo">Meriendas</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro">Hace click en el símbolo para conocer qué incluye cada propuesta.</p>
+
+                    <div class="carta__lista">
+                        <a class="plato ev-propuesta" href="#ev-merienda-express">
+                            <h4 class="plato__nombre">Merienda express</h4>
+                            <p class="plato__desc" id="ev-mx-card">Una propuesta ágil y simple, ideal para encuentros
+                                breves con opciones dulces y saladas clásicas.</p>
+                            <span class="ev-mas">Ver qué incluye <i class="ti ti-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="plato ev-propuesta" href="#ev-merienda-simple">
+                            <h4 class="plato__nombre">Merienda simple</h4>
+                            <p class="plato__desc" id="ev-ms-card">Una opción más completa, que combina variedad de
+                                pastelería con opciones saladas para una experiencia equilibrada.</p>
+                            <span class="ev-mas">Ver qué incluye <i class="ti ti-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="plato ev-propuesta" href="#ev-merienda-clasica">
+                            <h4 class="plato__nombre">Merienda clásica</h4>
+                            <p class="plato__desc" id="ev-mcl-card">Una propuesta más amplia y variada, pensada para
+                                encuentros más completos con opciones dulces, saladas y frescas.</p>
+                            <span class="ev-mas">Ver qué incluye <i class="ti ti-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="plato ev-propuesta" href="#ev-merienda-buffet">
+                            <h4 class="plato__nombre">Merienda buffet premium</h4>
+                            <p class="plato__desc" id="ev-mb-card">Menú tradicional de tres pasos, práctico y adaptable,
+                                ideal para eventos más estructurados.</p>
+                            <span class="ev-mas">Ver qué incluye <i class="ti ti-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PASO 3A: MERIENDA EXPRESS (prefijo mx) -->
+            <section class="ev-paso" id="ev-merienda-express" aria-labelledby="ev-merienda-express-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li><a href="#ev-meriendas">Meriendas</a></li>
+                        <li aria-current="step">Merienda express</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-merienda-express-titulo">Merienda express</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro" id="ev-mx-desc">Una propuesta ágil y simple, ideal para encuentros breves con
+                        opciones dulces y saladas clásicas.</p>
+
+                    <div class="ev-incluye">
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-mx-f-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-mx-f">
+                                <li id="ev-mx-f1" hidden></li>
+                                <li id="ev-mx-f2" hidden></li>
+                                <li id="ev-mx-f3" hidden></li>
+                                <li id="ev-mx-f4" hidden></li>
+                                <li id="ev-mx-f5" hidden></li>
+                            </ul>
+                        </div>
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-mx-b-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-mx-b">
+                                <li id="ev-mx-b1" hidden></li>
+                                <li id="ev-mx-b2" hidden></li>
+                                <li id="ev-mx-b3" hidden></li>
+                                <li id="ev-mx-b4" hidden></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="ev-aviso" hidden>No pudimos cargar el detalle en este momento. Escribinos por WhatsApp y
+                        te lo enviamos.</p>
+
+                    <div class="ev-acciones">
+                        <a class="ev-boton"
+                            href="https://wa.me/5493413442134?text=Hola!%20Quiero%20consultar%20por%20la%20Merienda%20express%20para%20un%20evento."
+                            target="_blank" rel="noopener">
+                            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Consultá tu evento
+                        </a>
+                        <a class="ev-volver" href="#ev-meriendas"><i class="ti ti-arrow-left" aria-hidden="true"></i>
+                            Volver a las propuestas</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PASO 3B: MERIENDA SIMPLE (prefijo ms) -->
+            <section class="ev-paso" id="ev-merienda-simple" aria-labelledby="ev-merienda-simple-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li><a href="#ev-meriendas">Meriendas</a></li>
+                        <li aria-current="step">Merienda simple</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-merienda-simple-titulo">Merienda simple</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro" id="ev-ms-desc">Una opción más completa, que combina variedad de pastelería con
+                        opciones saladas para una experiencia equilibrada.</p>
+
+                    <div class="ev-incluye">
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-ms-f-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-ms-f">
+                                <li id="ev-ms-f1" hidden></li>
+                                <li id="ev-ms-f2" hidden></li>
+                                <li id="ev-ms-f3" hidden></li>
+                                <li id="ev-ms-f4" hidden></li>
+                                <li id="ev-ms-f5" hidden></li>
+                                <li id="ev-ms-f6" hidden></li>
+                            </ul>
+                        </div>
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-ms-b-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-ms-b">
+                                <li id="ev-ms-b1" hidden></li>
+                                <li id="ev-ms-b2" hidden></li>
+                                <li id="ev-ms-b3" hidden></li>
+                                <li id="ev-ms-b4" hidden></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="ev-aviso" hidden>No pudimos cargar el detalle en este momento. Escribinos por WhatsApp y
+                        te lo enviamos.</p>
+
+                    <div class="ev-acciones">
+                        <a class="ev-boton"
+                            href="https://wa.me/5493413442134?text=Hola!%20Quiero%20consultar%20por%20la%20Merienda%20simple%20para%20un%20evento."
+                            target="_blank" rel="noopener">
+                            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Consultá tu evento
+                        </a>
+                        <a class="ev-volver" href="#ev-meriendas"><i class="ti ti-arrow-left" aria-hidden="true"></i>
+                            Volver a las propuestas</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PASO 3C: MERIENDA CLÁSICA (prefijo mcl) -->
+            <section class="ev-paso" id="ev-merienda-clasica" aria-labelledby="ev-merienda-clasica-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li><a href="#ev-meriendas">Meriendas</a></li>
+                        <li aria-current="step">Merienda clásica</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-merienda-clasica-titulo">Merienda clásica</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro" id="ev-mcl-desc">Una propuesta más amplia y variada, pensada para encuentros más
+                        completos con opciones dulces, saladas y frescas.</p>
+
+                    <div class="ev-incluye">
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-mcl-f-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-mcl-f">
+                                <li id="ev-mcl-f1" hidden></li>
+                                <li id="ev-mcl-f2" hidden></li>
+                                <li id="ev-mcl-f3" hidden></li>
+                                <li id="ev-mcl-f4" hidden></li>
+                                <li id="ev-mcl-f5" hidden></li>
+                                <li id="ev-mcl-f6" hidden></li>
+                                <li id="ev-mcl-f7" hidden></li>
+                            </ul>
+                        </div>
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-mcl-b-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-mcl-b">
+                                <li id="ev-mcl-b1" hidden></li>
+                                <li id="ev-mcl-b2" hidden></li>
+                                <li id="ev-mcl-b3" hidden></li>
+                                <li id="ev-mcl-b4" hidden></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="ev-aviso" hidden>No pudimos cargar el detalle en este momento. Escribinos por WhatsApp y
+                        te lo enviamos.</p>
+
+                    <div class="ev-acciones">
+                        <a class="ev-boton"
+                            href="https://wa.me/5493413442134?text=Hola!%20Quiero%20consultar%20por%20la%20Merienda%20cl%C3%A1sica%20para%20un%20evento."
+                            target="_blank" rel="noopener">
+                            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Consultá tu evento
+                        </a>
+                        <a class="ev-volver" href="#ev-meriendas"><i class="ti ti-arrow-left" aria-hidden="true"></i>
+                            Volver a las propuestas</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PASO 3D: MERIENDA BUFFET PREMIUM (prefijo mb) -->
+            <section class="ev-paso" id="ev-merienda-buffet" aria-labelledby="ev-merienda-buffet-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li><a href="#ev-meriendas">Meriendas</a></li>
+                        <li aria-current="step">Merienda buffet premium</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-merienda-buffet-titulo">Merienda buffet premium</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro" id="ev-mb-desc">Menú tradicional de tres pasos, práctico y adaptable, ideal para
+                        eventos más estructurados.</p>
+
+                    <div class="ev-incluye">
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-mb-f-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-mb-f">
+                                <li id="ev-mb-f1" hidden></li>
+                                <li id="ev-mb-f2" hidden></li>
+                                <li id="ev-mb-f3" hidden></li>
+                                <li id="ev-mb-f4" hidden></li>
+                                <li id="ev-mb-f5" hidden></li>
+                                <li id="ev-mb-f6" hidden></li>
+                                <li id="ev-mb-f7" hidden></li>
+                                <li id="ev-mb-f8" hidden></li>
+                            </ul>
+                        </div>
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-mb-b-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-mb-b">
+                                <li id="ev-mb-b1" hidden></li>
+                                <li id="ev-mb-b2" hidden></li>
+                                <li id="ev-mb-b3" hidden></li>
+                                <li id="ev-mb-b4" hidden></li>
+                                <li id="ev-mb-b5" hidden></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="ev-aviso" hidden>No pudimos cargar el detalle en este momento. Escribinos por WhatsApp y
+                        te lo enviamos.</p>
+
+                    <div class="ev-acciones">
+                        <a class="ev-boton"
+                            href="https://wa.me/5493413442134?text=Hola!%20Quiero%20consultar%20por%20la%20Merienda%20buffet%20premium%20para%20un%20evento."
+                            target="_blank" rel="noopener">
+                            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Consultá tu evento
+                        </a>
+                        <a class="ev-volver" href="#ev-meriendas"><i class="ti ti-arrow-left" aria-hidden="true"></i>
+                            Volver a las propuestas</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EMPLATADOS -->
+            <!-- PASO 2: EMPLATADOS (Selección de tipo) -->
+            <section class="ev-paso" id="ev-emplatados" aria-labelledby="ev-emplatados-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li aria-current="step">Emplatados</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-emplatados-titulo">Emplatados</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro">Hace click en el símbolo para conocer qué incluye cada menú.</p>
+
+                    <div class="carta__lista">
+                        <a class="plato ev-propuesta" href="#ev-emplatado-simple">
+                            <h4 class="plato__nombre">Emplatado simple</h4>
+                            <p class="plato__desc" id="ev-es-card">Una opción práctica y equilibrada, ideal para eventos
+                                organizados con un servicio ágil.</p>
+                            <span class="ev-mas">Ver qué incluye <i class="ti ti-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="plato ev-propuesta" href="#ev-emplatado-clasico">
+                            <h4 class="plato__nombre">Emplatado clásico</h4>
+                            <p class="plato__desc" id="ev-ec-card">Una propuesta más completa y tradicional, con
+                                servicio de varios pasos y mayor estructura.</p>
+                            <span class="ev-mas">Ver qué incluye <i class="ti ti-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="plato ev-propuesta" href="#ev-emplatado-gourmet">
+                            <h4 class="plato__nombre">Emplatado gourmet</h4>
+                            <p class="plato__desc" id="ev-eg-card">Una experiencia gastronómica más elaborada, con
+                                platos cuidados y presentación de nivel superior.</p>
+                            <span class="ev-mas">Ver qué incluye <i class="ti ti-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PASO 3A: EMPLATADO SIMPLE (prefijo es) -->
+            <section class="ev-paso" id="ev-emplatado-simple" aria-labelledby="ev-emplatado-simple-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li><a href="#ev-emplatados">Emplatados</a></li>
+                        <li aria-current="step">Emplatado simple</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-emplatado-simple-titulo">Emplatado simple</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro" id="ev-es-desc">Una opción práctica y equilibrada, ideal para eventos
+                        organizados con un servicio ágil.</p>
+
+                    <div class="ev-incluye">
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-es-p-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-es-p">
+                                <li id="ev-es-p1" hidden></li>
+                                <li id="ev-es-p2" hidden></li>
+                                <li id="ev-es-p3" hidden></li>
+                                <li id="ev-es-p4" hidden></li>
+                                <li id="ev-es-p5" hidden></li>
+                            </ul>
+                        </div>
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-es-b-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-es-b">
+                                <li id="ev-es-b1" hidden></li>
+                                <li id="ev-es-b2" hidden></li>
+                                <li id="ev-es-b3" hidden></li>
+                                <li id="ev-es-b4" hidden></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="ev-aviso" hidden>No pudimos cargar el detalle en este momento. Escribinos por WhatsApp y
+                        te lo enviamos.</p>
+
+                    <div class="ev-acciones">
+                        <a class="ev-boton"
+                            href="https://wa.me/5493413442134?text=Hola!%20Quiero%20consultar%20por%20el%20Emplatado%20simple%20para%20un%20evento."
+                            target="_blank" rel="noopener">
+                            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Consultá tu evento
+                        </a>
+                        <a class="ev-volver" href="#ev-emplatados"><i class="ti ti-arrow-left" aria-hidden="true"></i>
+                            Volver a las propuestas</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PASO 3B: EMPLATADO CLÁSICO (prefijo ec) -->
+            <section class="ev-paso" id="ev-emplatado-clasico" aria-labelledby="ev-emplatado-clasico-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li><a href="#ev-emplatados">Emplatados</a></li>
+                        <li aria-current="step">Emplatado clásico</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-emplatado-clasico-titulo">Emplatado clásico</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro" id="ev-ec-desc">Una propuesta más completa y tradicional, con servicio de varios
+                        pasos y mayor estructura.</p>
+
+                    <div class="ev-incluye">
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-ec-p-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-ec-p">
+                                <li id="ev-ec-p1" hidden></li>
+                                <li id="ev-ec-p2" hidden></li>
+                                <li id="ev-ec-p3" hidden></li>
+                                <li id="ev-ec-p4" hidden></li>
+                                <li id="ev-ec-p5" hidden></li>
+                                <li id="ev-ec-p6" hidden></li>
+                            </ul>
+                        </div>
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-ec-b-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-ec-b">
+                                <li id="ev-ec-b1" hidden></li>
+                                <li id="ev-ec-b2" hidden></li>
+                                <li id="ev-ec-b3" hidden></li>
+                                <li id="ev-ec-b4" hidden></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="ev-aviso" hidden>No pudimos cargar el detalle en este momento. Escribinos por WhatsApp y
+                        te lo enviamos.</p>
+
+                    <div class="ev-acciones">
+                        <a class="ev-boton"
+                            href="https://wa.me/5493413442134?text=Hola!%20Quiero%20consultar%20por%20el%20Emplatado%20cl%C3%A1sico%20para%20un%20evento."
+                            target="_blank" rel="noopener">
+                            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Consultá tu evento
+                        </a>
+                        <a class="ev-volver" href="#ev-emplatados"><i class="ti ti-arrow-left" aria-hidden="true"></i>
+                            Volver a las propuestas</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PASO 3C: EMPLATADO GOURMET (prefijo eg) -->
+            <section class="ev-paso" id="ev-emplatado-gourmet" aria-labelledby="ev-emplatado-gourmet-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li><a href="#ev-emplatados">Emplatados</a></li>
+                        <li aria-current="step">Emplatado gourmet</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-emplatado-gourmet-titulo">Emplatado gourmet</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro" id="ev-eg-desc">Una experiencia gastronómica más elaborada, con platos cuidados
+                        y presentación de nivel superior.</p>
+
+                    <div class="ev-incluye">
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-eg-p-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-eg-p">
+                                <li id="ev-eg-p1" hidden></li>
+                                <li id="ev-eg-p2" hidden></li>
+                                <li id="ev-eg-p3" hidden></li>
+                                <li id="ev-eg-p4" hidden></li>
+                                <li id="ev-eg-p5" hidden></li>
+                                <li id="ev-eg-p6" hidden></li>
+                                <li id="ev-eg-p7" hidden></li>
+                            </ul>
+                        </div>
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-eg-b-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-eg-b">
+                                <li id="ev-eg-b1" hidden></li>
+                                <li id="ev-eg-b2" hidden></li>
+                                <li id="ev-eg-b3" hidden></li>
+                                <li id="ev-eg-b4" hidden></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="ev-aviso" hidden>No pudimos cargar el detalle en este momento. Escribinos por WhatsApp y
+                        te lo enviamos.</p>
+
+                    <div class="ev-acciones">
+                        <a class="ev-boton"
+                            href="https://wa.me/5493413442134?text=Hola!%20Quiero%20consultar%20por%20el%20Emplatado%20gourmet%20para%20un%20evento."
+                            target="_blank" rel="noopener">
+                            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Consultá tu evento
+                        </a>
+                        <a class="ev-volver" href="#ev-emplatados"><i class="ti ti-arrow-left" aria-hidden="true"></i>
+                            Volver a las propuestas</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BARRA -->
+
+            <!-- PASO 2: BARRA DE BEBIDAS (Selección de tipo) -->
+            <section class="ev-paso" id="ev-barra" aria-labelledby="ev-barra-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li aria-current="step">Barra de bebidas</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-barra-titulo">Barra de bebidas</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro">Hace click en el símbolo para conocer qué incluye cada propuesta.</p>
+
+                    <div class="carta__lista">
+                        <a class="plato ev-propuesta" href="#ev-barra-clasica">
+                            <h4 class="plato__nombre">Barra clásica</h4>
+                            <p class="plato__desc" id="ev-bc-card">Una versión más simple y funcional, con una selección
+                                acotada de bebidas y tragos esenciales. Ideal para eventos más descontracturados o de
+                                menor duración, manteniendo la calidad del servicio en un formato más práctico.</p>
+                            <span class="ev-mas">Ver qué incluye <i class="ti ti-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                        <a class="plato ev-propuesta" href="#ev-barra-premium">
+                            <h4 class="plato__nombre">Barra premium</h4>
+                            <p class="plato__desc" id="ev-bp-card">Una selección de bebidas y tragos clásicos. Pensada
+                                para ofrecer una experiencia dinámica, equilibrada y de calidad, adaptándose a distintos
+                                estilos de evento sin resignar variedad.</p>
+                            <span class="ev-mas">Ver qué incluye <i class="ti ti-arrow-right"
+                                    aria-hidden="true"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PASO 3A: BARRA CLÁSICA (prefijo bc) -->
+            <section class="ev-paso" id="ev-barra-clasica" aria-labelledby="ev-barra-clasica-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li><a href="#ev-barra">Barra de bebidas</a></li>
+                        <li aria-current="step">Barra clásica</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-barra-clasica-titulo">Barra clásica</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro" id="ev-bc-desc">Una versión más simple y funcional, con una selección acotada de
+                        bebidas y tragos esenciales.</p>
+
+                    <div class="ev-incluye">
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-bc-b-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-bc-b">
+                                <li id="ev-bc-b1" hidden></li>
+                                <li id="ev-bc-b2" hidden></li>
+                                <li id="ev-bc-b3" hidden></li>
+                                <li id="ev-bc-b4" hidden></li>
+                                <li id="ev-bc-b5" hidden></li>
+                                <li id="ev-bc-b6" hidden></li>
+                                <li id="ev-bc-b7" hidden></li>
+                                <li id="ev-bc-b8" hidden></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="ev-aviso" hidden>No pudimos cargar el detalle en este momento. Escribinos por WhatsApp y
+                        te lo enviamos.</p>
+
+                    <div class="ev-acciones">
+                        <a class="ev-boton"
+                            href="https://wa.me/5493413442134?text=Hola!%20Quiero%20consultar%20por%20la%20Barra%20cl%C3%A1sica%20para%20un%20evento."
+                            target="_blank" rel="noopener">
+                            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Consultá tu evento
+                        </a>
+                        <a class="ev-volver" href="#ev-barra"><i class="ti ti-arrow-left" aria-hidden="true"></i> Volver
+                            a las propuestas</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PASO 3B: BARRA PREMIUM (prefijo bp) -->
+            <section class="ev-paso" id="ev-barra-premium" aria-labelledby="ev-barra-premium-titulo">
+                <div class="panel__scroll">
+                    <ol class="ev-migas">
+                        <li><a href="#ev-servicios">Servicios</a></li>
+                        <li><a href="#ev-barra">Barra de bebidas</a></li>
+                        <li aria-current="step">Barra premium</li>
+                    </ol>
+
+                    <div class="panel__cabecera">
+                        <h2 class="panel__titulo" id="ev-barra-premium-titulo">Barra premium</h2>
+                        <span class="panel__filete" aria-hidden="true"></span>
+                    </div>
+                    <p class="ev-intro" id="ev-bp-desc">Una selección de bebidas y tragos clásicos. Pensada para ofrecer
+                        una experiencia dinámica, equilibrada y de calidad.</p>
+
+                    <div class="ev-incluye">
+                        <div class="ev-grupo">
+                            <h3 class="ev-grupo__titulo" id="ev-bp-b-titulo" hidden></h3>
+                            <ul class="ev-lista" id="ev-bp-b">
+                                <li id="ev-bp-b1" hidden></li>
+                                <li id="ev-bp-b2" hidden></li>
+                                <li id="ev-bp-b3" hidden></li>
+                                <li id="ev-bp-b4" hidden></li>
+                                <li id="ev-bp-b5" hidden></li>
+                                <li id="ev-bp-b6" hidden></li>
+                                <li id="ev-bp-b7" hidden></li>
+                                <li id="ev-bp-b8" hidden></li>
+                                <li id="ev-bp-b9" hidden></li>
+                                <li id="ev-bp-b10" hidden></li>
+                                <!-- Slots extra para tragos o agregados adicionales -->
+                                <li id="ev-bp-b11" hidden></li>
+                                <li id="ev-bp-b12" hidden></li>
+                                <li id="ev-bp-b13" hidden></li>
+                                <li id="ev-bp-b14" hidden></li>
+                                <li id="ev-bp-b15" hidden></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="ev-aviso" hidden>No pudimos cargar el detalle en este momento. Escribinos por WhatsApp y
+                        te lo enviamos.</p>
+
+                    <div class="ev-acciones">
+                        <a class="ev-boton"
+                            href="https://wa.me/5493413442134?text=Hola!%20Quiero%20consultar%20por%20la%20Barra%20premium%20para%20un%20evento."
+                            target="_blank" rel="noopener">
+                            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Consultá tu evento
+                        </a>
+                        <a class="ev-volver" href="#ev-barra"><i class="ti ti-arrow-left" aria-hidden="true"></i> Volver
+                            a las propuestas</a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+
+        <a href="#" data-cotizar class="reservar-flotante">
+            <i class="ti ti-file-text"></i>
+            <span data-i18n="ev_cotizar">Cotizá tu evento</span>
+        </a>
     </main>
+    <!--- GALERIA DE FOTOS -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada" aria-hidden="true">
+        <button type="button" class="lightbox__cerrar" aria-label="Cerrar"><i class="ti ti-x"></i></button>
+        <button type="button" class="lightbox__nav lightbox__nav--prev" aria-label="Anterior"><i
+                class="ti ti-chevron-left"></i></button>
+        <img class="lightbox__img" src="" alt="">
+        <button type="button" class="lightbox__nav lightbox__nav--next" aria-label="Siguiente"><i
+                class="ti ti-chevron-right"></i></button>
+    </div>
+    <!-- VENTANA MODAL DE FORMULARIO GOOGLE , COTIZA TU EVENTO  -->
+    <div class="modal-overlay" id="modal-cotizar-overlay">
+        <div class="modal modal--form">
+            <button type="button" class="modal-close" data-cotizar-cerrar aria-label="Cerrar">✕</button>
+            <div class="reserva__logo">
+                <img src="../img/logobow.png" alt="Logo BOW" class="main-logo">
+            </div>
+            <h2 class="modal-titulo" data-i18n="ev_cotizar">Cotizá tu evento</h2>
+            <iframe class="cotizar__marco" title="Formulario de eventos"
+                data-src="https://docs.google.com/forms/d/e/1FAIpQLSeSxWrGQbEP520sx9nuJXFYxce7R8-lK26IfugRl_fXq9dHbA/viewform?embedded=true"></iframe>
+        </div>
+    </div>
 
 
 
     <script src="../js/idiomas.js"></script>
-    <script src="../js/reservas.js"></script>
-    <script src="../js/horarios.js"></script>
+    <script src="../js/analytics.js"></script>
+    <script src="../js/idioma-carta.js"></script>
     <script src="../js/bow.js"></script>
     <script src="../js/precios.js" defer></script>
-    <script src="../js/idioma-carta.js"></script>
+    <script src="../js/horarios.js"></script>
+    <script src="../js/reservas.js"></script>
+    <script src="../js/carrucel.js"></script>
+    <script src="../js/descri.js" defer></script>
+    <script src="../js/eventos.js"></script>
     <script src="../js/comun.js"></script>
 
     <!-- ==========================================

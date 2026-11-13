@@ -47,6 +47,7 @@ document.addEventListener("click", e => {
     if (!opcion) return;
     localStorage.setItem("idioma", opcion.dataset.idioma);
     aplicarIdioma(opcion.dataset.idioma);
+    trackear("cambio_idioma", { idioma: opcion.dataset.idioma });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
