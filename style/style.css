@@ -15,7 +15,7 @@
     --noche: #090b11;
     --serif: 'Cormorant Garamond', 'Cinzel', serif;
     --nav-alto: 72px;
-    --dorado-claro: #d4af37;
+    --sombra: 0 8px 25px rgba(0, 0, 0, 0.45);
 }
 
 * {
@@ -23,6 +23,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', 'Montserrat', sans-serif;
+}
+
+html {
+    background: var(--noche);
 }
 
 html, body {
@@ -160,7 +164,7 @@ body::after {
     font-weight: 700;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+    box-shadow: var(--sombra);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -183,7 +187,7 @@ body::after {
     overflow: hidden;
     object-fit: cover;
     margin:1rem;
-    filter: drop-shadow(0 0 12px var(--color-hover)) drop-shadow(0 0 24px var(--color-hover));
+    filter: drop-shadow(0 0 12px var(--oro-borde)) drop-shadow(0 0 24px var(--oro-borde));
 }
 
 
@@ -225,7 +229,7 @@ body::after {
 }
 
 .modal-close:hover {
-    color: var(--color-blanco);
+    color: var(--blanco);
 }
 
 .modal-titulo {
@@ -234,12 +238,6 @@ body::after {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 0.9rem;
-}
-
-.modal-subtitulo {
-    font-size: 0.75rem;
-    color: var(--color-secundary);
-    margin-bottom: 1.5rem;
 }
 
 .form-group {
@@ -251,7 +249,7 @@ body::after {
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 1px;
-    color: var(--color-hover);
+    color: var(--oro);
     text-transform: uppercase;
     margin-bottom: 0.4rem;
 }
@@ -262,7 +260,7 @@ body::after {
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 10px;
     padding: 10px 14px;
-    color: var(--color-blanco);
+    color: var(--blanco);
     font-size: 0.85rem;
     font-family: 'Montserrat', sans-serif;
     outline: none;
@@ -270,7 +268,7 @@ body::after {
 }
 
 .form-group input:focus {
-    border-color: var(--color-hover);
+    border-color: var(--oro);
 }
 
 .form-row {
@@ -282,7 +280,7 @@ body::after {
 .modal-btn {
     width: 100%;
     background: var(--vidrio-oscuro);
-    color: var(--color-blanco);
+    color: var(--blanco);
     border: none;
     border-radius: 50px;
     padding: 14px;
@@ -319,7 +317,7 @@ body::after {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 10px;
-    color: var(--color-secundary);
+    color: var(--texto-tenue);
     font-size: 0.8rem;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
@@ -328,8 +326,8 @@ body::after {
 }
 
 .sector-btn.activo {
-    border-color: var(--dorado-claro);
-    color: var(--color-hover);
+    border-color: var(--oro);
+    color: var(--oro);
     background: var(--vino);
 }
 
@@ -339,7 +337,7 @@ body::after {
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 10px;
     padding: 10px 14px;
-    color: var(--color-secundary);
+    color: var(--texto-tenue);
     font-size: 0.85rem;
     font-family: 'Montserrat', sans-serif;
     outline: none;
@@ -347,10 +345,10 @@ body::after {
 }
 
 .form-group select:focus {
-    border-color: var(--color-hover);
+    border-color: var(--oro);
 }
 
 .form-group select option {
-    background: var(--vino);
-    color: var(--velo);
+    background: var(--noche);
+    color: var(--blanco);
 }
