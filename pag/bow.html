@@ -30,8 +30,8 @@
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Cormorant+Garamond:wght@300;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap">
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="../style/style.css?v=20261114">
-    <link rel="stylesheet" href="../style/bow.css?v=20261114">
+    <link rel="stylesheet" href="../style/style.css?v=20261115">
+    <link rel="stylesheet" href="../style/bow.css?v=20261115">
 
     <!-- Tabler Icons (carga sin bloquear el render) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.50.0/dist/tabler-icons.min.css"
@@ -129,7 +129,7 @@
     <video id="video-teaser" autoplay muted loop playsinline class="video-background activo">
 
         <source src="video/teaser-mobile.mp4" media="(max-width: 768px)" type="video/mp4">
-        <source src="../video/bownvideo.mp4" type="video/mp4">
+        <source src="../video/bowvideo.mp4" type="video/mp4">
     </video>
 
 
@@ -1741,7 +1741,7 @@
         <section class="panel" id="rooftop-bebida" aria-labelledby="rooftop-bebida-titulo">
             <div class="panel__scroll">
                 <div class="panel__cabecera">
-                    <h2 class="panel__titulo" id="rooftop-bebida-titulo" data-i18n="rt_t_bebida">Rooftop · Bebida</h2>
+                    <h2 class="panel__titulo" id="rooftop-bebida-titulo" data-i18n="rt_t_bebida">Rooftop & Bebida</h2>
                     <span class="panel__filete" aria-hidden="true"></span>
                 </div>
 
@@ -2228,6 +2228,53 @@
                 </ul>
             </div>
         </section>
+
+        <!-- SECCION SALÓN ROOFTOP -->
+<section class="panel" id="rooftop-salon" aria-labelledby="rooftop-salon-titulo">
+    <div class="panel__scroll">
+        <div class="panel__cabecera">
+            <h2 class="panel__titulo" id="rooftop-salon-titulo" data-i18n="rt_t_salon">Reservas mas de 15 personas</h2>
+            <span class="panel__filete" aria-hidden="true"></span>
+        </div>
+
+        <div class="espacios">
+            <input type="radio" name="espacio-rooftop" id="esp-salon" class="espacios__radio" checked>
+
+            <div class="espacios__botones">
+                <label for="esp-salon" class="espacios__boton">
+                    <i class="ti ti-building-skyscraper"></i>
+                    <span data-i18n="rt_salon_t">Salón Rooftop</span>
+                </label>
+            </div>
+
+            <article class="espacios__panel espacios__panel--salon">
+                <p class="espacios__desc" data-i18n="rt_salon_d">Un espacio en el piso 16, con vista a la ciudad, pensado para grupos de más de 15 personas. Contanos qué tenés en mente y armamos la propuesta con vos.</p>
+
+                <div class="galeria-wrap">
+                    <button type="button" class="galeria__btn galeria__btn--prev" aria-label="Anterior"><i class="ti ti-chevron-left"></i></button>
+                    <div class="galeria-carrusel">
+                        <figure><img src="../img/eventos/rooftop-1.webp" alt="Salón Rooftop" loading="lazy" decoding="async"></figure>
+                        <figure><img src="../img/eventos/rooftop-2.webp" alt="Salón Rooftop" loading="lazy" decoding="async"></figure>
+                        <figure><img src="../img/eventos/rooftop-3.webp" alt="Salón Rooftop" loading="lazy" decoding="async"></figure>
+                        <figure><img src="../img/eventos/rooftop-4.webp" alt="Salón Rooftop" loading="lazy" decoding="async"></figure>
+                        <figure><img src="../img/eventos/rooftop-6.webp" alt="Salón Rooftop" loading="lazy" decoding="async"></figure>
+                        <figure><img src="../img/eventos/rooftop-7.webp" alt="Salón Rooftop" loading="lazy" decoding="async"></figure>
+                    </div>
+                    <button type="button" class="galeria__btn galeria__btn--next" aria-label="Siguiente"><i class="ti ti-chevron-right"></i></button>
+                </div>
+
+                <p class="espacios__dato" data-i18n="rt_salon_u">Piso 16 · Grupos de más de 15 personas</p>
+
+                <div class="ev-acciones">
+                    <a class="ev-boton" href="#" data-cotizar="reserva">
+                        <i class="ti ti-file-text" aria-hidden="true"></i>
+                        <span data-i18n="rt_cotizar">Cotizá tu reserva</span>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
 
 
 
@@ -3541,17 +3588,17 @@
 
 
 
-    <script src="../js/idiomas.js?v=20261114"></script>
-    <script src="../js/analytics.js?v=20261114"></script>
-    <script src="../js/idioma-carta.js?v=20261114"></script>
-    <script src="../js/bow.js?v=20261114"></script>
-    <script src="../js/precios.js?v=20261114" defer></script>
-    <script src="../js/horarios.js?v=20261114"></script>
-    <script src="../js/reservas.js?v=20261114"></script>
-    <script src="../js/carrucel.js?v=20261114"></script>
-    <script src="../js/descri.js?v=20261114" defer></script>
-    <script src="../js/eventos.js?v=20261114"></script>
-    <script src="../js/comun.js?v=20261114"></script>
+    <script src="../js/idiomas.js?v=20261115"></script>
+    <script src="../js/analytics.js?v=20261115"></script>
+    <script src="../js/idioma-carta.js?v=20261115"></script>
+    <script src="../js/bow.js?v=20261115"></script>
+    <script src="../js/precios.js?v=20261115" defer></script>
+    <script src="../js/horarios.js?v=20261115"></script>
+    <script src="../js/reservas.js?v=20261115"></script>
+    <script src="../js/carrucel.js?v=20261115"></script>
+    <script src="../js/descri.js?v=20261115" defer></script>
+    <script src="../js/eventos.js?v=20261115"></script>
+    <script src="../js/comun.js?v=20261115"></script>
 
     <!-- FOOTER -->
     <footer class="footer" id="footer">
@@ -3609,7 +3656,6 @@
             -->
             </div>
         </div>
-
         <div class="footer__bottom">
             <p>© 2026 BOW Café & Bistró · Dazzler by Wyndham, Rosario</p>
         </div>

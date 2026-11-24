@@ -938,6 +938,43 @@ Object.assign(IDIOMAS.fr, {
     "rt_d_campari_tonic": "Campari, tonic et rondelle de citron.",
 });
 
+Object.assign(IDIOMAS.es, {
+    ev_cotizar: "Cotizá tu evento",
+    rt_cotizar: "Cotizá tu reserva",
+    rt_nav_salon: "Salón",
+    rt_t_salon: "Reservas mas de 15 personas",
+    rt_salon_t: "Salón Rooftop",
+    rt_salon_d: "Un espacio en el piso 16, con vista a la ciudad, pensado para grupos de más de 15 personas. Contanos qué tenés en mente y armamos la propuesta con vos.",
+    rt_salon_u: "Piso 16 · Grupos de más de 15 personas"
+});
+Object.assign(IDIOMAS.en, {
+    ev_cotizar: "Get a quote for your event",
+    rt_cotizar: "Get a quote for your booking",
+    rt_nav_salon: "Lounge",
+    rt_t_salon: "Bookings for more than 15 people",
+    rt_salon_t: "Rooftop Lounge",
+    rt_salon_d: "A space on the 16th floor with city views, designed for groups of more than 15 people. Tell us what you have in mind and we'll put the proposal together with you.",
+    rt_salon_u: "16th floor · Groups of more than 15 people"
+});
+Object.assign(IDIOMAS.pt, {
+    ev_cotizar: "Solicite o orçamento do seu evento",
+    rt_cotizar: "Solicite o orçamento da sua reserva",
+    rt_nav_salon: "Salão",
+    rt_t_salon: "Reservas para mais de 15 pessoas",
+    rt_salon_t: "Salão Rooftop",
+    rt_salon_d: "Um espaço no 16º andar, com vista para a cidade, pensado para grupos de mais de 15 pessoas. Conte-nos o que você tem em mente e montamos a proposta com você.",
+    rt_salon_u: "16º andar · Grupos de mais de 15 pessoas"
+});
+Object.assign(IDIOMAS.fr, {
+    ev_cotizar: "Demandez un devis pour votre événement",
+    rt_cotizar: "Demandez un devis pour votre réservation",
+    rt_nav_salon: "Salon",
+    rt_t_salon: "Réservations pour plus de 15 personnes",
+    rt_salon_t: "Salon Rooftop",
+    rt_salon_d: "Un espace au 16e étage, avec vue sur la ville, pensé pour les groupes de plus de 15 personnes. Dites-nous ce que vous avez en tête et nous construisons la proposition avec vous.",
+    rt_salon_u: "16e étage · Groupes de plus de 15 personnes"
+});
+
 
  //EVENTOS 
 

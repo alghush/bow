@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === "ArrowRight") mostrar(posicion + 1, true);
     });
 
-    document.querySelectorAll("#eventos .galeria-wrap").forEach(wrap => {
+    document.querySelectorAll("#eventos .galeria-wrap, #rooftop-salon .galeria-wrap").forEach(wrap => {
         const carrusel = wrap.querySelector(".galeria-carrusel");
         const figuras = [...carrusel.querySelectorAll("figure")];
         const prev = wrap.querySelector(".galeria__btn--prev");

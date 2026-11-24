@@ -932,18 +932,18 @@
     color: var(--texto-tenue);
 }
 
-#eventos .espacios__radio {
+:is(#eventos, #rooftop-salon) .espacios__radio {
     position: absolute;
     opacity: 0;
     pointer-events: none;
 }
 
-#eventos .espacios__botones {
+:is(#eventos, #rooftop-salon) .espacios__botones {
     display:flex;
     justify-content: center;
 }
 
-#eventos .espacios__boton {
+:is(#eventos, #rooftop-salon) .espacios__boton {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -964,30 +964,30 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-#eventos .espacios__boton i {
+:is(#eventos, #rooftop-salon) .espacios__boton i {
     font-size: 1.8rem;
     color: var(--oro);
 }
 
-#eventos #esp-bistro:checked ~ .espacios__botones label[for="esp-bistro"],
-#eventos #esp-rooftop:checked ~ .espacios__botones label[for="esp-rooftop"] {
+:is(#eventos, #rooftop-salon) #esp-bistro:checked ~ .espacios__botones label[for="esp-bistro"],
+:is(#eventos, #rooftop-salon) #esp-rooftop:checked ~ .espacios__botones label[for="esp-rooftop"] {
     background: var(--vino);
     border-color: var(--oro);
 }
 
-#eventos #esp-bistro:focus-visible ~ .espacios__botones label[for="esp-bistro"],
-#eventos #esp-rooftop:focus-visible ~ .espacios__botones label[for="esp-rooftop"] {
+:is(#eventos, #rooftop-salon) #esp-bistro:focus-visible ~ .espacios__botones label[for="esp-bistro"],
+:is(#eventos, #rooftop-salon) #esp-rooftop:focus-visible ~ .espacios__botones label[for="esp-rooftop"] {
     outline: 2px solid var(--oro);
     outline-offset: 2px;
 }
 
-#eventos .espacios__panel {
+:is(#eventos, #rooftop-salon) .espacios__panel {
     display: none;
     margin-top: 20px;
 }
 
-#eventos #esp-bistro:checked ~ .espacios__panel--bistro,
-#eventos #esp-rooftop:checked ~ .espacios__panel--rooftop {
+:is(#eventos, #rooftop-salon) #esp-bistro:checked ~ .espacios__panel--bistro,
+:is(#eventos, #rooftop-salon) #esp-rooftop:checked ~ .espacios__panel--rooftop {
     display: block;
     animation: espacio-entra 0.45s ease both;
 }
@@ -1003,11 +1003,11 @@
     }
 }
 
-#eventos .galeria-wrap {
+:is(#eventos, #rooftop-salon) .galeria-wrap {
     position: relative;
 }
 
-#eventos .galeria-carrusel {
+:is(#eventos, #rooftop-salon) .galeria-carrusel {
     display: flex;
     gap: 10px;
     overflow-x: auto;
@@ -1017,11 +1017,11 @@
     border-radius: var(--radio);
 }
 
-#eventos .galeria-carrusel::-webkit-scrollbar {
+:is(#eventos, #rooftop-salon) .galeria-carrusel::-webkit-scrollbar {
     display: none;
 }
 
-#eventos .galeria-carrusel figure {
+:is(#eventos, #rooftop-salon) .galeria-carrusel figure {
     flex: 0 0 100%;
     aspect-ratio: 4 / 3;
     overflow: hidden;
@@ -1032,11 +1032,11 @@
     cursor: zoom-in;
 }
 
-#eventos .galeria-carrusel figure.activa img {
+:is(#eventos, #rooftop-salon) .galeria-carrusel figure.activa img {
     animation: foto-entra 0.9s ease both;
 }
 
-#eventos .galeria-carrusel figure {
+:is(#eventos, #rooftop-salon) .galeria-carrusel figure {
     flex: 0 0 100%;
     aspect-ratio: 4 / 3;
     overflow: hidden;
@@ -1047,7 +1047,7 @@
     cursor: zoom-in;
 }
 
-#eventos .galeria-carrusel figure.activa img {
+:is(#eventos, #rooftop-salon) .galeria-carrusel figure.activa img {
     animation: foto-entra 0.9s ease both;
 }
 
@@ -1061,14 +1061,14 @@
 }
 
 
-#eventos .galeria-carrusel img {
+:is(#eventos, #rooftop-salon) .galeria-carrusel img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-#eventos .galeria__btn {
+:is(#eventos, #rooftop-salon) .galeria__btn {
     position: absolute;
     top: 50%;
     z-index: 2;
@@ -1090,21 +1090,21 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-#eventos .galeria__btn--prev {
+:is(#eventos, #rooftop-salon) .galeria__btn--prev {
     left: 10px;
 }
 
-#eventos .galeria__btn--next {
+:is(#eventos, #rooftop-salon) .galeria__btn--next {
     right: 10px;
 }
 
-#eventos .galeria__btn:hover,
-#eventos .galeria__btn:active {
+:is(#eventos, #rooftop-salon) .galeria__btn:hover,
+:is(#eventos, #rooftop-salon) .galeria__btn:active {
     background: var(--vino);
     border-color: var(--oro);
 }
 
-#eventos .espacios__desc {
+:is(#eventos, #rooftop-salon) .espacios__desc {
     max-width: 520px;
     margin: 14px auto 0;
     padding: 0 8px 28px;
@@ -1114,7 +1114,7 @@
     color: var(--texto-tenue);
 }
 
-#eventos .espacios__dato {
+:is(#eventos, #rooftop-salon) .espacios__dato {
     margin-top: 22px;
     text-align: center;
     font-size: 0.8rem;
@@ -1181,11 +1181,11 @@ html.lightbox-abierto {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    #eventos .espacios__panel {
+    :is(#eventos, #rooftop-salon) .espacios__panel {
         animation: none
     }
 
-    #eventos .galeria-carrusel figure,
+    :is(#eventos, #rooftop-salon) .galeria-carrusel figure,
     .lightbox,
     .lightbox__img {
         transition: none;
@@ -1451,6 +1451,21 @@ html.lightbox-abierto {
 }
 
 .ev-grupo:not(:has(li)) { display: none; }
+
+/*---- reservas eventos rooftop -----*/
+
+#esp-salon:checked ~ .espacios__botones label[for="esp-salon"] {
+    background: var(--vino);
+    border-color: var(--oro);
+}
+#esp-salon:focus-visible ~ .espacios__botones label[for="esp-salon"] {
+    outline: 2px solid var(--oro);
+    outline-offset: 2px;
+}
+#esp-salon:checked ~ .espacios__panel--salon {
+    display: block;
+    animation: espacio-entra 0.45s ease both;
+}
 
 /* ===== Footer ===== */
 
